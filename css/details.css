@@ -1,0 +1,42 @@
+.detailRoot {
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  max-width: 400px;
+  padding: 0;
+}
+
+.detailInfo {
+  margin:0;
+}
+
+.detailTitles {
+  padding: 0;
+  color: #2C3E50;
+  text-decoration: none;
+}
+
+.detailTitles:hover {
+    text-decoration: none;
+    color:inherit;
+}
+
+.detailTitle {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+
+.detailSubtitle {
+  font-size: 12px;
+  margin: 0;
+}
+
+.detailIcons {
+  padding: 0;
+  margin: 0;
+}
+
+.detailIcon>img {
+  margin: 5px 0;
+}
