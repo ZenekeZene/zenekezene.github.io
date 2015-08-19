@@ -1,4 +1,8 @@
-.detailRoot {
+.section-portfolio, .icon-section-portfolio {
+  color: #18BC9C;
+}
+
+.detail-root {
   display: block;
   position: relative;
   margin: 0px auto;
@@ -6,37 +10,35 @@
   padding: 0;
 }
 
-.detailInfo {
-  margin:0;
-}
-
-.detailTitles {
+.detail-titles {
   padding: 0;
   color: #2C3E50;
   text-decoration: none;
 }
 
-.detailTitles:hover {
+.detail-titles:hover {
     text-decoration: none;
     color:inherit;
 }
 
-.detailTitle {
+.detail-title {
   font-size: 15px;
   font-weight: bold;
   margin: 10px 0 0 0;
 }
 
-.detailSubtitle {
+.detail-subtitle {
   font-size: 12px;
   margin: 0;
 }
 
-.detailIcons {
-  padding: 0;
-  margin: 0;
+.detail-info {
+  margin:0;
+  font-size: 12px;
+  font-style: italic;
 }
 
-.detailIcon>img {
-  margin: 5px 0;
+.detail-icons {
+  padding: 0;
+  margin: 0;
 }
