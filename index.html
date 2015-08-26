@@ -188,7 +188,7 @@
         <div class="row">
           <!-- 5.- LLAVE -->
           <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModalLlave" class="portfolio-link detailLlave" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -197,7 +197,7 @@
               <img src="img/portfolio/llaveacceso.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalLlave" class="col-xs-11 detail-titles">
                 <p class="detail-title">OpenLock</p>
                 <p class="detail-subtitle">Viñetas informativas sobre app para flyers.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
@@ -1119,7 +1119,9 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- MODALES CON FOTOS CARGADAS ASINCRONAMENTE -->
+    <!-- LLAVE -->
+    <div class="portfolio-modal modal fade" id="portfolioModalLlave" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -1131,9 +1133,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Open Lock</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/caracoles.jpg" class="img-responsive img-centered" alt="">
+                            <img data-aload="img/portfolio/openlock/vineta1.png" class="img-responsive img-centered img-detailLlave" alt="">
+                            <img data-aload="img/portfolio/openlock/vineta2.png" class="img-responsive img-centered img-detailLlave" alt="">
+                            <img data-aload="img/portfolio/openlock/vineta3.png" class="img-responsive img-centered img-detailLlave" alt="">
+                            <img data-aload="img/portfolio/openlock/vineta4.png" class="img-responsive img-centered img-detailLlave" alt="">
+                            <img data-aload="img/portfolio/openlock/vineta5.png" class="img-responsive img-centered img-detailLlave" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -1145,7 +1151,7 @@
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    <strong><a href="http://startbootstrap.com">Web Developm2ent</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -1215,17 +1221,20 @@
     <!-- Aload Lib -->
     <script src="js/aload.min.js"></script>
     <script>
-      //window.onload = function () {
 
         $("[href^='#portfolioModal']").click(function(){
-          console.log(this);
           var selector = "img-" + $(this).attr('class').split(' ')[1];
-          console.log(selector);
           var imgDetail = $("." + selector);
-          aload(imgDetail);
+          var tamOrigin = imgDetail.length;
+          var i, node, cont = 0;
+          for(i = 0; i < tamOrigin; i++){
+            node = imgDetail[i];
+            if ($(node).attr('src') === undefined)
+              cont++;
+          }
+          if (tamOrigin == cont)
+            aload(imgDetail);
         });
-      //}
-
 
     </script>
 
