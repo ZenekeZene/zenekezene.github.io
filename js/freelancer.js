@@ -35,7 +35,3 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-
-$(".portfolio-link").click(function($event) {
-    console.log(this);
-});
