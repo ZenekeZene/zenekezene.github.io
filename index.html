@@ -197,7 +197,7 @@
               <img src="img/portfolio/llaveacceso.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalLlave" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalLlave" class="col-xs-11 detailLlave detail-titles">
                 <p class="detail-title">OpenLock</p>
                 <p class="detail-subtitle">Viñetas informativas sobre app para flyers.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
@@ -234,7 +234,7 @@
           </div>
           <!-- 8.- RETRATOS -->
           <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModalRetratos" class="portfolio-link detailRetratos" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -242,18 +242,18 @@
               </div>
               <img src="img/portfolio/retrato.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
-              <div class="col-sm-12 row detail-root">
-                <a href="#portfolioModal1" class="col-xs-11 detail-titles">
-                  <p class="detail-title">Retratos Vector</p>
-                  <p class="detail-subtitle">Ilustraciones vectoriales de pseudo-retratos.</p>
-                  <p class="detail-info">Diseñado con Adobe Illustrator.</p>
+            <div class="col-sm-12 row detail-root">
+              <a href="#portfolioModalRetratos" class="col-xs-11 detailRetratos detail-titles">
+                <p class="detail-title">Retratos Vector</p>
+                <p class="detail-subtitle">Ilustraciones vectoriales de pseudo-retratos.</p>
+                <p class="detail-info">Diseñado con Adobe Illustrator.</p>
+              </a>
+              <div class="col-xs-1 detail-icons">
+                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                  <i class="fa fa-2x fa-behance-square"></i>
                 </a>
-                <div class="col-xs-1 detail-icons">
-                  <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                    <i class="fa fa-2x fa-behance-square"></i>
-                  </a>
-                </div>
               </div>
+            </div>
           </div>
           <!-- 9.- VUDU -->
           <div class="col-sm-4 portfolio-item">
@@ -289,7 +289,7 @@
               <img src="img/portfolio/spray.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalSpray" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalSpray" class="col-xs-11 detailSpray detail-titles">
                 <p class="detail-title">Spray Boy</p>
                 <p class="detail-subtitle">Character Design experimental.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
@@ -303,7 +303,7 @@
           </div>
           <!-- 11.-CARACOLES -->
           <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModalCaracoles" class="portfolio-link detailCaracoles" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -349,7 +349,7 @@
           </div>
           <!-- 13.- SEAT -->
           <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModalSeat" class="portfolio-link detailSeat" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -432,7 +432,7 @@
           </div>
           <!-- DIARIO DE UN VIDEOJUEGO -->
           <div class="col-sm-4 portfolio-item">
-            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModalDiario" class="portfolio-link detailDiario" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -441,7 +441,7 @@
               <img src="img/portfolio/diariode.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalDiario" class="col-xs-11 detailDiario detail-titles">
                 <p class="detail-title">Diario de un videojuego</p>
                 <p class="detail-subtitle">Sitio web, CEO y redactor principal.</p>
                 <p class="detail-info">Desarrollado con HTML5, CSS3, JS y Wordpress.</p>
@@ -1162,7 +1162,8 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- MODAL RETRATOS -->
+    <div class="portfolio-modal modal fade" id="portfolioModalRetratos" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -1174,9 +1175,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Retratos</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/caracoles.jpg" class="img-responsive img-centered" alt="">
+                            <img data-aload="img/portfolio/retratos/retrato-colombo.jpg" class="img-responsive img-centered img-detailRetratos" alt="">
+                            <img data-aload="img/portfolio/retratos/retrato-lore.jpg" class="img-responsive img-centered img-detailRetratos" alt="">
+                            <img data-aload="img/portfolio/retratos/retrato-hector.jpg" class="img-responsive img-centered img-detailRetratos" alt="">
+                            <img data-aload="img/portfolio/retratos/retrato-mikel.jpg" class="img-responsive img-centered img-detailRetratos" alt="">
+                            <img data-aload="img/portfolio/retratos/retrato-gorka.jpg" class="img-responsive img-centered img-detailRetratos" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -1188,7 +1193,7 @@
                                     </strong>
                                 </li>
                                 <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    <strong><a href="http://startbootstrap.com">Web Developm2ent</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -1199,7 +1204,128 @@
             </div>
         </div>
     </div>
-    <img data-aload="img/portfolio/submarine.png" width="400" height="300">
+    <!-- CARACOLES -->
+    <div class="portfolio-modal modal fade" id="portfolioModalCaracoles" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Caracoles</h2>
+                            <hr class="star-primary">
+                            <img data-aload="img/portfolio/caracoles/caracoles-detalle.jpg" class="img-responsive img-centered img-detailCaracoles" alt="">
+                            <img data-aload="img/portfolio/caracoles/caracoles-grande.jpg" class="img-responsive img-centered img-detailCaracoles" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Developm2ent</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SEAT -->
+    <div class="portfolio-modal modal fade" id="portfolioModalSeat" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Seat Marbella</h2>
+                            <hr class="star-primary">
+                            <img data-aload="img/portfolio/seat/seat1.jpg" class="img-responsive img-centered img-detailSeat" alt="">
+                            <img data-aload="img/portfolio/seat/seat2.jpg" class="img-responsive img-centered img-detailSeat" alt="">
+                            <img data-aload="img/portfolio/seat/seat3.jpg" class="img-responsive img-centered img-detailSeat" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Developm2ent</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIARIO -->
+    <div class="portfolio-modal modal fade" id="portfolioModalDiario" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Diario de un videojuego</h2>
+                            <hr class="star-primary">
+                            <img data-aload="img/portfolio/diario/diario3.jpg" class="img-responsive img-centered img-detailDiario" alt="">
+                            <img data-aload="img/portfolio/diario/diario2.jpg" class="img-responsive img-centered img-detailDiario" alt="">
+                            <img data-aload="img/portfolio/diario/diario1.jpg" class="img-responsive img-centered img-detailDiario" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Developm2ent</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
