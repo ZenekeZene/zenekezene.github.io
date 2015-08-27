@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Héctor Villar - Portfolio</title>
+  <title>{{ page.title }}</title>
 
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -877,7 +877,7 @@
             <form id="contactForm" novalidate  action="//formspree.io/hectorvillarm@gmail.com" method="POST">
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
-                  <label>Nombre</label>
+                  <label>Nombre</label>{{ site.baseurl }}
                   <input type="text" class="form-control" placeholder="Nombre" id="name" required data-validation-required-message="Por favor, introduzca su nombre.">
                   <p class="help-block text-danger"></p>
                 </div>
