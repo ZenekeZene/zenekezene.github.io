@@ -76,7 +76,54 @@ td.col-xs-5 {
   color: #18BC9C;
 }
 
-// Progress bar FLATS
+.site-project-header {
+  background-size: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-especialista-header {
+  background-image: url("../img/portfolio/especialista.jpg");
+}
+
+.site-frozen-header {
+  background-image: url("../img/portfolio/frozen.jpg");
+}
+
+.site-knowpills-header {
+  background-image: url("../img/portfolio/knowpills.jpg");
+}
+
+.site-mercante-header {
+  background-image: url("../img/portfolio/mercante/mercante1.jpg");
+}
+
+.title-project {
+  background-color: rgba(54, 25, 25, 0.7);
+}
+
+.title-project-especialista {
+  color: yellow;
+}
+
+.title-project-frozen, .title-project-knowpills, .title-project-mercante {
+  color: white;
+}
+
+.lista-project {
+  padding-left : 50px;
+}
+
+.history-project {
+  margin-top: 50px;
+}
+
+.font-project {
+  font-size: 15px;
+}
+
+/* Progress bar FLATS*/
 .progress-flat {
   height: 20px;
   margin-bottom: 20px;
