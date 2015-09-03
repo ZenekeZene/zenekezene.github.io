@@ -192,16 +192,16 @@
           </div>
         </div>
         <div class="row">
-          <img src="../img/portfolio/especialista/captura1.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura2.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura3.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura4.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura5.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura6.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura7.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura8.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura9.png" class="col-xs-12">
-          <img src="../img/portfolio/especialista/captura10.jpg" class="col-xs-12"">
+          <img data-original="../img/portfolio/especialista/captura1.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura2.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura3.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura4.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura5.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura6.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura7.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura8.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura9.png" class="lazy col-xs-12">
+          <img data-original="../img/portfolio/especialista/captura10.jpg" class="lazy col-xs-12">
         </div>
       </div><!-- End container -->
     </section>
@@ -262,6 +262,16 @@
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
+    <!-- Lazy Load -->
+    <script src="http://www.appelsiini.net/js/all.js"></script>
+    <script>
+      $(function(){
+          $("img.lazy").lazyload( {
+            effect : "fadeIn"
+          });
+      });
+
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
