@@ -123,6 +123,14 @@ td.col-xs-5 {
   font-size: 15px;
 }
 
+.portfolio-knowpills {
+  padding: 100px 0 20px;
+}
+
+#capturas-knowpills {
+  padding: 20px 0 100px;
+}
+
 /* Progress bar FLATS*/
 .progress-flat {
   height: 20px;

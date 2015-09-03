@@ -76,7 +76,7 @@
                 <div class="col-lg-12">
                     <!--<img class="img-responsive" src="img/profile.png" alt="">-->
                     <div class="intro-text intro-text title-project title-project-frozen">
-                        <span class="name">FROZEN MONKEYS</span>
+                        <span class="name">Frozen Monkeys</span>
                         <hr class="star-light">
                         <span class="skills">Videojuego 2D (Android)</span>
                     </div>
@@ -109,17 +109,18 @@
             <li>Documentación técnica</li>
             <li>Análisis</li>
           </ul>
-          <img class="col-sm-4 col-xs-12" src="../img/portfolio/battery.jpg">
+          <img class="col-sm-4 col-xs-12" src="../img/portfolio/frozen/captura4.png">
         </div>
         <div class="row">
-          <p class="col-sm-5 col-sm-push-5 col-xs-12 text-justify">
-            El videojuego se ha desarrollado en apenas 2 semanas, procurando hacer hincapie en la jugabilidad
-            del mismo y no en el acabado final.
+          <p class="col-md-4 col-sm-5 col-sm-push-5 col-xs-12 text-justify">
+            El videojuego se ha desarrollado en apenas 2 semanas, como resultado de un desarrollo ágil, procurando hacer hincapie en la jugabilidad
+            del mismo y no en el acabado final y artwork. Se ha incorporado una mecánica simple de 'drag' o arrastre de los monos como únicos controles
+            del juego, de forma que sea factible para el usuario jugar con una sóla mano, aderezado con un sistema de ranking local.
           </p>
-          <img class="col-sm-3 col-sm-pull-3 col-xs-12" src="../img/portfolio/battery.jpg">
+          <img class="col-md-offset-2 col-md-4 col-sm-5 col-sm-pull-5 col-xs-12" src="../img/portfolio/frozen/captura5.png">
         </div>
         <div class="row history-project">
-          <p class="col-sm-offset-1 col-sm-6 col-xs-12 text-justify">
+          <p class="col-md-7 col-sm-offset-1 col-sm-6 col-xs-12 text-justify">
             <i>
             “Una panda de monos sacados de la jungla más salvaje del Sudeste Pacífico se embarcan sin quererlo
             en una embarcación de mercancias intercontinentales, cegados por los contenedores repletos de bananas que albergaba el barco.
@@ -128,7 +129,7 @@
             ¡Ayudáles a no congelarse! Recoge las prendas que los pingüinos han tomado prestado a los nativos.
             Pero, ¡ten cuidado, los esquimales están muy cabreados!”</i>
           </p>
-          <img class="col-sm-3 col-xs-12" src="../img/portfolio/battery.jpg">
+          <img class="col-lg-2 col-md-3 col-sm-5 col-xs-3 hidden-xs" src="../img/portfolio/frozen/captura1.png">
         </div>
         <div class="row">
           <p class="col-sm-offset-1 col-sm-9 col-xs-12">
@@ -179,6 +180,10 @@
             <h4>Capturas</h4>
             <hr>
           </div>
+        </div>
+        <div class="row">
+          <img data-original="../img/portfolio/frozen/captura2.png" class="lazy col-lg-offset-0 col-lg-3 col-md-offset-1 col-md-3 col-sm-6 col-xs-12">
+          <img data-original="../img/portfolio/frozen/captura3.png" class="lazy col-lg-offset-0 col-lg-3 col-md-offset-1 col-md-3 col-sm-6 col-xs-12">
         </div>
       </div><!-- End container -->
     </section>
@@ -239,7 +244,16 @@
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
+    <!-- Lazy Load -->
+    <script src="http://www.appelsiini.net/js/all.js"></script>
+    <script>
+      $(function(){
+          $("img.lazy").lazyload( {
+            effect : "fadeIn"
+          });
+      });
 
+    </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
 

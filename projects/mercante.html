@@ -176,9 +176,28 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h4>Capturas</h4>
+            <h4>Trabajos</h4>
             <hr>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img data-original="../img/portfolio/mercante/captura1.png" class="lazy col-md-12 col-xs-offset-1 col-xs-10">
+            <p class="col-xs-offset-1 col-xs-10">Cartel XX de bla bla bla.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img data-original="../img/portfolio/mercante/captura5.png" class="lazy col-md-12 col-xs-offset-1 col-xs-10">
+            <p class="col-xs-offset-1 col-xs-10">Cartel XX de bla bla bla.</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <img data-original="../img/portfolio/mercante/captura6.png" class="lazy col-md-12 col-xs-offset-1 col-xs-10">
+            <p class="col-xs-offset-1 col-xs-10">Cartel XX de bla bla bla.</p>
+          </div>
+        </div>-->
+        <!--<div class="col-md-4 col-sm-6 col-xs-12">
+          <img data-original="../img/portfolio/mercante/captura2.png" class="lazy col-md-12 col-xs-12">
+          <p class="col-xs-offset-1 col-xs-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>-->
         </div>
       </div><!-- End container -->
     </section>
@@ -239,6 +258,16 @@
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
+    <!-- Lazy Load -->
+    <script src="http://www.appelsiini.net/js/all.js"></script>
+    <script>
+      $(function(){
+          $("img.lazy").lazyload( {
+            effect : "fadeIn"
+          });
+      });
+
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
