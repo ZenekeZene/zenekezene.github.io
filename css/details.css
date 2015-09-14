@@ -139,8 +139,12 @@ td.col-xs-5 {
   margin-top: 10px;
 }
 
+.btn-descargar-bichos {
+  margin-bottom: 50px;
+}
+
 .content-juego {
-  margin-top: 200px;
+  margin-top: 200px!important;
 }
 
 /* Progress bar FLATS*/
