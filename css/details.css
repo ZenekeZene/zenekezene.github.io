@@ -92,7 +92,7 @@ td.col-xs-5 {
 }
 
 .site-knowpills-header {
-  background-image: url("../img/portfolio/knowpills.jpg");
+  background-image: url("../img/portfolio/knowpills/captura1.jpg");
 }
 
 .site-mercante-header {
@@ -146,6 +146,11 @@ td.col-xs-5 {
 #content-frozen {
   height: 900px;
 }
+
+.img-mercante {
+    margin-bottom: 20px;
+}
+
 /* Progress bar FLATS*/
 .progress-flat {
   height: 20px;
@@ -155,6 +160,8 @@ td.col-xs-5 {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  position: relative;
+  top: 11px;
 }
 
 .progress-flat {
