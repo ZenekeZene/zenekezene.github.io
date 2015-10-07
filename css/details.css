@@ -1,3 +1,51 @@
+.lista-social {
+  position: relative;
+  top: 36px;
+}
+
+.lista-social .btn-social {
+  background-color: white;
+  color: #18BC9C;
+}
+
+.lista-social .btn-outline:hover,
+.lista-social .btn-outline:focus,
+.lista-social .btn-outline:active,
+.lista-social .btn-outline.active {
+    border: solid 2px #18BC9C;
+    color: white;
+    background: #18BC9C;
+}
+
+.skills {
+  color: #2C3E50;
+}
+
+a.icon-social, a.icon-social:hover {
+  color: white;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  margin: 6px;
+  text-decoration: none;
+}
+
+a.icon-social:hover {
+  background-color: #2C3E50;
+  border: none;
+}
+
+.icon-social>span {
+  display:block;
+  font-size: 31px;
+  position: relative;
+  top: 18%;
+}
+
 .section-portfolio, .icon-section {
   color: #18BC9C;
 }

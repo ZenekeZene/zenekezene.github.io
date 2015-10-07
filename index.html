@@ -21,7 +21,9 @@
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -78,8 +80,22 @@
             <div class="intro-text">
               <span class="name">Héctor Villar</span>
               <hr class="star-light">
-              <span class="skills">Web Developer - Graphic Artist - Game Developer</span>
+              <span class="skills">Web & Game Developer - Graphic Artist</span>
             </div>
+            <ul class="list-inline lista-social">
+                <li>
+                  <a href="http://www.github.com/ZenekeZene" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </li>
+                <li>
+                  <a href="http://www.behance.com/ZenekeZene" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-behance"></i></a>
+                </li>
+                <li>
+                  <a href="https://es.linkedin.com/in/hectorvillarm" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="mailto:hectorvillarm@gmail.com" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -114,7 +130,7 @@
               <img src="img/portfolio/especialista.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="Publish/especialista/index.html" class="col-xs-11 detail-titles">
+              <a href="Publish/especialista/index.html" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">El Especialista</p>
                 <p class="detail-subtitle">Videojuego 2D (Android), género Shoot 'Em Up.</p>
                 <p class="detail-info">Desarrollado con <strong>Unity3D y C#</strong>.</p>
@@ -147,13 +163,13 @@
               <img src="img/portfolio/frozen.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="Publish/monos/index.html" class="col-xs-11 detail-titles">
+              <a href="Publish/monos/index.html" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Frozen Monkeys</p>
                 <p class="detail-subtitle">Videojuego 2D (Android), género Casual.</p>
                 <p class="detail-info">Desarrollado con <strong>Unity3D y C#</strong>.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://github.com/ZenekeZene/Frozen-Monkeys" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-github"></i>
                 </a>
               </div>
@@ -177,7 +193,7 @@
               <img src="img/portfolio/bichos.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalBichos" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Bichos</p>
                 <p class="detail-subtitle">Videojuego 2D (Android), género Arcade.</p>
                 <p class="detail-info">Desarrollado con <strong>Corona SDK y LUA</strong>.</p>
@@ -185,6 +201,9 @@
               <div class="col-xs-1 detail-icons">
                 <a href="https://github.com/ZenekeZene/Insects-Invasion" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-github"></i>
+                </a>
+                <a href="https://www.behance.net/gallery/28591413/Sprites-Bichos" class="detailIcon" target="_blank">
+                  <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
               <div class="center-block">
@@ -218,13 +237,13 @@
               <img src="img/portfolio/knowpills.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="projects/knowpills.html" class="col-xs-11 detail-titles">
                 <p class="detail-title">Knowpills</p>
                 <p class="detail-subtitle">Front-End, UX, Character Design y gamification de plataforma educativa.</p>
                 <p class="detail-info">Desarrollado con HTML5, CSS3, JS, Yii (PHP) y Adobe Photoshop.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/30098239/Knowpills" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -241,14 +260,14 @@
               <img src="img/portfolio/diariode.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalDiario" class="col-xs-11 detailDiario detail-titles">
+              <a href="#portfolioModalDiario" class="col-xs-11 detailDiario detail-titles" data-toggle="modal">
                 <p class="detail-title">Diario de un videojuego</p>
                 <p class="detail-subtitle">Sitio web, CEO y redactor principal.</p>
                 <p class="detail-info">Desarrollado con HTML5, CSS3, JS y Wordpress.</p>
               </a>
               <div class="col-xs-1 detail-icons">
                 <a href="https://www.diariodeunvideojuego.es" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-world"></i>
+                  <i class="fa fa-2x fa-globe"></i>
                 </a>
               </div>
             </div>
@@ -264,15 +283,13 @@
               <img src="img/portfolio/potato.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalPotato" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">GearDev</p>
                 <p class="detail-subtitle">Site web experimental con creador de personajes.</p>
                 <p class="detail-info">Desarrollado con HTML, CSS2, JS + jQuery y PHP.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-behance-square"></i>
-                </a>
+
               </div>
             </div>
           </div>
@@ -298,15 +315,13 @@
               <img src="img/portfolio/emprendizaje.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalEmprendizaje" class="col-xs-11 detailEmprendizaje detail-titles">
+              <a href="#portfolioModalEmprendizaje" class="col-xs-11 detailEmprendizaje detail-titles" data-toggle="modal">
                 <p class="detail-title">Hacia el emprendizaje</p>
                 <p class="detail-subtitle">Branding, portada, contraportada e interiores.</p>
                 <p class="detail-info">Diseño con Adobe Photoshop, Illustrator e InDesign.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-behance-square"></i>
-                </a>
+
               </div>
             </div>
           </div>
@@ -321,16 +336,13 @@
               <img src="img/portfolio/elmercante.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="projects/mercante.html" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Gran Café El Mercante</p>
                 <p class="detail-subtitle">Branding, cartelería y diseño gráfico para restaurante.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-behance-square"></i>
-                </a>
-                <a href="http://diariodeunvideojuego.es" class="detailIcon" target="_blank">
+                <a href="http://cafemercante.es" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-globe"></i>
                 </a>
               </div>
@@ -347,15 +359,13 @@
               <img src="img/portfolio/cheesekito.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalEmprendizaje" class="col-xs-11 detailEmprendizaje detail-titles">
+              <a href="#portfolioModalCheesekito" class="col-xs-11 detailEmprendizaje detail-titles" data-toggle="modal">
                 <p class="detail-title">Cheesekito</p>
                 <p class="detail-subtitle">Diseño de menú de restaurante.</p>
                 <p class="detail-info">Diseño con Adobe Photoshop, Illustrator e InDesign.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-behance-square"></i>
-                </a>
+
               </div>
             </div>
           </div>
@@ -381,13 +391,13 @@
               <img src="img/portfolio/llaveacceso.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalLlave" class="col-xs-11 detailLlave detail-titles">
+              <a href="#portfolioModalLlave" class="col-xs-11 detailLlave detail-titles" data-toggle="modal">
                 <p class="detail-title">OpenLock</p>
                 <p class="detail-subtitle">Viñetas informativas sobre app para flyers.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28591845/Una-llave-muchos-accesos" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -404,13 +414,13 @@
               <img src="img/portfolio/retrato.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalRetratos" class="col-xs-11 detailRetratos detail-titles">
+              <a href="#portfolioModalRetratos" class="col-xs-11 detailRetratos detail-titles" data-toggle="modal">
                 <p class="detail-title">Retratos Vector</p>
                 <p class="detail-subtitle">Ilustraciones vectoriales de pseudo-retratos.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28571001/Your-face-my-vector" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -427,13 +437,13 @@
               <img src="img/portfolio/vudu.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalVudu" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalVudu" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Vudú Watercolor</p>
                 <p class="detail-subtitle">Concept-Art experimental de color y pinceles.</p>
                 <p class="detail-info">Diseñado con PaintTool SAI.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28591263/Color-Budu" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -450,13 +460,13 @@
               <img src="img/portfolio/spray.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalSpray" class="col-xs-11 detailSpray detail-titles">
+              <a href="#portfolioModalSpray" class="col-xs-11 detailSpray detail-titles" data-toggle="modal">
                 <p class="detail-title">Spray Boy</p>
                 <p class="detail-subtitle">Character Design experimental.</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28590721/Spray-Boy" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -473,13 +483,13 @@
               <img src="img/portfolio/cebralin.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalCebralin" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalCebralin" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Cebralin</p>
                 <p class="detail-subtitle">Storyboard para anuncio corporativo.</p>
                 <p class="detail-info">Diseñado con Adobe Photoshop.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28591667/Cebralin-Storyboard" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -496,13 +506,13 @@
               <img src="img/portfolio/caracoles.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
               <div class="col-sm-12 row detail-root">
-                <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+                <a href="#portfolioModalCaracoles" class="col-xs-11 detail-titles" data-toggle="modal">
                   <p class="detail-title">Caracoles</p>
                   <p class="detail-subtitle">Artwork onírico.</p>
                   <p class="detail-info">Diseñado con Adobe Photoshop.</p>
                 </a>
                 <div class="col-xs-1 detail-icons">
-                  <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                  <a href="https://www.behance.net/wip/1301293" class="detailIcon" target="_blank">
                     <i class="fa fa-2x fa-behance-square"></i>
                   </a>
                 </div>
@@ -519,13 +529,13 @@
               <img src="img/portfolio/battery.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalBattery" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalBattery" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Low Battery</p>
                 <p class="detail-subtitle">Character Design.</p>
                 <p class="detail-info">Diseñado con Adobe Photoshop.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28590227/Low-Battery" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -542,15 +552,36 @@
               <img src="img/portfolio/seat.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalSeat" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Seat Marbella</p>
                 <p class="detail-subtitle">Muestreo de diseños para Seat Marbella (Panda RAID).</p>
                 <p class="detail-info">Diseñado con Adobe Illustrator.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28590505/Seat-Marbella" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
+              </div>
+            </div>
+          </div>
+          <!-- 13.- MÁS -->
+          <div class="col-sm-4 portfolio-item">
+            <a href="https://www.behance.net/zenekezene" class="portfolio-link" target="_blank">
+              <div class="caption">
+                <div class="caption-content">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="img/portfolio/artemas.jpg" class="img-responsive" alt="" width="900" height="600">
+            </a>
+            <div class="col-sm-12 row detail-root">
+              <a href="https://www.behance.net/zenekezene" class="col-xs-11 detail-titles" target="_blank">
+                <p class="detail-title">Más trabajos</p>
+                <p class="detail-subtitle">Para ver el resto de mis trabajos de arte</p>
+                <p class="detail-info">visita mi perfil en Behance</p>
+              </a>
+              <div class="col-xs-1 detail-icons">
+
               </div>
             </div>
           </div>
@@ -584,13 +615,13 @@
               <img src="img/portfolio/soldados.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalSoldados" class="col-xs-11 detailSoldados detail-titles">
+              <a href="#portfolioModalSoldados" class="col-xs-11 detailSoldados detail-titles" data-toggle="modal">
                 <p class="detail-title">Portugalete 2015</p>
                 <p class="detail-subtitle">Diseño de ilustración para camisetas.</p>
                 <p class="detail-info">Desarrollado con Adobe Photoshop.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28592359/Portugalete-2015" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -607,13 +638,13 @@
               <img src="img/portfolio/festival.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModalMalaga" class="col-xs-11 detailMalaga detail-titles">
+              <a href="#portfolioModalMalaga" class="col-xs-11 detailMalaga detail-titles" data-toggle="modal">
                 <p class="detail-title">Málaga 2015</p>
                 <p class="detail-subtitle">Diseño de ilustración para camisetas.</p>
                 <p class="detail-info">Diseñado con Adobe Photoshop.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
+                <a href="https://www.behance.net/gallery/28592117/Malaga-2015" class="detailIcon" target="_blank">
                   <i class="fa fa-2x fa-behance-square"></i>
                 </a>
               </div>
@@ -631,15 +662,13 @@
               <img src="img/portfolio/centro.jpg" class="img-responsive" alt="" width="900" height="600">
             </a>
             <div class="col-sm-12 row detail-root">
-              <a href="#portfolioModal1" class="col-xs-11 detail-titles">
+              <a href="#portfolioModalCentro" class="col-xs-11 detail-titles" data-toggle="modal">
                 <p class="detail-title">Centro San Luis</p>
                 <p class="detail-subtitle">Aplicación de escritorio para gestión de recursos del Centro San Luis (Bilbao).</p>
                 <p class="detail-info">Desarrollado con Java 1.7, Swing, MYSQL.</p>
               </a>
               <div class="col-xs-1 detail-icons">
-                <a href="https://github.com/ZenekeZene/El-Especialista" class="detailIcon" target="_blank">
-                  <i class="fa fa-2x fa-behance-square"></i>
-                </a>
+
               </div>
             </div>
           </div>
@@ -750,7 +779,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2>Skills</h2>
-            <i class="icon-section fa fa-2x fa-rocket"></i>
+            <i class="icon-section fa fa-2x fa-area-chart"></i>
             <hr>
           </div>
         </div>
@@ -1086,9 +1115,9 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong>Freelance</strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Agosto 2013</strong>
                                 </li>
-                                <li>Servicio:<strong>Web Development</strong>
+                                <li>Servicio:<strong>Storyboard</strong>
                                 </li>
                             </ul>
                             <img src="img/portfolio/cebralin.jpg" class="img-responsive img-centered" alt="" width="900" height="600">
@@ -1119,7 +1148,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong>Freelance</strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Abril 2015</strong>
                                 </li>
                                 <li>Servicio:<strong>Ilustración experimental</strong>
                                 </li>
@@ -1152,7 +1181,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong>Freelance</strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Enero 2011</strong>
                                 </li>
                                 <li>Servicio:<strong>Diseño experimental</strong>
                                 </li>
@@ -1185,7 +1214,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong><a href="http://startbootstrap.com">Freelance</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Octubre 2012</strong>
                                 </li>
                                 <li>Servicio:<strong>Sketch experimental</strong>
                                 </li>
@@ -1220,7 +1249,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong><a href="http://www.matrix.es">Matrix</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Febrero 2015</strong>
                                 </li>
                                 <li>Servicio:<strong>Diseño gráfico, Character Design</strong>
                                 </li>
@@ -1257,7 +1286,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong><a href="http://https://www.behance.net/gallery/28571001/Your-face-my-vector">Freelance, a comisión</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Mayo 2013</strong>
                                 </li>
                                 <li>Servicio:<strong>Ilustración vectorial</strong>
                                 </li>
@@ -1292,9 +1321,9 @@
                             <hr class="star-primary">
                             <p>Ilustración experimental elaborado con Adobe Photoshop. Experimento para probar nuevo estilo. composición y colorimetría.</p>
                             <ul class="list-inline item-details">
-                                <li>Cliente:<strong>Freelance</strong>
+                                <li>Behance:<strong><a href="https://www.behance.net/wip/1301293" target="_blank">Freelance</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Noviembre 2014</strong>
                                 </li>
                                 <li>Servicio:<strong>Web Developm2ent</strong>
                                 </li>
@@ -1328,7 +1357,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong>Freelance a comisión</strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Septiembre 2014</strong>
                                 </li>
                                 <li>Servicio:<strong>Diseño gráfico</strong>
                                 </li>
@@ -1367,7 +1396,7 @@
                             <ul class="list-inline item-details">
                                 <li>Cliente:<strong><a href="http://www.diariodeunvideojuego.es">www.diariodeunvideojuego.es</a></strong>
                                 </li>
-                                <li>Fecha:<strong>Mayo 2015</strong>
+                                <li>Fecha:<strong>Marzo 2015</strong>
                                 </li>
                                 <li>Servicio:<strong>Desarrollo web, redacción de contenidos</strong>
                                 </li>
@@ -1402,9 +1431,9 @@
                             <p>Web experimental desarrollado desde 0 con estándares (HTML,CSS3 y Javascript). El apartado videojuegos contiene un sistema
                             propio que con ayuda de jQuery facilita la creación personajes mediante el arrastre de piezas.</p>
                             <ul class="list-inline item-details">
-                                <li>Cliente:<strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                <li>Cliente:<strong>Formación</strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Mayo 2012</strong>
                                 </li>
                                 <li>Servicio:<strong>Web | Game Development</strong>
                                 </li>
@@ -1436,9 +1465,9 @@
                             <hr class="star-primary">
                             <p>Diseño de camiseta e ilustración para una asociación de Portugalete. Elaborado con Adobe Photoshop.</p>
                             <ul class="list-inline item-details">
-                                <li>Cliente:<strong><a href="http://startbootstrap.com">Asociación de Portugalete</a></strong>
+                                <li>Behance:<strong><a href="https://www.behance.net/gallery/28592359/Portugalete-2015">Asociación de Portugalete</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Julio 2015</strong>
                                 </li>
                                 <li>Servicio:<strong>Diseño de camisetas</strong>
                                 </li>
@@ -1481,7 +1510,7 @@
                                 <li>Behance:
                                     <strong><a href="https://www.behance.net/gallery/28592117/Malaga-2015">Málaga 2015</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Junio 2015</strong>
                                 </li>
                                 <li>Servicio:<strong>Diseño de camiseta</strong>
                                 </li>
@@ -1517,7 +1546,7 @@
                                 <li>Cliente:
                                     <strong><a href="http://www.bubok.es/libros/228056/Hacia-el-Emprendizaje-version-acortada">Hacia el emprendizaje</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</strong>
+                                <li>Fecha:<strong>Octubre 2013</strong>
                                 </li>
                                 <li>Servicio: <strong>Diseño de portada, contraportada e interiores</strong>
                                 </li>
@@ -1553,7 +1582,7 @@
                                 <li>Cliente:
                                     <strong><a href="http://www.cheesekito.com">Cheesekito</a></strong>
                                 </li>
-                                <li>Fecha:<strong>April 2014</a></strong>
+                                <li>Fecha:<strong>Febrero 2014</a></strong>
                                 </li>
                                 <li>Servicio:
                                   <strong>Diseño gráfico a medida.</strong>
@@ -1594,11 +1623,11 @@
                             </p>
                             <ul class="list-inline item-details">
                                 <li>Cliente:
-                                    <strong><a href="http://startbootstrap.com">University of Wales</a>
+                                    <strong><a href="http://www.centrosanluis.com">University of Wales</a>
                                     </strong>
                                 </li>
                                 <li>Fecha:
-                                    <strong>Abril 2013</strong>
+                                    <strong>Mayo 2014</strong>
                                 </li>
                                 <li>Servicio:
                                     <strong>Desarrollo de aplicación de gestión</strong>
@@ -1640,9 +1669,9 @@
                             </p>
                             <ul class="list-inline item-details">
                                 <li>Cliente:
-                                    <strong><a href="http://startbootstrap.com">Seotec Agencia Digital</a></strong>
+                                    <strong><a href="#">Seotec Agencia Digital</a></strong>
                                 </li>
-                                <li>Fecha:<strong>Abril 2014</strong>
+                                <li>Fecha:<strong>Diciembre 2012</strong>
                                 </li>
                                 <li>Github:
                                     <strong><a href="https://github.com/ZenekeZene/Insects-Invasion">Insect-Invasion</a></strong>
