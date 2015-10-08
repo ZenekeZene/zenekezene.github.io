@@ -992,6 +992,7 @@
             <hr class="star-primary">
           </div>
         </div>
+
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
@@ -1012,7 +1013,7 @@
                 </div>
               </div>
               <div class="row control-group">
-                <div class="form-group col-xs-12 floating-label-form-group controls">
+                <div class="form-group col-md-6 col-sm-6 col-xs-12 floating-label-form-group controls">
                   <label>Mensaje</label>
                   <textarea rows="5" class="form-control" name="body" placeholder="Mensaje" id="message" required data-validation-required-message="Por favor, introduzca un mensaje."></textarea>
                   <p class="help-block text-danger"></p>
@@ -1021,10 +1022,13 @@
               <br>
               <div id="success"></div>
               <div class="row">
-                <div class="form-group col-xs-12">
+                <div class="form-group col-md-8 col-xs-12">
                   <button type="submit" class="btn btn-success btn-lg">Enviar</button>
                 </div>
-                <p>Si lo prefiere, también puede contactarme a través de mi email personal, <a href="mailto:hectorvillarm@gmail.com">hectorvillarm@gmail.com</a></p>
+                <div class="col-sm-12 col-xs-12">
+                  <p class="col-sm-6 col-xs-12">Si lo prefiere, también puede contactarme a través de mi email personal, <a href="mailto:hectorvillarm@gmail.com">hectorvillarm@gmail.com</a></p>
+                  <img id="chiste-contacto" class="col-sm-6 hidden-xs" src="img/contacto.png">
+                </div>
               </div>
             </form>
           </div>

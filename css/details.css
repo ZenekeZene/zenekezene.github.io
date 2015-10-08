@@ -1,3 +1,28 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #chiste-contacto {
+    top: -250%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #chiste-contacto {
+      top: -593%;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #chiste-contacto {
+      top: -250%;
+  }
+}
+
+#chiste-contacto {
+  position:absolute;
+}
+
 .lista-social {
   position: relative;
   top: 36px;
