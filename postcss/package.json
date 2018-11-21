@@ -39,8 +39,5 @@
     "mustache": "^2.3.0",
     "socket.io": "^1.7.3"
   },
-  "license": "MIT",
-  "dependencies": {
-    "node-static": "^0.7.11"
-  }
+  "license": "MIT"
 }
