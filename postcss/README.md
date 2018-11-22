@@ -73,6 +73,10 @@ Ruby Sass:      1042 ms (26.0 times slower)
 
 
 ### Es SASS friendly
+### CSS regular
+Note: No requiere de sintaxis propias como pasa con troos preprocesadores.
+No se bloquea el proyecto con una sintaxix concreta ni hay que traducir el proyecto en lenguajes diferentes.
+Volvemos a la raices y a la especificacion.
 
 
 ### Es modular, ligero
@@ -86,8 +90,19 @@ Usa lo que necesites
 Note: las librerias de CSS no estan atadas a un unico procesador. También estamos empezando a ver completas librerias construidas con PostCSS, que en el pasado podrían haberse escrito con Stylus, Sass o Less.
 
 Por ejemplo, Cory Simmons originalmente mantenía dos versiones (Sass y Stylus) de su Lost grid system para que los usuarios de ambos sistemas puedan aprovecharlo. Posteriormente ha migrado su proyecto a PostCSS, lo que significa que cualquier puede usar Lost, incluyendo los usuarios de SASS y Stylus, pero también los de Less, incluso personas que no trabajan con ningún preprocesador.
-- Sintaxis del futuro (no exactamente)
-- Plugins (y propios)
+
+
+### Sintaxis del futuro
+Note: Permite usar sintaxis que esta en la especificacion del W3C pero todavia no hay soporte en los navegadores. Nos permite preparar nuestros trabajos para el futuro. Ej: Custom media queries, custom properties & var(), funciones de color(), REM con fallback, etc.
+
+
+### Gran comunidad
++ de 300 plugins
+
+[Comunidad plugins](https://www.postcss.parts)
+
+
+### DIY
 
 
 
@@ -95,12 +110,12 @@ Por ejemplo, Cory Simmons originalmente mantenía dos versiones (Sass y Stylus) 
 
 
 ### Su potencial es peligroso
-Note: Por ejemplo, con el plugin postcss-definde-property, podemos crear customs properties,
-los cuales pueden ser confusos cuando heredan nuestro código. SASS es cambio, añade azúcar sintáctico con su @include.
-SASS es conservador, monolítico, pero ahi esta su fuerte. Su arquitectura esta pensada para NO SER CSS, no pretende serlo, y establece un lenguaje común para todos los devs, con sintaxis clara. PostCSS no, es CSS-like, puedes hacer casi cualquier cosa (y que se parezca mucho a CSS), y eso a veces es peligroso. P.e: Distinguir entre CSS Standar y lo que no a veces es muy jodido.
 
 
 <div class="tweet" data-src="https://twitter.com/chriseppstein/status/618515591582724096"></div>
+Note: Por ejemplo, con el plugin postcss-definde-property, podemos crear customs properties,
+los cuales pueden ser confusos cuando heredan nuestro código. SASS es cambio, añade azúcar sintáctico con su @include.
+SASS es conservador, monolítico, pero ahi esta su fuerte. Su arquitectura esta pensada para NO SER CSS, no pretende serlo, y establece un lenguaje común para todos los devs, con sintaxis clara. PostCSS no, es CSS-like, puedes hacer casi cualquier cosa (y que se parezca mucho a CSS), y eso a veces es peligroso. P.e: Distinguir entre CSS Standar y lo que no a veces es muy jodido.
 
 
 ### La modularidad
@@ -113,6 +128,13 @@ overbloatear tu sistema. Algunos plugins pueden ser de calidad y otros no, otros
 ## Qué hace
 
 
+### NADA
+
+(por si solo)
+
+
+### CON PLUGINS
+
 Todo lo que ya hace SASS
 
 Mixins, variables, nesting, extends, partials...
@@ -120,23 +142,62 @@ Mixins, variables, nesting, extends, partials...
 +
 
 
+#### Optimizar y añadir prefijos al código
 ![Autoprefixer](https://postcss.org/_/web_modules/InANutshell/autoprefixer.svg)
 ![Autoprefixer demo](http://zenekezene.github.io/Publish/speech_capturas/autoprefixer.png)
+Note: El plugin por excelencia. Permite usar cross browser automatizado dando soporte de prefijos vendor. Se actualiza con el Can I use?.
 
 
+#### Añade fallbacks
 ![env-preset](https://postcss.org/_/web_modules/InANutshell/cssdb.svg)
 ![env-preset demo](http://zenekezene.github.io/Publish/speech_capturas/preset-env.png)
 
-
-![CSS modules](https://postcss.org/_/web_modules/InANutshell/css-modules.svg)
-![css-modules demo](http://zenekezene.github.io/Publish/speech_capturas/css-modules.png)
+Note: p.e, con custom properties
 
 
+#### PreCSS
+
+Note: Las funcionalidades de un prepro como SASS (nested, mixins, funciones, variables prepros, etc).
+
+
+#### Supervisa el código
 ![stylelint](https://postcss.org/_/web_modules/InANutshell/stylelint.svg)
 ![stylelint demo](http://zenekezene.github.io/Publish/speech_capturas/stylelint.png)
 
 
+#### Inventarte tus propiedades CSS
+[postcss-define-property](https://github.com/daleeidd/postcss-define-property)
+```css
+size: $size {
+    height: $size;
+    width: $size;
+}
+
+.box {
+    size: 50px;
+}
+```
+
+
+#### Sintaxis del futuro
 ![CSS Next](https://keithjgrant.com/talks/css-from-the-future/images/cssnext.png)
+![Preset Env](https://github.com/csstools/postcss-preset-env)
+
+```css
+@custom-media --small-viewport (max-width: 30em);
+/* check out media queries ranges for a better syntax !*/
+
+@media (--small-viewport) {
+  /* styles for small viewport */
+}
+```
+
+
+####
+![CSS modules](https://postcss.org/_/web_modules/InANutshell/css-modules.svg)
+![css-modules demo](http://zenekezene.github.io/Publish/speech_capturas/css-modules.png)
+Note: Permite trabajar el CSS con un scope local y hacer que el CSS no se pise de componente a componente. Orientado a Angular, React, Vue.
+
 
 - [Normalizar](https://github.com/csstools/postcss-normalize)
 - [Parciales](https://github.com/jonathantneal/postcss-partial-import)
@@ -183,21 +244,32 @@ gulp
 
 
 
+## Tu propio plugin
+
+
+
+
 ## El presente
 
 
 ![](https://cdn.evilmartians.com/front/posts/five-years-of-postcss-state-of-the-union/postcss_downloads-a4e7df2.png)
-Note: Nació hace 5 años como una herramienta para crear más herramientas CSS. Hoy en día según [npm trends](https://www.npmtrends.com/postcss-vs-webpack-vs-babel-core-vs-node-sass-vs-less) es uno de los frameworks Frontend más populares, con casi 14.000.000 de descargas en el último mes.
+Note: Nació hace 5 años como una herramienta para crear más herramientas CSS. Hoy en día según [npm trends](https://www.npmtrends.com/postcss-vs-webpack-vs-babel-core-vs-node-sass-vs-less) es uno de los frameworks Frontend más populares, con casi 14.000.000 de descargas en el último año. Es usado por Google, Shopify, Twitter, Bootstrap, Wordpress, Alibaba, Codepen, JustEAT...
 
 
 
 ## Links
 [PostCSS](https://postcss.org)
+
 [Comunidad plugins](https://www.postcss.parts)
+
 [Deconfusing Pre- and Post-processing](https://medium.com/@ddprrt/deconfusing-pre-and-post-processing-d68e3bd078a3)
+
 [5 años de PostCSS](https://evilmartians.com/chronicles/five-years-of-postcss-state-of-the-union?ref=webdesignernews.com)
+
 [Alternativas a PostCSS](https://www.slant.co/options/767/alternatives/~postcss-alternatives)
+
 [CSS inmutable](https://github.com/johno/immutable-css)
+
 [JustEAT review PostCSS](https://ashleynolan.co.uk/blog/postcss-a-review)
 
 
