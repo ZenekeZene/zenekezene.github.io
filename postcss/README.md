@@ -245,10 +245,32 @@ gulp
 
 
 ## Tu propio plugin
+
+
+```javascript
+var postcss = require('postcss');
+
+module.exports = postcss.plugin('postcss-testing-plugin', function (opts) {
+    opts = opts || {};
+
+    // Work with options here
+
+    return function (root, result) {
+        // Transform CSS AST here
+        root.walkComments(comment => {
+            // ...
+        });
+    };
+});
+
+```
+
+
 [PostCSS plugin Boilerplate](https://github.com/postcss/postcss-plugin-boilerplate)
 
 [API plugin postCSS](http://api.postcss.org/)
 
+[Tutorial plugin postCSS](https://github.com/postcss/postcss/blob/master/docs/writing-a-plugin.md)
 
 
 ## El presente
@@ -277,6 +299,8 @@ Note: Nació hace 5 años como una herramienta para crear más herramientas CSS.
 [PostCSS plugin Boilerplate](https://github.com/postcss/postcss-plugin-boilerplate)
 
 [API plugin postCSS](http://api.postcss.org/)
+
+[Tutorial plugin postCSS](https://github.com/postcss/postcss/blob/master/docs/writing-a-plugin.md)
 
 
 
