@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	padding: 0;
+
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.app {
+	max-width: 22rem;
+	margin: auto;
+	height: 44rem;
+	background-color: #121212;
+	overflow: hidden;
+}
