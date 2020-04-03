@@ -43,7 +43,7 @@ export default {
   list-style: none;
 
   li {
-    height: 3.5rem;
+    height: 3rem;
     overflow: hidden;
     flex-grow: 1;
     font-size: 0.7rem;
@@ -56,7 +56,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    padding: 0.7rem 1rem 0.7rem 1rem;
+    padding: 1.7rem 1rem 0.7rem 1rem;
     color: rgba(255, 255, 255, 0.64);
     text-decoration: none;
   }
@@ -65,6 +65,7 @@ export default {
     font-size: 1rem;
 
     a {
+      padding-top: 0.5rem;
       color: white;
     }
 

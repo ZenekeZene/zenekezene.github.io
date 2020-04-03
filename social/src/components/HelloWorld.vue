@@ -2,7 +2,7 @@
   <div class="hello">
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
-    <img class="image" src="https://pbs.twimg.com/media/Dt37R41UUAEER2t.jpg">
+    <img class="image" src="avatar2.jpg">
   </div>
 </template>
 
@@ -43,16 +43,24 @@ a {
   overflow: hidden;
   margin: 0 0.7rem;
   padding: 0.5rem;
-  background: blue;
   border-radius: 1rem 1rem 0 0;
+  filter: grayscale(100%);
+  transition: all 250ms ease-in;
+
+  &:hover {
+    filter: grayscale(0);
+  }
 
   &:before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2rem;
-    background-color: black;
+    z-index: 1;
+    width: 100%;
+    height: 5.5rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
+    display: block;
   }
 }
 
@@ -75,6 +83,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
+  height: 100%;
 }
 </style>

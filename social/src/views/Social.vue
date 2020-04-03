@@ -31,6 +31,7 @@ export default {
 	.social {
 		margin: 0;
 		text-align: left;
+		list-style: none;
 
 		li {
 			padding: 1rem;

@@ -54,9 +54,11 @@ export default {
 
   &__main {
     height: 100%;
+    overflow-y: auto;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     background-color: white;
     border-radius: 0 0 1rem 1rem;
+    text-align: left;
   }
 }
 </style>
