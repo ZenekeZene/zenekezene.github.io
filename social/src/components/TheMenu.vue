@@ -1,13 +1,33 @@
 <template>
-    <ol class="menu">
-        <li>About me</li>
-        <li>Social</li>
-        <li>Portfolio</li>
-    </ol>
+  <ol class="menu">
+    <li v-for="section in sections" :key="`section-${section.name}`"
+    :class="{ 'active': $route.name === section.name }"
+    >
+      <router-link :to="section.name">{{ section.text }}</router-link>
+    </li>
+  </ol>
 </template>
 <script>
 export default {
-    name: 'TheMenu'
+  name: 'TheMenu',
+  data() {
+    return {
+      sections: [
+        {
+          name: 'About',
+          text: 'About me'
+        },
+        {
+          name: 'Social',
+          text: 'Social'
+        },
+        {
+          name: 'Portfolio',
+          text: 'Portfolio'
+        },
+      ]
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -23,9 +43,40 @@ export default {
   list-style: none;
 
   li {
+    height: 3.5rem;
+    overflow: hidden;
     flex-grow: 1;
-    padding: 1rem;
     font-size: 0.7rem;
+    transition: all 250ms ease-in;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    color: rgba(255, 255, 255, 0.64);
+    text-decoration: none;
+  }
+
+  .active {
+    font-size: 1rem;
+
+    a {
+      color: white;
+    }
+
+    a:after {
+      $size: 3px;
+      content: '';
+      display: inline-block;
+      width: $size;
+      height: $size;
+      background-color: white;
+      border-radius: 50%;
+    }
   }
 }
 </style>

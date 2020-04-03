@@ -38,7 +38,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 19rem;
+  min-height: 19rem;
+  flex-basis: 19rem;
   overflow: hidden;
   margin: 0 0.7rem;
   padding: 0.5rem;
@@ -66,6 +67,7 @@ a {
 }
 
 .role {
+  margin-bottom: 0.5rem;
   font-size: 0.7rem;
 }
 

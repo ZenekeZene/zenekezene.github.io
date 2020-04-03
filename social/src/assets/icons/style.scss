@@ -1,0 +1,115 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?32m88u');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?32m88u#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?32m88u') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?32m88u') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?32m88u##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-port-"], [class*=" icon-port-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-port-arrow-left {
+  &:before {
+    content: $icon-port-arrow-left; 
+  }
+}
+.icon-port-send {
+  &:before {
+    content: $icon-port-send; 
+  }
+}
+.icon-port-mail {
+  &:before {
+    content: $icon-port-mail; 
+  }
+}
+.icon-port-heart-outlined {
+  &:before {
+    content: $icon-port-heart-outlined; 
+  }
+}
+.icon-port-heart {
+  &:before {
+    content: $icon-port-heart; 
+  }
+}
+.icon-port-signal {
+  &:before {
+    content: $icon-port-signal; 
+  }
+}
+.icon-port-wifi {
+  &:before {
+    content: $icon-port-wifi; 
+  }
+}
+.icon-port-battery-1 {
+  &:before {
+    content: $icon-port-battery-1; 
+  }
+}
+.icon-port-battery-2 {
+  &:before {
+    content: $icon-port-battery-2; 
+  }
+}
+.icon-port-battery-3 {
+  &:before {
+    content: $icon-port-battery-3; 
+  }
+}
+.icon-port-battery-0 {
+  &:before {
+    content: $icon-port-battery-0; 
+  }
+}
+.icon-port-battery {
+  &:before {
+    content: $icon-port-battery; 
+  }
+}
+.icon-port-earth {
+  &:before {
+    content: $icon-port-earth; 
+  }
+}
+.icon-port-instagram {
+  &:before {
+    content: $icon-port-instagram; 
+  }
+}
+.icon-port-twitter {
+  &:before {
+    content: $icon-port-twitter; 
+  }
+}
+.icon-port-github {
+  &:before {
+    content: $icon-port-github; 
+  }
+}
+.icon-port-linkedin {
+  &:before {
+    content: $icon-port-linkedin; 
+  }
+}
+

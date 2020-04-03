@@ -11,9 +11,8 @@
 	}
 }
 
-html,
 body {
-	height: 100%;
+	background-color: #212121;
 }
 
 .app {
@@ -22,4 +21,8 @@ body {
 	height: 44rem;
 	background-color: #121212;
 	overflow: hidden;
+	box-shadow: 0 0 5rem black;
 }
+
+$icomoon-font-path: "icons/fonts" !default;
+@import './icons/style.scss';

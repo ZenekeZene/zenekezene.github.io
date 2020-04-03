@@ -1,0 +1,49 @@
+<template>
+	<ul class="portfolio">
+		<li>
+			<img src="https://instagram.fbio2-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/82414017_1586345854839301_252668707078321734_n.jpg?_nc_ht=instagram.fbio2-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=-XzwkpYvYFAAX_GaQbh&oh=e167982ec997042d2f29db062d875031&oe=5EB19CBC">
+		</li>
+		<li>
+			<img src="https://instagram.fbio2-2.fna.fbcdn.net/v/t51.2885-15/e35/50246537_119251855830841_5415370244134001188_n.jpg?_nc_ht=instagram.fbio2-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=KIxsOU4pFngAX8QZLtY&oh=c5c495f96d0b9ee42129e294b285df3d&oe=5EAF6649">
+		</li>
+		<li>
+			<img src="https://instagram.fbio2-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/68865920_674675336379478_3321306553085518456_n.jpg?_nc_ht=instagram.fbio2-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=0-sAUPF4rhwAX_hbRjo&oh=a8eb4e2ed9070253aa9e875e61172408&oe=5EAFE123">
+		</li>
+		<li>
+			<img src="https://instagram.fbio2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.133.1063.1063a/s640x640/79038099_153520295914233_8335738709108248233_n.jpg?_nc_ht=instagram.fbio2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=Apwc40p28AwAX-5U06B&oh=6ae91e6382404fa2d3e1016b7493a38d&oe=5EB1739F">
+		</li>
+	</ul>
+</template>
+<script>
+export default {
+	name: 'Portfolio'
+}
+</script>
+<style lang="scss">
+	.portfolio {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-column-gap: 0.5rem;
+		grid-row-gap: 0.5rem;
+		height: 100%;
+		margin: 0;
+		list-style: none;
+
+		li {
+			overflow: hidden;
+
+			&:nth-child(3) {
+				border-bottom-left-radius: 0.7rem;
+			}
+
+			&:nth-child(4) {
+				border-bottom-right-radius: 0.7rem;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+</style>

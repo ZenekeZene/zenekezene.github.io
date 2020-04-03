@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app">
+    <TheHeader />
     <HelloWorld
       author="Héctor Villar"
       role="Software Engineer"
@@ -15,12 +16,14 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue'
 import TheMenu from './components/TheMenu.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    TheHeader,
     TheMenu
   }
 }
@@ -39,15 +42,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  &:before {
-    content: '';
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 2rem;
-    background-color: black;
-  }
 }
 
 .content {
@@ -60,7 +54,7 @@ export default {
 
   &__main {
     height: 100%;
-    padding: 2rem 0.7rem 0.7rem 0.7rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
     background-color: white;
     border-radius: 0 0 1rem 1rem;
   }
