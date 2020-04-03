@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/social'
+  baseUrl: '/social/'
 }
