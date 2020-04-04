@@ -1,17 +1,26 @@
 <template>
-  <div class="hello">
+  <div class="hello" :class="{ '--mini': isMini }">
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
-    <img class="image" src="avatar2.jpg">
+    <img class="image" src="/avatar2.jpg">
+    <span v-if="isMini" @click="toggleIsMini" class="close icon-port-cross"></span>
   </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   name: 'HelloWorld',
   props: {
     author: String,
-    role: String
+    role: String,
+  },
+  computed: {
+    ...mapState(['isMini']),
+  },
+  methods: {
+    ...mapMutations(['toggleIsMini'])
   }
 }
 </script>
@@ -45,7 +54,7 @@ a {
   padding: 0.5rem;
   border-radius: 1rem 1rem 0 0;
   filter: grayscale(100%);
-  transition: all 250ms ease-in;
+  transition: all 100ms ease-in;
 
   &:hover {
     filter: grayscale(0);
@@ -61,6 +70,17 @@ a {
     height: 5.5rem;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
     display: block;
+  }
+
+  &.--mini{
+    min-height: 1rem;
+    height: 2rem;
+    flex-basis: 5rem;
+
+    .image {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -85,5 +105,15 @@ a {
   left: 0;
   width: auto;
   height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 </style>

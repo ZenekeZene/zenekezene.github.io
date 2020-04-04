@@ -14,15 +14,15 @@ export default {
     return {
       sections: [
         {
-          name: 'About',
+          name: 'about',
           text: 'About me'
         },
         {
-          name: 'Social',
+          name: 'networks',
           text: 'Social'
         },
         {
-          name: 'Portfolio',
+          name: 'portfolio',
           text: 'Portfolio'
         },
       ]

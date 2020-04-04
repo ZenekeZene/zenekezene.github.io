@@ -1,3 +1,7 @@
+:root {
+	--vh: 0px;
+}
+
 * {
 	box-sizing: border-box;
 	margin-top: 0;
@@ -12,16 +16,56 @@
 }
 
 body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(var(--vh, 1vh) * 100);
+	margin: 0;
 	background-color: #212121;
 }
 
 .app {
-	max-width: 22rem;
-	margin: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 22rem;
 	height: 44rem;
-	background-color: #121212;
 	overflow: hidden;
+	margin-top: 1rem;
+	margin: auto;
+	text-align: center;
+	color: #2c3e50;
+	background-color: black;
+	border-radius: 2rem;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	box-shadow: 0 0 5rem black;
+
+	@media (max-width: 414px) {
+		max-width: unset;
+		width: 100%;
+    	height: 100%;
+		border-radius: 0;
+	}
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  padding: 0 0.7rem 1rem 0.7rem;
+  background-color: black;
+  overflow: hidden;
+
+  &__main {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    background-color: white;
+    border-radius: 0 0 1rem 1rem;
+    text-align: left;
+  }
 }
 
 $icomoon-font-path: "icons/fonts" !default;

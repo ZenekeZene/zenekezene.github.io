@@ -27,11 +27,23 @@
 				fugit dicta cumque, assumenda reiciendis ea maxime!
 			</p>
 		</li>
+		<li class="read-more" @click="handMini">{{ isMini ? 'Read more': 'Read less' }}</li>
 	</ol>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
-	name: 'About'
+	name: 'About',
+	computed: {
+		...mapState(['isMini']),
+	},
+	methods: {
+		...mapMutations(['toggleIsMini']),
+		handMini() {
+			this.toggleIsMini()
+		}
+	}
 }
 </script>
 <style lang="scss">
@@ -40,10 +52,6 @@ export default {
 
 		li {
 			position: relative;
-
-			&:last-child:before {
-				display: none;
-			}
 
 			&:before {
 				content: '';
@@ -79,7 +87,7 @@ export default {
 
 		h4 {
 			display: flex;
-			padding-left: 1.5rem;
+			padding-left: 1.65rem;
 			font-size: 0.8rem;
 
 			span {
@@ -93,6 +101,17 @@ export default {
 			& + p {
 				padding-left: 1.7rem;
 				font-size: 0.8rem;
+			}
+		}
+
+		.read-more {
+			padding: 1rem;
+			text-align: center;
+			text-decoration: underline;
+			font-weight: 700;
+
+			&:before {
+				display: none;
 			}
 		}
 	}
