@@ -52,7 +52,7 @@ export default {
 		}
 
 		&.--mini {
-			grid-template-rows: 10rem;
+			grid-template-rows: 9rem;
 
 			li {
 				border-radius: 0;
