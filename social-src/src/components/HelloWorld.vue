@@ -2,7 +2,7 @@
   <div class="hello" :class="{ '--mini': isMini }">
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
-    <img class="image" src="/avatar2.jpg">
+    <img class="image" src="/social/avatar2.jpg">
     <span @click="toggleIsMini" class="close" :class="isMini ? 'icon-port-maximize' : 'icon-port-minimize'"></span>
   </div>
 </template>
