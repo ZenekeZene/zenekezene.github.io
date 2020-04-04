@@ -1,5 +1,5 @@
 <template>
-	<ul class="portfolio">
+	<ul class="portfolio" :class="{ '--mini': isMini }">
 		<li>
 			<img src="https://instagram.fbio2-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/82414017_1586345854839301_252668707078321734_n.jpg?_nc_ht=instagram.fbio2-2.fna.fbcdn.net&_nc_cat=101&_nc_ohc=-XzwkpYvYFAAX_GaQbh&oh=e167982ec997042d2f29db062d875031&oe=5EB19CBC">
 		</li>
@@ -15,8 +15,13 @@
 	</ul>
 </template>
 <script>
+import { mapState } from 'vuex';
+
 export default {
-	name: 'Portfolio'
+	name: 'Portfolio',
+	computed: {
+		...mapState(['isMini']),
+	},
 }
 </script>
 <style lang="scss">
@@ -33,16 +38,24 @@ export default {
 		li {
 			overflow: hidden;
 
-			&:nth-child(3) {
+			&:nth-last-child(2) {
 				border-bottom-left-radius: 0.7rem;
 			}
 
-			&:nth-child(4) {
+			&:nth-last-child(1) {
 				border-bottom-right-radius: 0.7rem;
 			}
 
 			img {
 				width: 100%;
+			}
+		}
+
+		&.--mini {
+			grid-template-rows: 10rem;
+
+			li {
+				border-radius: 0;
 			}
 		}
 	}

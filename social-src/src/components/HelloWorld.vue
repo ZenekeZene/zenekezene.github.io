@@ -3,7 +3,7 @@
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
     <img class="image" src="/avatar2.jpg">
-    <span v-if="isMini" @click="toggleIsMini" class="close icon-port-cross"></span>
+    <span @click="toggleIsMini" class="close" :class="isMini ? 'icon-port-maximize' : 'icon-port-minimize'"></span>
   </div>
 </template>
 
@@ -107,9 +107,9 @@ a {
   height: 100%;
 }
 
-.close {
+[class*='icon-port-'] {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   z-index: 1;
   padding: 1rem;
