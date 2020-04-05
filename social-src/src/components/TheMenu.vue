@@ -1,15 +1,22 @@
 <template>
   <ol class="menu">
-    <li v-for="section in sections" :key="`section-${section.name}`"
-    :class="{ 'active': $route.name === section.name }"
+    <li v-for="(section, index) in sections" :key="`section-${section.name}`"
+      :class="{ 'active': currentStep === index }"
+      @click="handGo(index)"
     >
-      <router-link :to="section.name">{{ section.text }}</router-link>
+      {{ section.text }}
     </li>
   </ol>
 </template>
 <script>
 export default {
   name: 'TheMenu',
+  props: {
+    currentStep: {
+      type: Number,
+      default: 0,
+    },
+  },
   data() {
     return {
       sections: [
@@ -27,6 +34,11 @@ export default {
         },
       ]
     }
+  },
+  methods: {
+    handGo(index) {
+      this.$emit('go:to', { slideIndex: index });
+    }
   }
 }
 </script>
@@ -43,14 +55,6 @@ export default {
   list-style: none;
 
   li {
-    height: 3rem;
-    overflow: hidden;
-    flex-grow: 1;
-    font-size: 0.7rem;
-    transition: all 250ms ease-in;
-  }
-
-  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,18 +62,19 @@ export default {
     height: 100%;
     padding: 1.7rem 1rem 0.7rem 1rem;
     color: rgba(255, 255, 255, 0.64);
-    text-decoration: none;
+    height: 3rem;
+    overflow: hidden;
+    flex-grow: 1;
+    font-size: 0.7rem;
+    transition: all 250ms ease-in;
   }
 
   .active {
     font-size: 1rem;
+    padding-top: 0.5rem;
+    color: white;
 
-    a {
-      padding-top: 0.5rem;
-      color: white;
-    }
-
-    a:after {
+    &:after {
       $size: 3px;
       content: '';
       display: inline-block;

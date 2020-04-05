@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'networks',
+    name: 'default',
     component: Social,
   },
   {

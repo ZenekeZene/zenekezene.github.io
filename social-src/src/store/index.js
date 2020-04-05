@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
 	state: {
-		isMini: false,
+		isMini: true,
 	},
 	mutations: {
 		toggleIsMini(state) {
