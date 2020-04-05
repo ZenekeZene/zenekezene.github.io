@@ -53,6 +53,7 @@ export default {
       },
       contentSwiperOptions: {
         slidesPerView: 1,
+        autoHeight: true,
       },
       currentStep: 0
     }

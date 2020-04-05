@@ -16,6 +16,11 @@
 }
 
 body {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -58,11 +63,6 @@ body {
 		}
 
 		.content__main {
-			border-radius: 0;
-		}
-
-		.portfolio li:nth-last-child(1),
-		.portfolio li:nth-last-child(2) {
 			border-radius: 0;
 		}
 	}

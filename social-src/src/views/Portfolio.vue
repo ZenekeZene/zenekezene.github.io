@@ -28,7 +28,7 @@ export default {
 	.portfolio {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 8rem 8rem;
 		grid-column-gap: 0.5rem;
 		grid-row-gap: 0.5rem;
 		height: 100%;
@@ -52,7 +52,6 @@ export default {
 		}
 
 		&.--mini {
-			grid-template-rows: 9rem;
 
 			li {
 				border-radius: 0;
