@@ -47,8 +47,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 19rem;
-  flex-basis: 19rem;
+  min-height: 42vh;
   overflow: hidden;
   margin: 0 0.7rem;
   padding: 0.5rem;

@@ -47,6 +47,24 @@ body {
 		width: 100%;
     	height: 100%;
 		border-radius: 0;
+
+		.header {
+			display: none;
+		}
+
+		.hello {
+			margin-top: 1rem;
+			border-radius: 0;
+		}
+
+		.content__main {
+			border-radius: 0;
+		}
+
+		.portfolio li:nth-last-child(1),
+		.portfolio li:nth-last-child(2) {
+			border-radius: 0;
+		}
 	}
 }
 
