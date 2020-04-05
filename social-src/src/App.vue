@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app" v-touch:swipe.top="swipeUpHandler" v-touch:swipe.bottom="swipeDownHandler">
     <TheHeader />
     <HelloWorld
       author="Héctor Villar"
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import { debounce } from 'lodash'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader.vue'
@@ -57,9 +58,18 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['toggleIsMini']),
     handGo({ slideIndex }) {
       this.currentStep = slideIndex;
       this.$refs.contentSwiper.$swiper.slideTo(slideIndex);
+    },
+    swipeUpHandler() {
+      console.log('swipeUpHandler');
+      this.toggleIsMini();
+    },
+    swipeDownHandler() {
+      console.log('swipeDownHandler');
+      this.toggleIsMini();
     }
   },
   mounted() {
