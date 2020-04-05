@@ -1,25 +1,33 @@
 <template>
-  <div id="app" class="app" v-touch:swipe.top="swipeUpHandler" v-touch:swipe.bottom="swipeDownHandler">
-    <TheHeader />
-    <HelloWorld
-      author="Héctor Villar"
-      role="Software Engineer"
-    />
-    <TheMenu ref="menuSwiper" :options="menuSwiperOptions" :current-step="currentStep" @go:to="handGo($event)"/>
+  <div id="app" class="app">
+    <div v-touch:swipe.top="swipeUpHandler" v-touch:swipe.bottom="swipeDownHandler" :class="{ '--mini': isMini }">
+      <TheHeader />
+      <HelloWorld
+        author="Héctor Villar"
+        role="Software Engineer"
+      />
+      <TheMenu ref="menuSwiper" :options="menuSwiperOptions" :current-step="currentStep" @go:to="handGo($event)"/>
+    </div>
     <main class="content">
-      <div class="content__main">
+      <div class="content__main" id="content-work">
+        <span
+          v-if="isExpanded && currentStep === 2"
+          class="close icon-port-cross"
+          @click="handCloseExpanded"
+        ></span>
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
           <swiper-slide><Social /></swiper-slide>
           <swiper-slide><Portfolio /></swiper-slide>
         </swiper>
+        <div id="work-wrapper" v-if="currentStep === 2"></div>
       </div>
     </main>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 import { debounce } from 'lodash'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader.vue'
@@ -39,6 +47,7 @@ export default {
     Portfolio
   },
   computed: {
+    ...mapState(['isMini', 'isExpanded']),
     menuSwiper() {
       return this.$refs.contentSwiper.$swiper
     },
@@ -59,17 +68,19 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['toggleIsMini']),
+    ...mapMutations(['toggleIsMini', 'setIsExpanded']),
     handGo({ slideIndex }) {
       this.currentStep = slideIndex;
       this.$refs.contentSwiper.$swiper.slideTo(slideIndex);
     },
+    handCloseExpanded() {
+      document.getElementsByClassName('work--expanded')[0].remove();
+      this.setIsExpanded({ isExpanded: false })
+    },
     swipeUpHandler() {
-      console.log('swipeUpHandler');
       this.toggleIsMini();
     },
     swipeDownHandler() {
-      console.log('swipeDownHandler');
       this.toggleIsMini();
     }
   },
@@ -77,6 +88,7 @@ export default {
     this.menuSwiper.controller.control = this.floorSwiper;
     this.$refs.contentSwiper.$swiper.on('slideChange', () => {
       this.currentStep = this.$refs.contentSwiper.$swiper.activeIndex;
+      this.setIsExpanded({ isExpanded: false })
     });
     this.contentSwiper.controller.control = this.indexSwiper;
 
@@ -95,3 +107,14 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+</style>

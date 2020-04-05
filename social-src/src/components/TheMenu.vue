@@ -67,6 +67,7 @@ export default {
     flex-grow: 1;
     font-size: 0.7rem;
     transition: all 250ms ease-in;
+    cursor: pointer;
   }
 
   .active {

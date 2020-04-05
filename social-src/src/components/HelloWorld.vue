@@ -1,5 +1,5 @@
 <template>
-  <div class="hello" :class="{ '--mini': isMini }">
+  <div class="hello">
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
     <img class="image" src="/social/avatar2.jpg">
@@ -53,7 +53,7 @@ a {
   padding: 0.5rem;
   border-radius: 1rem 1rem 0 0;
   filter: grayscale(100%);
-  transition: all 100ms ease-in;
+  transition: all 50ms ease-in;
 
   &:hover {
     filter: grayscale(0);
@@ -69,17 +69,6 @@ a {
     height: 5.5rem;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
     display: block;
-  }
-
-  &.--mini{
-    min-height: 1rem;
-    height: 2rem;
-    flex-basis: 5rem;
-
-    .image {
-      width: 100%;
-      height: auto;
-    }
   }
 }
 
@@ -108,7 +97,7 @@ a {
 
 [class*='icon-port-'] {
   position: absolute;
-  bottom: 0;
+  bottom: 2.2rem;
   right: 0;
   z-index: 1;
   padding: 1rem;

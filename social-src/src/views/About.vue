@@ -51,6 +51,10 @@ export default {
 				height: calc(100% + 0.7rem);
 				border-left: 1px solid rgba(0, 0, 0, 0.21);
 			}
+
+			&:last-child:before {
+				display: none;
+			}
 		}
 
 		h3 {
@@ -75,6 +79,7 @@ export default {
 
 		h4 {
 			display: flex;
+			padding-right: 1rem;
 			padding-left: 1.65rem;
 			font-size: 0.8rem;
 
@@ -87,6 +92,7 @@ export default {
 		h3,
 		h4 {
 			& + p {
+				padding-right: 1rem;
 				padding-left: 1.7rem;
 				font-size: 0.8rem;
 			}
