@@ -5,6 +5,7 @@
 			:key="`work-${index}`"
 			@click="showWork(index)"
 			:ref="`work-${index}`"
+			class="glass"
 		>
 			<img :src="work.src">
 		</li>
@@ -44,26 +45,31 @@ export default {
 		...mapMutations(['setIsMini', 'setIsExpanded']),
 		showWork(index) {
 			this.setIsMini({ isMini: true });
-			this.generateWork(index);
 			this.setIsExpanded({ isExpanded: true });
+			this.generateWork(index);
 		},
 		generateWork(index) {
+			const structure = document.getElementById('structure');
+			const workWrapper = document.getElementById('work-wrapper');
 			const item = this.$refs[`work-${index}`][0];
-			const image = item.children[0].cloneNode(true);
-			const app = document.getElementById('work-wrapper');
-			console.log(app);
+
+			const offsetTopStructure = parseInt(structure.offsetTop);
+			const offsetHeightStructure = parseInt(structure.offsetHeight);
 			const offsetTop = item.offsetTop;
 			const offsetLeft = item.offsetLeft;
 			const width = item.offsetWidth;
 			const height = item.offsetHeight;
+
+			const image = item.children[0].cloneNode(true);
 			const wrapper = document.createElement('div');
 			wrapper.classList.add('work');
-			wrapper.style.top = `calc(${offsetTop}px + 1rem)`;
-			wrapper.style.left = `calc(${offsetLeft}px + 0.5rem)`;
+			wrapper.style.top = `calc(${offsetHeightStructure +  offsetTop}px + 1rem)`;
+			wrapper.style.left = `calc(${offsetLeft}px + 1.2rem)`;
 			wrapper.style.width = `${width}px`;
 			wrapper.style.height = `${height}px`;
 			wrapper.appendChild(image);
-			app.appendChild(wrapper);
+			workWrapper.appendChild(wrapper);
+
 			setTimeout(() => {
 				wrapper.classList.add('work--expanded');
 			}, 100);
@@ -86,11 +92,11 @@ export default {
 			overflow: hidden;
 
 			&:nth-last-child(2) {
-				border-bottom-left-radius: 0.7rem;
+				border-bottom-left-radius: 1.6rem;
 			}
 
 			&:nth-last-child(1) {
-				border-bottom-right-radius: 0.7rem;
+				border-bottom-right-radius: 1.6rem;
 			}
 
 			img {

@@ -1,21 +1,31 @@
 <template>
   <div id="app" class="app">
-    <div id="work-wrapper" v-if="currentStep === 2 && isMini"></div>
-    <div v-touch:swipe.top="swipeUpHandler" v-touch:swipe.bottom="swipeDownHandler" :class="{ '--mini': isMini }">
+    <div id="work-wrapper" v-if="currentStep === 2">
+      <span
+        v-if="isExpanded && currentStep === 2 && isMini"
+        class="close icon-port-cross"
+        @click="handCloseExpanded"
+      ></span>
+    </div>
+    <div
+      id="structure"
+      v-touch:swipe.top="swipeUpHandler"
+      v-touch:swipe.bottom="swipeDownHandler"
+      :class="{ '--mini': isMini }"
+    >
       <TheHeader />
       <HelloWorld
         author="Héctor Villar"
         role="Software Engineer"
       />
-      <TheMenu ref="menuSwiper" :options="menuSwiperOptions" :current-step="currentStep" @go:to="handGo($event)"/>
+      <TheMenu ref="menuSwiper"
+        :options="menuSwiperOptions"
+        :current-step="currentStep"
+        @go:to="handGo($event)"
+      />
     </div>
     <main class="content">
       <div class="content__main" id="content-work">
-        <span
-          v-if="isExpanded && currentStep === 2 && isMini"
-          class="close icon-port-cross"
-          @click="handCloseExpanded"
-        ></span>
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
           <swiper-slide><Social /></swiper-slide>
@@ -87,6 +97,7 @@ export default {
     }
   },
   mounted() {
+    this.$refs.contentSwiper.$swiper.slideTo(this.currentStep);
     this.$refs.contentSwiper.$swiper.on('slideChange', () => {
       this.currentStep = this.$refs.contentSwiper.$swiper.activeIndex;
       this.setIsExpanded({ isExpanded: false })
@@ -107,29 +118,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-  .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    padding: 1rem;
-    color: white;
-
-    &:before {
-      position: relative;
-      z-index: 1;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 10rem;
-      height: 10rem;
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%);
-    }
-  }
-</style>

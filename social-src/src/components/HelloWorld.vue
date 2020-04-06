@@ -65,10 +65,10 @@ a {
     bottom: 0;
     left: 0;
     z-index: 1;
+    display: block;
     width: 100%;
     height: 5.5rem;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
-    display: block;
   }
 }
 
