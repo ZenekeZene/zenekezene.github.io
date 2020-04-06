@@ -1,24 +1,29 @@
 <template>
 	<ol class="social">
 		<li>
-			<span class="icon-port-github"></span>
-			Github
+			<a href="#" class="link--as-button">
+				<span class="icon-port-github"></span>Github
+			</a>
 		</li>
 		<li>
-			<span class="icon-port-twitter"></span>
-			Twitter
+			<a href="#" class="link--as-button">
+				<span class="icon-port-twitter"></span>Twitter
+			</a>
 		</li>
 		<li>
-			<span class="icon-port-linkedin"></span>
-			Linkedin
+			<a href="#" class="link--as-button">
+				<span class="icon-port-linkedin"></span>Linkedin
+			</a>
 		</li>
 		<li>
-			<span class="icon-port-instagram"></span>
-			Instagram
+			<a href="#" class="link--as-button">
+				<span class="icon-port-instagram"></span>Instagram
+			</a>
 		</li>
 		<li>
-			<span class="icon-port-earth"></span>
-			Web
+			<a href="#" class="link--as-button">
+				<span class="icon-port-earth"></span>Web
+			</a>
 		</li>
 	</ol>
 </template>
@@ -34,7 +39,9 @@ export default {
 		list-style: none;
 
 		li {
-			padding: 1rem;
+			a {
+				padding: 0.5rem;
+			}
 
 			[class^='icon-port'] {
 				padding-right: 1rem;

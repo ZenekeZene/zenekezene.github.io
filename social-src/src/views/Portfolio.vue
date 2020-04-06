@@ -12,6 +12,8 @@
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex';
+// import mdPrueba from '../portfolio/test.md';
+// console.log(mdPrueba);
 
 export default {
 	name: 'Portfolio',
@@ -35,7 +37,8 @@ export default {
 				},
 				{
 					key: "",
-					src: "https://instagram.fbio2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.133.1063.1063a/s640x640/79038099_153520295914233_8335738709108248233_n.jpg?_nc_ht=instagram.fbio2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=Apwc40p28AwAX-5U06B&oh=6ae91e6382404fa2d3e1016b7493a38d&oe=5EB1739F"
+					src: "https://instagram.fbio2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.133.1063.1063a/s640x640/79038099_153520295914233_8335738709108248233_n.jpg?_nc_ht=instagram.fbio2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=Apwc40p28AwAX-5U06B&oh=6ae91e6382404fa2d3e1016b7493a38d&oe=5EB1739F",
+					title: 'Título 4'
 				},
 			]
 		};
@@ -48,30 +51,8 @@ export default {
 			this.generateWork(index);
 		},
 		generateWork(index) {
-			const structure = document.getElementById('structure');
-			const workWrapper = document.getElementById('work-wrapper');
 			const item = this.$refs[`work-${index}`][0];
-
-			const offsetTopStructure = parseInt(structure.offsetTop);
-			const offsetHeightStructure = parseInt(structure.offsetHeight);
-			const offsetTop = item.offsetTop;
-			const offsetLeft = item.offsetLeft;
-			const width = item.offsetWidth;
-			const height = item.offsetHeight;
-
-			const image = item.children[0].cloneNode(true);
-			const wrapper = document.createElement('div');
-			wrapper.classList.add('work');
-			wrapper.style.top = `calc(${offsetHeightStructure +  offsetTop}px + 1rem)`;
-			wrapper.style.left = `calc(${offsetLeft}px + 1.2rem)`;
-			wrapper.style.width = `${width}px`;
-			wrapper.style.height = `${height}px`;
-			wrapper.appendChild(image);
-			workWrapper.appendChild(wrapper);
-
-			setTimeout(() => {
-				wrapper.classList.add('work--expanded');
-			}, 100);
+			this.$emit('launch:ligth-box', { item, data: this.works[index] });
 		}
 	}
 }
@@ -80,7 +61,7 @@ export default {
 	.portfolio {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7.25rem 7.25rem;
+		grid-template-rows: 7.75rem 7.75rem;
 		grid-column-gap: 0.5rem;
 		grid-row-gap: 0.5rem;
 		height: 100%;
@@ -88,6 +69,7 @@ export default {
 		list-style: none;
 
 		li {
+			cursor: pointer;
 			overflow: hidden;
 
 			&:nth-last-child(2) {

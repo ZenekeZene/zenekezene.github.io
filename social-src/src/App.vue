@@ -1,15 +1,21 @@
 <template>
   <div id="app" class="app">
     <div class="card"><div class="shine"></div></div>
-    <div id="work-wrapper" v-if="currentStep === 2">
+    <div ref="workWrapper" v-if="currentStep === 2">
       <span
         v-if="isExpanded && currentStep === 2 && isMini"
         class="close icon-port-cross"
         @click="handCloseExpanded"
       ></span>
+      <div ref="work" class="work" :style="lightBoxStyle">
+        <div v-if="lightBoxItem">
+          <img :src="lightBoxItem.src">
+          <h1>{{ lightBoxItem.title }}</h1>
+        </div>
+      </div>
     </div>
     <div
-      id="structure"
+      ref="structure"
       v-touch:swipe.top="swipeUpHandler"
       v-touch:swipe.bottom="swipeDownHandler"
       :class="{ '--mini': isMini }"
@@ -30,7 +36,7 @@
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
           <swiper-slide><Social /></swiper-slide>
-          <swiper-slide><Portfolio /></swiper-slide>
+          <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
         </swiper>
       </div>
     </main>
@@ -67,6 +73,9 @@ export default {
     contentSwiper() {
       return this.$refs.contentSwiper.$swiper
     },
+    work() {
+      return this.$refs.work;
+    }
   },
   data() {
     return {
@@ -77,7 +86,9 @@ export default {
         slidesPerView: 1,
         autoHeight: true,
       },
-      currentStep: 2
+      currentStep: 2,
+      lightBoxStyle: {},
+      lightBoxItem: null
     }
   },
   methods: {
@@ -87,14 +98,37 @@ export default {
       this.$refs.contentSwiper.$swiper.slideTo(slideIndex);
     },
     handCloseExpanded() {
-      document.getElementsByClassName('work--expanded')[0].remove();
-      this.setIsExpanded({ isExpanded: false })
+      this.lightBoxItem = null;
+      this.lightBoxStyle = null;
+      this.setIsExpanded({ isExpanded: false });
+      this.work.classList.remove('--expanded');
     },
     swipeUpHandler() {
       this.toggleIsMini();
     },
     swipeDownHandler() {
       this.toggleIsMini();
+    },
+    launchLightBox($event) {
+      const item = $event.item;
+      this.lightBoxItem = $event.data;
+      console.log(this.lightBoxItem);
+      const { structure, workWrapper } = this.$refs;
+
+			const offsetTopStructure = structure.offsetTop;
+			const offsetHeightStructure = structure.offsetHeight;
+			const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = item;
+
+      this.lightBoxStyle = {
+        top: `calc(${offsetHeightStructure +  offsetTop}px + 0.5rem)`,
+        left: `calc(${offsetLeft}px + 1.2rem)`,
+        width: `${offsetWidth}px`,
+        height: `${offsetHeight}px`,
+      }
+
+			setTimeout(() => {
+				this.work.classList.add('--expanded');
+			}, 100);
     }
   },
   mounted() {
