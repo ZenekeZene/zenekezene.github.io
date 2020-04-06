@@ -91,8 +91,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 [class*='icon-port-'] {
@@ -103,5 +103,6 @@ a {
   padding: 1rem;
   color: white;
   font-size: 1rem;
+  cursor: pointer;
 }
 </style>

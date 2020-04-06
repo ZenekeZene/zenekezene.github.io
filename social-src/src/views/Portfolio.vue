@@ -5,7 +5,6 @@
 			:key="`work-${index}`"
 			@click="showWork(index)"
 			:ref="`work-${index}`"
-			class="glass"
 		>
 			<img :src="work.src">
 		</li>
@@ -101,6 +100,16 @@ export default {
 
 			img {
 				width: 100%;
+			}
+
+			@media (max-width: 414px) {
+				&:nth-last-child(2) {
+					border-bottom-left-radius: 0;
+				}
+
+				&:nth-last-child(1) {
+					border-bottom-right-radius: 0;
+				}
 			}
 		}
 
