@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app">
+    <div class="card"><div class="shine"></div></div>
     <div id="work-wrapper" v-if="currentStep === 2">
       <span
         v-if="isExpanded && currentStep === 2 && isMini"
