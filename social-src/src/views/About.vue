@@ -52,8 +52,12 @@ export default {
 				border-left: 1px solid rgba(0, 0, 0, 0.21);
 			}
 
-			&:last-child:before {
-				display: none;
+			&:last-child {
+				margin-bottom: 3rem;
+
+				&:before {
+					display: none;
+				}
 			}
 		}
 

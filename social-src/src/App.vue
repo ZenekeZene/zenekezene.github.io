@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app">
+    <div id="work-wrapper" v-if="currentStep === 2 && isMini"></div>
     <div v-touch:swipe.top="swipeUpHandler" v-touch:swipe.bottom="swipeDownHandler" :class="{ '--mini': isMini }">
       <TheHeader />
       <HelloWorld
@@ -11,7 +12,7 @@
     <main class="content">
       <div class="content__main" id="content-work">
         <span
-          v-if="isExpanded && currentStep === 2"
+          v-if="isExpanded && currentStep === 2 && isMini"
           class="close icon-port-cross"
           @click="handCloseExpanded"
         ></span>
@@ -20,9 +21,10 @@
           <swiper-slide><Social /></swiper-slide>
           <swiper-slide><Portfolio /></swiper-slide>
         </swiper>
-        <div id="work-wrapper" v-if="currentStep === 2"></div>
       </div>
     </main>
+    <button v-if="currentStep === 0" class="fab"><span class="icon-port-download"></span></button>
+    <button v-if="currentStep === 1" class="fab"><span class="icon-port-share2"></span></button>
   </div>
 </template>
 
@@ -64,7 +66,7 @@ export default {
         slidesPerView: 1,
         autoHeight: true,
       },
-      currentStep: 0
+      currentStep: 2
     }
   },
   methods: {
@@ -85,12 +87,10 @@ export default {
     }
   },
   mounted() {
-    this.menuSwiper.controller.control = this.floorSwiper;
     this.$refs.contentSwiper.$swiper.on('slideChange', () => {
       this.currentStep = this.$refs.contentSwiper.$swiper.activeIndex;
       this.setIsExpanded({ isExpanded: false })
     });
-    this.contentSwiper.controller.control = this.indexSwiper;
 
     // Hack mobile viewport with vh units:
     let vh = window.innerHeight * 0.01;
@@ -115,6 +115,21 @@ export default {
     z-index: 2;
     padding: 1rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+
+    &:before {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 10rem;
+      height: 10rem;
+      background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, black 100%);
+    }
   }
 </style>
