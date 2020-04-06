@@ -11,6 +11,7 @@
         <div v-if="lightBoxItem">
           <img :src="lightBoxItem.src">
           <h1>{{ lightBoxItem.title }}</h1>
+          <p v-html="lightBoxItem.markdown"></p>
         </div>
       </div>
     </div>

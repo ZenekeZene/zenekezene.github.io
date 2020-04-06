@@ -7,13 +7,13 @@
 			:ref="`work-${index}`"
 		>
 			<img :src="work.src">
+			
 		</li>
 	</ul>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex';
-// import mdPrueba from '../portfolio/test.md';
-// console.log(mdPrueba);
+import worksData from '../portfolio/portfolio.js';
 
 export default {
 	name: 'Portfolio',
@@ -36,9 +36,9 @@ export default {
 					src: "https://instagram.fbio2-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/68865920_674675336379478_3321306553085518456_n.jpg?_nc_ht=instagram.fbio2-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=0-sAUPF4rhwAX_hbRjo&oh=a8eb4e2ed9070253aa9e875e61172408&oe=5EAFE123"
 				},
 				{
-					key: "",
+					key: "cabeza",
 					src: "https://instagram.fbio2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.133.1063.1063a/s640x640/79038099_153520295914233_8335738709108248233_n.jpg?_nc_ht=instagram.fbio2-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=Apwc40p28AwAX-5U06B&oh=6ae91e6382404fa2d3e1016b7493a38d&oe=5EB1739F",
-					title: 'Título 4'
+					markdown: worksData[0]
 				},
 			]
 		};
