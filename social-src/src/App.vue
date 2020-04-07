@@ -8,11 +8,7 @@
         @click="handCloseExpanded"
       ></span>
       <div ref="work" class="work" :style="lightBoxStyle">
-        <div v-if="lightBoxItem">
-          <img :src="lightBoxItem.src">
-          <h1>{{ lightBoxItem.title }}</h1>
-          <p v-html="lightBoxItem.markdown"></p>
-        </div>
+        <div v-if="lightBoxItem" v-html="lightBoxItem.content"></div>
       </div>
     </div>
     <div
@@ -113,7 +109,6 @@ export default {
     launchLightBox($event) {
       const item = $event.item;
       this.lightBoxItem = $event.data;
-      console.log(this.lightBoxItem);
       const { structure, workWrapper } = this.$refs;
 
 			const offsetTopStructure = structure.offsetTop;
