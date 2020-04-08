@@ -1,1 +1,1 @@
-<img src="../../../img/astro.jpg">
+<img src=../../../img/astro.jpg>
