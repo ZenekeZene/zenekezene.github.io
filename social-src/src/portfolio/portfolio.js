@@ -8,7 +8,7 @@ const portfolio = {
 	getPreviewImage(index = 0) {
 		console.log(portfolio.getWorkData(index));
 		var str = portfolio.getWorkData(index).split('\n')[0];
-		var regex = /<img.*?src='(.*?)'/;
+		var regex = /<img.*?src="(.*?)"/;
 		const src = regex.exec(str);
 		return src ? src[1] : '';
 	},
