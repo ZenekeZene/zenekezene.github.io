@@ -6,9 +6,8 @@ const portfolio = {
 		return (index === -1 ? worksData : worksData[index]);
 	},
 	getPreviewImage(index = 0) {
-		console.log(portfolio.getWorkData(index));
 		var str = portfolio.getWorkData(index).split('\n')[0];
-		var regex = /<img.*?src="(.*?)"/;
+		var regex = /src='(.*?)'|src="(.*?)"/;
 		const src = regex.exec(str);
 		return src ? src[1] : '';
 	},
@@ -21,7 +20,6 @@ const portfolio = {
 				previewImage: portfolio.getPreviewImage(index),
 				content: portfolio.getWorkData(index),
 			};
-			console.log(workObject);
 			worksOutput.push(workObject);
 		});
 		return worksOutput;
