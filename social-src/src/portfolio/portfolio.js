@@ -9,7 +9,9 @@ const portfolio = {
 		var str = portfolio.getWorkData(index).split('\n')[0];
 		var regex = /src='(.*?)'|src="(.*?)"/;
 		const src = regex.exec(str);
-		return src ? src[1] : 'hola';
+		console.log(src);
+		console.log(src[1]);
+		return src ? src[1] : '';
 	},
 	mountedWorks() {
 		const worksOutput = [];
