@@ -19,7 +19,6 @@ export default {
 	computed: {
 		...mapState(['isMini', 'isExpanded']),
 		works() {
-			console.log(portfolio.mountedWorks());
 			return portfolio.mountedWorks().filter(work => work.previewImage);
 		},
 	},

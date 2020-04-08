@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="app">
     <div class="card"><div class="shine"></div></div>
-    <div ref="workWrapper" v-if="currentStep === 2">
+    <div ref="workWrapper">
       <span
-        v-if="isExpanded && currentStep === 2 && isMini"
+        v-if="isExpanded && currentStep === 1 && isMini"
         class="close icon-port-cross"
         @click="handCloseExpanded"
       ></span>
@@ -29,7 +29,7 @@
       />
     </div>
     <main class="content">
-      <div class="content__main" id="content-work">
+      <div class="content__main">
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
           <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>

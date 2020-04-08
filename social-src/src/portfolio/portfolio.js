@@ -6,11 +6,10 @@ const portfolio = {
 		return (index === -1 ? worksData : worksData[index]);
 	},
 	getPreviewImage(index = 0) {
-		var str = portfolio.getWorkData(index).split('\n')[0];
-		var regex = /src='(.*?)'|src="(.*?)"/;
-		const src = regex.exec(str);
-		console.log(src);
-		console.log(src[1]);
+		let str = portfolio.getWorkData(index).split('\n')[0];
+		str = str.replace(/"/gi, "'");
+		const regex = /src='(.*?)'/;
+		const src = str.match(regex);
 		return src ? src[1] : '';
 	},
 	mountedWorks() {
