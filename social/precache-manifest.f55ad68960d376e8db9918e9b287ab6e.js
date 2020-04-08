@@ -8,11 +8,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "b5684deb8e7a2c1b8154",
+    "revision": "48b9a253831676243724",
     "url": "/social/css/app.2243340b.css"
   },
   {
-    "revision": "f169fb1950bdde0e8ead",
+    "revision": "6d8142dacde1ba5761be",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
@@ -60,16 +60,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "066f6210db88daec7abfd49b8040c05e",
+    "revision": "59ade3e2e6756eaf4e7264fa78cf5b26",
     "url": "/social/index.html"
   },
   {
-    "revision": "b5684deb8e7a2c1b8154",
-    "url": "/social/js/app.451887fe.js"
+    "revision": "48b9a253831676243724",
+    "url": "/social/js/app.696d4b9b.js"
   },
   {
-    "revision": "f169fb1950bdde0e8ead",
-    "url": "/social/js/chunk-vendors.25de56a9.js"
+    "revision": "6d8142dacde1ba5761be",
+    "url": "/social/js/chunk-vendors.1f636458.js"
   },
   {
     "revision": "6807d751075d2eb3d52aa88df9aae182",
@@ -100,7 +100,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/ganga_work.md"
   },
   {
-    "revision": "b285fb205f38a6d668153c71b57e6820",
+    "revision": "e4e3cb86e0e3b878d2e5985af50d393a",
     "url": "/social/portfolio/portfolio.js"
   },
   {
