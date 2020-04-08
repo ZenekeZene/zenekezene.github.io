@@ -7,6 +7,7 @@ const portfolio = {
 	},
 	getPreviewImage(index = 0) {
 		let str = portfolio.getWorkData(index).split('\n')[0];
+		str = str.replace(/'/gi, "\"");
 		console.log(str);
 		const regex = /src="(.*?)"/;
 		const src = str.match(regex);

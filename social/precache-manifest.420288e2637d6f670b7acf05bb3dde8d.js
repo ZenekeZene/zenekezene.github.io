@@ -8,11 +8,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "48b9a253831676243724",
+    "revision": "0c1e876fdb56af5a4f96",
     "url": "/social/css/app.2243340b.css"
   },
   {
-    "revision": "6d8142dacde1ba5761be",
+    "revision": "f169fb1950bdde0e8ead",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
@@ -48,10 +48,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/broken.3a5a87e6.png"
   },
   {
-    "revision": "39af110b03584c0b45b0dc59ba54e1d5",
-    "url": "/social/img/cabeza1.39af110b.png"
-  },
-  {
     "revision": "02c21cd0ed7c00ddab114ca766fc1560",
     "url": "/social/img/captura8.02c21cd0.jpg"
   },
@@ -60,16 +56,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "59ade3e2e6756eaf4e7264fa78cf5b26",
+    "revision": "f66bbfe82473e3221c9c186baed91412",
     "url": "/social/index.html"
   },
   {
-    "revision": "48b9a253831676243724",
-    "url": "/social/js/app.696d4b9b.js"
+    "revision": "0c1e876fdb56af5a4f96",
+    "url": "/social/js/app.63a3951c.js"
   },
   {
-    "revision": "6d8142dacde1ba5761be",
-    "url": "/social/js/chunk-vendors.1f636458.js"
+    "revision": "f169fb1950bdde0e8ead",
+    "url": "/social/js/chunk-vendors.25de56a9.js"
   },
   {
     "revision": "6807d751075d2eb3d52aa88df9aae182",
@@ -80,11 +76,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/1_work.md"
   },
   {
-    "revision": "729a3b355d2c5f7ec04f42efea63abfb",
+    "revision": "ecf642ad6ab15ea8d76af6ae45126300",
     "url": "/social/portfolio/another_work.md"
   },
   {
-    "revision": "268557bf48b447470d6ecc3f1a10066f",
+    "revision": "90efd5310a97c5b16a3c261bbb533166",
     "url": "/social/portfolio/barley_work.md"
   },
   {
@@ -100,7 +96,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/ganga_work.md"
   },
   {
-    "revision": "e4e3cb86e0e3b878d2e5985af50d393a",
+    "revision": "b285fb205f38a6d668153c71b57e6820",
     "url": "/social/portfolio/portfolio.js"
   },
   {
