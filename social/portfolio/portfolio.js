@@ -9,6 +9,9 @@ const portfolio = {
 		let str = portfolio.getWorkData(index).split('\n')[0];
 		str = str.replace(/'/gi, "\"");
 		console.log(str);
+		console.log(str);
+		console.log(str);
+		console.log(str);
 		const regex = /src="(.*?)"/;
 		const src = str.match(regex);
 		console.log(src);

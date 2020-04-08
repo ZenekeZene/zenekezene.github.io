@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "0c1e876fdb56af5a4f96",
+    "revision": "e40b52350cb725c40cf6",
     "url": "/social/css/app.2243340b.css"
   },
   {
@@ -56,12 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "f66bbfe82473e3221c9c186baed91412",
+    "revision": "69bcdd763ce16c285a74969bf95ccab7",
     "url": "/social/index.html"
   },
   {
-    "revision": "0c1e876fdb56af5a4f96",
-    "url": "/social/js/app.63a3951c.js"
+    "revision": "e40b52350cb725c40cf6",
+    "url": "/social/js/app.c4a552a0.js"
   },
   {
     "revision": "f169fb1950bdde0e8ead",
@@ -96,7 +96,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/ganga_work.md"
   },
   {
-    "revision": "b285fb205f38a6d668153c71b57e6820",
+    "revision": "898c8f961b0c8702423483f2d4df2b5b",
     "url": "/social/portfolio/portfolio.js"
   },
   {
