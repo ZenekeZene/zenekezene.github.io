@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "fbda4d51025f3205f3fa",
-    "url": "/social/css/app.873ae144.css"
+    "revision": "d007bff90642f06fc19e",
+    "url": "/social/css/app.3c10bf72.css"
   },
   {
     "revision": "dc602cdc425e4f6af821",
@@ -36,12 +36,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/broken.3a5a87e6.png"
   },
   {
-    "revision": "1badc7c5088f1d1bf9af25b578607e9e",
+    "revision": "12b1107e4134c71c188f79ab79cb8eff",
     "url": "/social/index.html"
   },
   {
-    "revision": "fbda4d51025f3205f3fa",
-    "url": "/social/js/app.fb2c1961.js"
+    "revision": "d007bff90642f06fc19e",
+    "url": "/social/js/app.800e514d.js"
   },
   {
     "revision": "dc602cdc425e4f6af821",

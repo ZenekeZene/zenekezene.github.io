@@ -85,6 +85,7 @@ a {
 
 .swiper-container {
   width: 100%;
+  min-height: 16.7rem;
 }
 
 .background {
@@ -105,6 +106,7 @@ a {
   }
 
   p {
+    min-height: 22rem;
     color: white;
     text-align: left;
     padding: 1rem 2rem;
@@ -113,9 +115,7 @@ a {
 
 .hello {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  height: 49vh;
   overflow: hidden;
   margin: 0 0.7rem;
   border-radius: 1rem 1rem 0 0;
