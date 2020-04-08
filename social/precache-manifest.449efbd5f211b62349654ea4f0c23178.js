@@ -100,7 +100,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/ganga_work.md"
   },
   {
-    "revision": "e4044e6c3235447689ae28472114ae59",
+    "revision": "fbae05e6e0344fa4fcde0f6c4971f8d2",
     "url": "/social/portfolio/portfolio.js"
   },
   {
