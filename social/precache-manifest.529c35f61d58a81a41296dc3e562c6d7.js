@@ -76,7 +76,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/manifest.json"
   },
   {
-    "revision": "277dad20a483e569e08d1352a1197322",
+    "revision": "bf7b6c71a2c301919c92fa47ab670b7f",
     "url": "/social/portfolio/1_work.md"
   },
   {
