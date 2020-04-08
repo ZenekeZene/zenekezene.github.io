@@ -8,40 +8,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "b4c1e20cfa4c2e71b924",
-    "url": "/social/css/app.c1374d62.css"
+    "revision": "fbda4d51025f3205f3fa",
+    "url": "/social/css/app.873ae144.css"
   },
   {
     "revision": "dc602cdc425e4f6af821",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
-    "revision": "44914121d01c94043f764130effb3821",
-    "url": "/social/fonts/Portfolio.44914121.woff"
+    "revision": "0951a9c936b8bd7cae54f7ceebc1d462",
+    "url": "/social/fonts/Portfolio.0951a9c9.ttf"
   },
   {
-    "revision": "4ecf8ec9c4c7be004708815731d1d1a6",
-    "url": "/social/fonts/Portfolio.4ecf8ec9.eot"
+    "revision": "c7de01fcbd1ddb6df297d12f33b5cd7c",
+    "url": "/social/fonts/Portfolio.c7de01fc.woff"
   },
   {
-    "revision": "8df0f90373ef6b984b934a7e24379e35",
-    "url": "/social/fonts/Portfolio.8df0f903.ttf"
+    "revision": "e2172e9b73dbd6d6df2e9096fd2ffe8c",
+    "url": "/social/fonts/Portfolio.e2172e9b.eot"
   },
   {
-    "revision": "cfa4eaa7ca1062b941bf96b44966ab95",
-    "url": "/social/img/Portfolio.cfa4eaa7.svg"
+    "revision": "a6deeb8166f11b345d27d1506f015e19",
+    "url": "/social/img/Portfolio.a6deeb81.svg"
   },
   {
     "revision": "3a5a87e6f045d3374d7322af0638e2ae",
     "url": "/social/img/broken.3a5a87e6.png"
   },
   {
-    "revision": "857913f61d0de694cfa6e5fbae8664cd",
+    "revision": "1badc7c5088f1d1bf9af25b578607e9e",
     "url": "/social/index.html"
   },
   {
-    "revision": "b4c1e20cfa4c2e71b924",
-    "url": "/social/js/app.149535e9.js"
+    "revision": "fbda4d51025f3205f3fa",
+    "url": "/social/js/app.fb2c1961.js"
   },
   {
     "revision": "dc602cdc425e4f6af821",

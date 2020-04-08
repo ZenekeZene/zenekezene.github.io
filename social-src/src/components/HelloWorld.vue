@@ -1,10 +1,28 @@
 <template>
   <div class="hello">
-    <span class="contact icon-port-bubbles"></span>
-    <h1 class="author">{{ author }}</h1>
-    <p class="role">{{ role }}</p>
-    <img class="image" src="/social/avatar2.jpg">
-    <span @click="toggleIsMini" class="hand-size" :class="isMini ? 'icon-port-maximize' : 'icon-port-minimize'"></span>
+    <div class="info">
+      <h1 class="author">{{ author }}</h1>
+      <p class="role">{{ role }}</p>
+    </div>
+    <img class="background" src="/social/avatar2.jpg">
+    <swiper ref="aboutSwiper" class="slider" :options="optionsSwiper">
+      <swiper-slide></swiper-slide>
+      <swiper-slide class="description">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Rerum illo alias possimus distinctio velit et autem magni sapiente,
+          dolore optio praesentium ea, aliquam quibusdam nemo veniam vel saepe,
+          tempore commodi?
+          <span class="icon-port-vue"></span>
+          <span class="icon-port-sass"></span>
+          <span class="icon-port-html5"></span>
+          <span class="icon-port-js"></span>
+          <span class="icon-port-git"></span>
+        </p>
+      </swiper-slide>
+    </swiper>
+    <div v-if="currentStep === 1" class="button-prev" @click="previous"><span class="icon-port-arrow-left"></span></div>
+    <div v-if="currentStep === 0" class="button-next" @click="next"><span class="icon-port-arrow-left"></span></div>
+    <span @click="toggleIsMini" class="hand-size" :class="isMini ? 'icon-port-info' : 'icon-port-minimize'"></span>
   </div>
 </template>
 
@@ -20,8 +38,30 @@ export default {
   computed: {
     ...mapState(['isMini']),
   },
+  data() {
+    return {
+      optionsSwiper: {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      },
+      currentStep: 0
+    }
+  },
+  mounted() {
+    this.$refs.aboutSwiper.$swiper.on('slideChange', () => {
+      this.currentStep = this.$refs.aboutSwiper.$swiper.activeIndex;
+    });
+  },
   methods: {
-    ...mapMutations(['toggleIsMini'])
+    ...mapMutations(['toggleIsMini']),
+    next() {
+      this.$refs.aboutSwiper.$swiper.slideNext();
+    },
+    previous() {
+      this.$refs.aboutSwiper.$swiper.slidePrev();
+    }
   }
 }
 </script>
@@ -43,15 +83,41 @@ a {
   color: #42b983;
 }
 
+.swiper-container {
+  width: 100%;
+}
+
+.background {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+}
+
+.description {
+  background-color: black;
+}
+
+.slider {
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    color: white;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+}
+
 .hello {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 42vh;
   overflow: hidden;
   margin: 0 0.7rem;
-  padding: 0.5rem;
   border-radius: 1rem 1rem 0 0;
   transition: all 50ms ease-in;
 
@@ -59,18 +125,6 @@ a {
     .image {
       filter: grayscale(0);
     }
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 5.5rem;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
   }
 }
 
@@ -85,7 +139,6 @@ a {
 }
 
 .role {
-  margin-bottom: 0.5rem;
   font-size: 0.7rem;
 }
 
@@ -98,17 +151,6 @@ a {
   min-height: 10rem;
   filter: grayscale(100%);
   transition: all 150ms ease-in;
-}
-
-[class*='icon-port-'] {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  padding: 1rem;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
 }
 
 .contact {
@@ -129,5 +171,57 @@ a {
     background-color: red;
     border-radius: 50%;
   }
+
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+  background: black;
+
+  &:before {
+    // content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 5.5rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 90%, rgba(0, 0, 0, 0.7));
+  }
+}
+
+.hand-size {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  z-index: 2;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-prev,
+.button-next {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  margin-top: 1.5rem;
+  padding: 0 0.1rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.button-prev {
+  color: white;
+}
+
+.button-next {
+  right: 0;
+  transform: rotate(180deg);
 }
 </style>

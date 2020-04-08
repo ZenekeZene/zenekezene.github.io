@@ -32,13 +32,13 @@
       <div class="content__main" id="content-work">
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
-          <swiper-slide><Social /></swiper-slide>
           <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
+          <swiper-slide><Social /></swiper-slide>
         </swiper>
       </div>
     </main>
     <button v-if="currentStep === 0" class="fab"><span class="icon-port-download"></span></button>
-    <button v-if="currentStep === 1" class="fab"><span class="icon-port-share2"></span></button>
+    <button v-if="currentStep === 2" class="fab"><span class="icon-port-share"></span></button>
   </div>
 </template>
 
@@ -101,10 +101,10 @@ export default {
       this.work.classList.remove('--expanded');
     },
     swipeUpHandler() {
-      this.toggleIsMini();
+      // this.toggleIsMini();
     },
     swipeDownHandler() {
-      this.toggleIsMini();
+      // this.toggleIsMini();
     },
     launchLightBox($event) {
       const item = $event.item;

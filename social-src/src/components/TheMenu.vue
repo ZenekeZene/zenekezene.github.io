@@ -22,15 +22,15 @@ export default {
       sections: [
         {
           name: 'about',
-          text: 'About me'
-        },
-        {
-          name: 'networks',
-          text: 'Social'
+          text: 'CV'
         },
         {
           name: 'portfolio',
           text: 'Portfolio'
+        },
+        {
+          name: 'networks',
+          text: 'Contact'
         },
       ]
     }

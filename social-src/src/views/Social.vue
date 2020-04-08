@@ -25,6 +25,7 @@
 				<span class="icon-port-earth"></span>Web
 			</a>
 		</li>
+		<span class="contact icon-port-bubbles"></span>
 	</ol>
 </template>
 <script>

@@ -107,31 +107,10 @@ li.read-more {
 
 .--mini {
 	.hello {
-		min-height: 2rem;
-		flex-basis: 2rem;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+		height: 5.5rem;
 
-		.author {
-			font-size: 1rem;
-		}
-
-		.role {
-			margin: 0;
-			padding-left: 1rem;
-		}
-
-		.image {
-			display: none;
-		}
-
-		.hand-size {
-			bottom: -0.2rem;
-		}
-
-		.contact {
-			display: none;
+		.slider {
+			visibility: hidden;
 		}
 	}
 }
@@ -250,8 +229,8 @@ li.read-more {
     top: 0.4rem;
     left: 0.4rem;
     z-index: 3;
-    width: calc(100% - 0.6rem);
-    height: calc(100% - 1.2rem);
+    width: calc(100% - 0.8rem);
+    height: calc(100% - 0.7rem);
 	pointer-events: none;
 	border-top: 1px solid rgba(255, 255, 255, 0.24);
     border-radius: 2.5rem;
