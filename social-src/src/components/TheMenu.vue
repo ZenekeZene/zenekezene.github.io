@@ -59,6 +59,7 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-basis: 33.33%;
     height: 100%;
     padding: 1.7rem 1rem 0.7rem 1rem;
     color: rgba(255, 255, 255, 0.64);

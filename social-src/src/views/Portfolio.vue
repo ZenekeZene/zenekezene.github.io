@@ -12,7 +12,7 @@
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex';
-import portfolio from '../portfolio/portfolio.js';
+import portfolio from '../../public/portfolio/portfolio.js';
 
 export default {
 	name: 'Portfolio',

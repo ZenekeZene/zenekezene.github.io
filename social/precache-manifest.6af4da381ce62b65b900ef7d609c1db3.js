@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "db44374edecfbb69919b",
-    "url": "/social/css/app.d85476e1.css"
+    "revision": "b5684deb8e7a2c1b8154",
+    "url": "/social/css/app.2243340b.css"
   },
   {
     "revision": "f169fb1950bdde0e8ead",
@@ -60,12 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "6a3c1d54c7e6dd7405c5c45a3b10204e",
+    "revision": "066f6210db88daec7abfd49b8040c05e",
     "url": "/social/index.html"
   },
   {
-    "revision": "db44374edecfbb69919b",
-    "url": "/social/js/app.1c16402a.js"
+    "revision": "b5684deb8e7a2c1b8154",
+    "url": "/social/js/app.451887fe.js"
   },
   {
     "revision": "f169fb1950bdde0e8ead",
@@ -74,6 +74,34 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6807d751075d2eb3d52aa88df9aae182",
     "url": "/social/manifest.json"
+  },
+  {
+    "revision": "277dad20a483e569e08d1352a1197322",
+    "url": "/social/portfolio/1_work.md"
+  },
+  {
+    "revision": "729a3b355d2c5f7ec04f42efea63abfb",
+    "url": "/social/portfolio/another_work.md"
+  },
+  {
+    "revision": "268557bf48b447470d6ecc3f1a10066f",
+    "url": "/social/portfolio/barley_work.md"
+  },
+  {
+    "revision": "8816bf98e6b08bcb4b30f85ed14af8c5",
+    "url": "/social/portfolio/caracoles_work.md"
+  },
+  {
+    "revision": "d752e1703c3082cade9e539da1a26b16",
+    "url": "/social/portfolio/cheesekito_work.md"
+  },
+  {
+    "revision": "819752e15cea48aaeebba71759f61126",
+    "url": "/social/portfolio/ganga_work.md"
+  },
+  {
+    "revision": "b285fb205f38a6d668153c71b57e6820",
+    "url": "/social/portfolio/portfolio.js"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
