@@ -107,12 +107,32 @@ li.read-more {
 
 .--mini {
 	.hello {
-		min-height: 5rem;
-		flex-basis: 5rem;
+		min-height: 2rem;
+		flex-basis: 2rem;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		.author {
+			font-size: 1rem;
+		}
+
+		.role {
+			margin: 0;
+			padding-left: 1rem;
+		}
 
 		.image {
 			width: 100%;
 			height: auto;
+		}
+
+		.hand-size {
+			bottom: -0.2rem;
+		}
+
+		.contact {
+			display: none;
 		}
 	}
 }

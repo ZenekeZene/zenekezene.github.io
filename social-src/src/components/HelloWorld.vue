@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <span class="icon-port-bubbles"></span>
+    <span class="contact icon-port-bubbles"></span>
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
     <img class="image" src="/social/avatar2.jpg">
@@ -53,11 +53,12 @@ a {
   margin: 0 0.7rem;
   padding: 0.5rem;
   border-radius: 1rem 1rem 0 0;
-  filter: grayscale(100%);
   transition: all 50ms ease-in;
 
   &:hover {
-    filter: grayscale(0);
+    .image {
+      filter: grayscale(0);
+    }
   }
 
   &:before {
@@ -95,6 +96,8 @@ a {
   min-width: 100%;
   height: 100%;
   min-height: 10rem;
+  filter: grayscale(100%);
+  transition: all 150ms ease-in;
 }
 
 [class*='icon-port-'] {
@@ -106,5 +109,25 @@ a {
   color: white;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: unset;
+  height: 3rem;
+
+  &:after {
+    content: '';
+    $size: 0.5rem;
+    position: relative;
+    top: -0.8rem;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background-color: red;
+    border-radius: 50%;
+  }
 }
 </style>
