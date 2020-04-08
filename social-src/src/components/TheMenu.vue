@@ -26,11 +26,11 @@ export default {
         },
         {
           name: 'portfolio',
-          text: 'Portfolio'
+          text: 'Portafolio'
         },
         {
           name: 'networks',
-          text: 'Contact'
+          text: 'Contacto'
         },
       ]
     }

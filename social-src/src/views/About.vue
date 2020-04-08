@@ -2,30 +2,31 @@
 	<ol class="about">
 		<li>
 			<h3>Init</h3>
-			<h4>Frontend developer<span>2012-2014</span></h4>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-				Repellat, natus in maiores temporibus voluptatum aliquam
-				culpa beatae minus odit veritatis corporis tempore illum
-				fugit dicta cumque, assumenda reiciendis ea maxime!
+			<h4>Frontend developer<span>2017-Hoy</span></h4>
+			<p>Desarrollo de apps híbridas de salud, con Ionic, Angular8, Vue, Nuxt.
+				Manager de equipo de UX / Front.
 			</p>
 		</li>
 		<li>
 			<h3>Suggiero</h3>
-			<h4>Frontend developer<span>2012-2014</span></h4>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-				Repellat, natus in maiores temporibus voluptatum aliquam
-				culpa beatae minus odit veritatis corporis tempore illum
-				fugit dicta cumque, assumenda reiciendis ea maxime!
-			</p>
+			<h4>Frontend / UI<span>2015-2017</span></h4>
+			<p>Diseño UI / UX y desarrollo Front de plataformas web enfocadas en apuestas deportivas.
+				JS, Gulp, Webpack, SASS.</p>
 		</li>
 		<li>
 			<h3>Diario de un videojuego</h3>
-			<h4>Game developer<span>2012-2014</span></h4>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-				Repellat, natus in maiores temporibus voluptatum aliquam
-				culpa beatae minus odit veritatis corporis tempore illum
-				fugit dicta cumque, assumenda reiciendis ea maxime!
-			</p>
+			<h4>Game developer<span>2014-2015</span></h4>
+			<p>Fundador y redactor principal de Diario de un Videojuego
+			(htttp://diariodeunvideojuego.es).
+			Sigue todo el proceso de creación de un videojuego 2D para
+			Android/IOs, desde los primeros bocetos hasta el producto final.</p>
+		</li>
+		<li>
+			<h3>Seotec</h3>
+			<h4>Full Stack<span>2012-2014</span></h4>
+			<p>Desarrollo Front-End y Back-End, HTML5, CSS3, MySQL, PHP, Yii,
+			Javascript, Backbone, JQuery, Illustrator, Photoshop. Desarrollo
+			de aplicaciones móviles basados en tecnologías web con Phonegap, JS y HTML5.</p>
 		</li>
 	</ol>
 </template>

@@ -6,19 +6,29 @@
     </div>
     <img class="background" src="/social/avatar2.jpg">
     <swiper ref="aboutSwiper" class="slider" :options="optionsSwiper">
-      <swiper-slide></swiper-slide>
       <swiper-slide class="description">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Rerum illo alias possimus distinctio velit et autem magni sapiente,
-          dolore optio praesentium ea, aliquam quibusdam nemo veniam vel saepe,
-          tempore commodi?
-          <span class="icon-port-vue"></span>
-          <span class="icon-port-sass"></span>
-          <span class="icon-port-html5"></span>
-          <span class="icon-port-js"></span>
-          <span class="icon-port-git"></span>
+        <p>Creo <span class="font-bold">aplicaciones web</span> e <span class="font-bold">híbridas</span> con <span class="font-bold">estándares web</span>, en entornos ágiles,
+          con tests y clean code. Además, hago <span class="font-bold">videojuegos</span>, desde el arte
+          hasta animación e implementación de mecánicas.
+          <br/><br/>
+          Trabajo haciendo lo que me apasiona y me siento realmente afortunado.
+          <br/><br/>
+          <span class="claim font-bold">Trabajo, compromiso y pasión.</span>
+          <br/><br/>
+          <span class="badge">JS <span class="icon-port-js"></span></span>
+          <span class="badge">Vue <span class="icon-port-vue"></span></span>
+          <span class="badge">React <span class="icon-port-react"></span></span>
+          <span class="badge">Ionic <span class="icon-port-ionic"></span></span>
+          <span class="badge">Nuxt <span class="icon-port-nuxt"></span></span>
+          <span class="badge">Firebase <span class="icon-port-firebase"></span></span>
+          <span class="badge">SASS <span class="icon-port-sass"></span></span>
+          <span class="badge">CSS <span class="icon-port-css"></span></span>
+          <span class="badge">HTML<span class="icon-port-html5"></span></span>
+          <span class="badge">Git <span class="icon-port-git"></span></span>
+          <span class="badge">Unity <span class="icon-port-unity"></span></span>
         </p>
       </swiper-slide>
+      <swiper-slide></swiper-slide>
     </swiper>
     <div v-if="currentStep === 1" class="button-prev" @click="previous"><span class="icon-port-arrow-left"></span></div>
     <div v-if="currentStep === 0" class="button-next" @click="next"><span class="icon-port-arrow-left"></span></div>
@@ -71,14 +81,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
@@ -90,9 +103,11 @@ a {
 
 .background {
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   left: 0;
   width: 100%;
+  filter: grayscale(100%);
+  transition: all 250ms ease-in;
 }
 
 .description {
@@ -106,23 +121,24 @@ a {
   }
 
   p {
-    min-height: 22rem;
+    min-height: 16rem;
     color: white;
     text-align: left;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
 .hello {
   position: relative;
-  height: 49vh;
+  height: 19rem;
   overflow: hidden;
   margin: 0 0.7rem;
   border-radius: 1rem 1rem 0 0;
   transition: all 50ms ease-in;
 
   &:hover {
-    .image {
+    img {
       filter: grayscale(0);
     }
   }
@@ -133,6 +149,7 @@ a {
   position: relative;
   z-index: 1;
   margin: 0;
+  font-size: 1.5rem;
   text-align: left;
   color: white;
   text-shadow: 0 0 5px black;
@@ -178,7 +195,7 @@ a {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem 0.5rem 0.5rem;
   background: black;
 
   &:before {
@@ -196,12 +213,12 @@ a {
 
 .hand-size {
   position: absolute;
-  top: 2rem;
+  top: 0;
   right: 0;
   z-index: 2;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -210,18 +227,30 @@ a {
   position: absolute;
   z-index: 1;
   top: 50%;
-  margin-top: 1.5rem;
   padding: 0 0.1rem;
-  color: black;
+  color: white;
   font-size: 1.5rem;
 }
 
 .button-prev {
-  color: white;
+  color: black;
 }
 
 .button-next {
   right: 0;
   transform: rotate(180deg);
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+  padding-right: 0.8rem;
+  color: #9e9e9e;
+}
+
+@media screen and (max-height: 512px) {
+  .claim {
+    display: none;
+  }
 }
 </style>

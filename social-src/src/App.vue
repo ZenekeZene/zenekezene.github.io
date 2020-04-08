@@ -83,7 +83,7 @@ export default {
         slidesPerView: 1,
         autoHeight: true,
       },
-      currentStep: 2,
+      currentStep: 1,
       lightBoxStyle: {},
       lightBoxItem: null
     }

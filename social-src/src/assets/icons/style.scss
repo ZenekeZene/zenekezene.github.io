@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?j6rquw');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?j6rquw#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?j6rquw') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?j6rquw') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?j6rquw##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?y5isp3');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?y5isp3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?y5isp3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?y5isp3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?y5isp3##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -234,6 +234,23 @@
 .icon-port-share {
   &:before {
     content: $icon-port-share; 
+  }
+}
+.icon-port-react {
+  &:before {
+    content: $icon-port-react;     
+    color: #61dafb;
+  }
+}
+.icon-port-ionic {
+  &:before {
+    content: $icon-port-ionic;     
+    color: #3880ff;
+  }
+}
+.icon-port-unity {
+  &:before {
+    content: $icon-port-unity; 
   }
 }
 
