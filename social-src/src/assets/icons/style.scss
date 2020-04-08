@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fcmpw8');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fcmpw8#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?fcmpw8') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?fcmpw8') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?fcmpw8##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?stvagb');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?stvagb#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?stvagb') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?stvagb') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?stvagb##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-port-bubble {
+  &:before {
+    content: $icon-port-bubble; 
+  }
+}
+.icon-port-bubbles {
+  &:before {
+    content: $icon-port-bubbles; 
+  }
+}
+.icon-port-firebase {
+  &:before {
+    content: $icon-port-firebase;     
+    color: #ffca28;
+  }
+}
+.icon-port-git {
+  &:before {
+    content: $icon-port-git;     
+    color: #f05032;
+  }
+}
+.icon-port-html5 {
+  &:before {
+    content: $icon-port-html5;     
+    color: #e34f26;
+  }
+}
+.icon-port-css {
+  &:before {
+    content: $icon-port-css;     
+    color: #f43059;
+  }
+}
+.icon-port-css3 {
+  &:before {
+    content: $icon-port-css3;     
+    color: #1572b6;
+  }
+}
+.icon-port-nuxt {
+  &:before {
+    content: $icon-port-nuxt;     
+    color: #00c58e;
+  }
+}
+.icon-port-js {
+  &:before {
+    content: $icon-port-js;     
+    color: #393;
+  }
+}
+.icon-port-vue {
+  &:before {
+    content: $icon-port-vue;     
+    color: #4fc08d;
+  }
+}
+.icon-port-sass {
+  &:before {
+    content: $icon-port-sass;     
+    color: #c69;
+  }
+}
 .icon-port-search {
   &:before {
     content: $icon-port-search; 

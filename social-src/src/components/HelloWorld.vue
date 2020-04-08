@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <span class="icon-port-bubbles"></span>
     <h1 class="author">{{ author }}</h1>
     <p class="role">{{ role }}</p>
     <img class="image" src="/social/avatar2.jpg">

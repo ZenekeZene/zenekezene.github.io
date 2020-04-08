@@ -150,6 +150,7 @@ li.read-more {
 
 		@media (max-width: 414px) {
 			top: 1rem !important;
+			height: calc(100% - 1rem) !important;
     		border-radius: 0;
 		}
 	}

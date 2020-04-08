@@ -8,40 +8,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "bf261420cbbd07779350",
-    "url": "/social/css/app.290d6472.css"
+    "revision": "23ac215022a7b9f59832",
+    "url": "/social/css/app.2b8bf3a4.css"
   },
   {
     "revision": "dc602cdc425e4f6af821",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
-    "revision": "0feae5441f8eb1a6c2a40e58a0d41091",
-    "url": "/social/fonts/Portfolio.0feae544.eot"
+    "revision": "44914121d01c94043f764130effb3821",
+    "url": "/social/fonts/Portfolio.44914121.woff"
   },
   {
-    "revision": "4055864011a9771e0246fa8f9426f7d3",
-    "url": "/social/fonts/Portfolio.40558640.woff"
+    "revision": "4ecf8ec9c4c7be004708815731d1d1a6",
+    "url": "/social/fonts/Portfolio.4ecf8ec9.eot"
   },
   {
-    "revision": "f18e0e5352c0309d55f528daeb374549",
-    "url": "/social/fonts/Portfolio.f18e0e53.ttf"
+    "revision": "8df0f90373ef6b984b934a7e24379e35",
+    "url": "/social/fonts/Portfolio.8df0f903.ttf"
   },
   {
-    "revision": "9dbb01369e80ff94fad08d431bba0e4a",
-    "url": "/social/img/Portfolio.9dbb0136.svg"
+    "revision": "cfa4eaa7ca1062b941bf96b44966ab95",
+    "url": "/social/img/Portfolio.cfa4eaa7.svg"
   },
   {
     "revision": "3a5a87e6f045d3374d7322af0638e2ae",
     "url": "/social/img/broken.3a5a87e6.png"
   },
   {
-    "revision": "01212c8dec6eb9ffbb0984bca6d3c7de",
+    "revision": "1ef08110e8b09c027a2c7891812f6f4c",
     "url": "/social/index.html"
   },
   {
-    "revision": "bf261420cbbd07779350",
-    "url": "/social/js/app.2efc10c4.js"
+    "revision": "23ac215022a7b9f59832",
+    "url": "/social/js/app.de5e1ea3.js"
   },
   {
     "revision": "dc602cdc425e4f6af821",
