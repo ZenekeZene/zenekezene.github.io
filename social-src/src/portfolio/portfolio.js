@@ -21,7 +21,7 @@ const portfolio = {
 				previewImage: portfolio.getPreviewImage(index),
 				content: portfolio.getWorkData(index),
 			};
-			//console.log(workObject);
+			console.log(workObject);
 			worksOutput.push(workObject);
 		});
 		return worksOutput;
