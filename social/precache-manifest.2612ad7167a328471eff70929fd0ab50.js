@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "311329db965666339c30",
-    "url": "/social/css/app.2243340b.css"
+    "revision": "c8039a2aafc82362b050",
+    "url": "/social/css/app.aa04b2cc.css"
   },
   {
     "revision": "f169fb1950bdde0e8ead",
@@ -60,12 +60,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "bfd43ebd7827d407062e3c9b63605110",
+    "revision": "7c4e90aaa89be3ecba2908dc846afcff",
     "url": "/social/index.html"
   },
   {
-    "revision": "311329db965666339c30",
-    "url": "/social/js/app.cbd1bb53.js"
+    "revision": "c8039a2aafc82362b050",
+    "url": "/social/js/app.a61055cf.js"
   },
   {
     "revision": "f169fb1950bdde0e8ead",

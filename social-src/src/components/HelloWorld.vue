@@ -124,7 +124,7 @@ a {
     min-height: 16rem;
     color: white;
     text-align: left;
-    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
     font-size: 0.8rem;
   }
 }
@@ -230,6 +230,7 @@ a {
   padding: 0 0.1rem;
   color: white;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .button-prev {
@@ -244,7 +245,7 @@ a {
 .badge {
   display: inline-block;
   margin-bottom: 0.2rem;
-  padding-right: 0.8rem;
+  padding-right: 0.5rem;
   color: #9e9e9e;
 }
 
