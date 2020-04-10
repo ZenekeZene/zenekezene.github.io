@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <div class="info">
-      <h1 class="author">{{ author }}</h1>
+      <h1 class="author">{{ author }}
+        <span @click="toggleIsMini" class="hand-size" :class="isMini ? 'icon-port-info' : 'icon-port-minimize'"></span>
+      </h1>
       <p class="role">{{ role }}</p>
     </div>
     <img class="background" src="/social/avatar2.jpg">
@@ -15,24 +17,23 @@
           <br/><br/>
           <span class="claim font-bold">Trabajo, compromiso y pasión.</span>
           <br/><br/>
-          <span class="badge">JS <span class="icon-port-js"></span></span>
-          <span class="badge">Vue <span class="icon-port-vue"></span></span>
-          <span class="badge">React <span class="icon-port-react"></span></span>
-          <span class="badge">Ionic <span class="icon-port-ionic"></span></span>
-          <span class="badge">Nuxt <span class="icon-port-nuxt"></span></span>
-          <span class="badge">Firebase <span class="icon-port-firebase"></span></span>
-          <span class="badge">SASS <span class="icon-port-sass"></span></span>
-          <span class="badge">CSS <span class="icon-port-css"></span></span>
-          <span class="badge">HTML<span class="icon-port-html5"></span></span>
-          <span class="badge">Git <span class="icon-port-git"></span></span>
-          <span class="badge">Unity <span class="icon-port-unity"></span></span>
+          <span class="badge"><span class="icon-port-js"></span>JS</span>
+          <span class="badge"><span class="icon-port-vue"></span>Vue</span>
+          <span class="badge"><span class="icon-port-react"></span>React</span>
+          <span class="badge"><span class="icon-port-ionic"></span>Ionic</span>
+          <span class="badge"><span class="icon-port-nuxt"></span>Nuxt</span>
+          <span class="badge"><span class="icon-port-firebase"></span>Firebase</span>
+          <span class="badge"><span class="icon-port-sass"></span>SASS</span>
+          <span class="badge"><span class="icon-port-css"></span>CSS</span>
+          <span class="badge"><span class="icon-port-html5"></span>HTML</span>
+          <span class="badge"><span class="icon-port-git"></span>Git</span>
+          <span class="badge"><span class="icon-port-unity"></span>Unity</span>
         </p>
       </swiper-slide>
       <swiper-slide></swiper-slide>
     </swiper>
     <div v-if="currentStep === 1" class="button-prev" @click="previous"><span class="icon-port-arrow-left"></span></div>
     <div v-if="currentStep === 0" class="button-next" @click="next"><span class="icon-port-arrow-left"></span></div>
-    <span @click="toggleIsMini" class="hand-size" :class="isMini ? 'icon-port-info' : 'icon-port-minimize'"></span>
   </div>
 </template>
 
@@ -212,11 +213,7 @@ a {
 }
 
 .hand-size {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
@@ -244,9 +241,13 @@ a {
 
 .badge {
   display: inline-block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
   padding-right: 0.5rem;
   color: #9e9e9e;
+
+  [class*='icon-port'] {
+    padding-right: 0.2rem;
+  }
 }
 
 @media screen and (max-height: 512px) {

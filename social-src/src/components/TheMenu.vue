@@ -61,20 +61,21 @@ export default {
     flex-direction: column;
     flex-basis: 33.33%;
     height: 100%;
-    padding: 1.7rem 1rem 0.7rem 1rem;
+    padding: 1rem;
     color: rgba(255, 255, 255, 0.64);
     height: 3rem;
     overflow: hidden;
     flex-grow: 1;
-    font-size: 0.7rem;
+    font-size: 1rem;
     transition: all 250ms ease-in;
     cursor: pointer;
   }
 
   .active {
-    font-size: 1rem;
     padding-top: 0.5rem;
     color: white;
+    font-size: 1rem;
+    font-weight: 700;
 
     &:after {
       $size: 3px;
@@ -82,6 +83,7 @@ export default {
       display: inline-block;
       width: $size;
       height: $size;
+      margin-top: 4px;
       background-color: white;
       border-radius: 50%;
     }

@@ -8,11 +8,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "c8039a2aafc82362b050",
-    "url": "/social/css/app.aa04b2cc.css"
+    "revision": "43d9123f51a27713752e",
+    "url": "/social/css/app.9f4bd0d2.css"
   },
   {
-    "revision": "f169fb1950bdde0e8ead",
+    "revision": "1922724b519f3f0d1e71",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
@@ -60,16 +60,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "7c4e90aaa89be3ecba2908dc846afcff",
+    "revision": "352a23adcdf4bf0c6b9ab7a35c95bda3",
     "url": "/social/index.html"
   },
   {
-    "revision": "c8039a2aafc82362b050",
-    "url": "/social/js/app.a61055cf.js"
+    "revision": "43d9123f51a27713752e",
+    "url": "/social/js/app.76c85fed.js"
   },
   {
-    "revision": "f169fb1950bdde0e8ead",
-    "url": "/social/js/chunk-vendors.25de56a9.js"
+    "revision": "1922724b519f3f0d1e71",
+    "url": "/social/js/chunk-vendors.c8183b42.js"
   },
   {
     "revision": "6807d751075d2eb3d52aa88df9aae182",
@@ -100,7 +100,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/portfolio/ganga_work.md"
   },
   {
-    "revision": "fbae05e6e0344fa4fcde0f6c4971f8d2",
+    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "url": "/social/portfolio/millo_mejoras.md"
+  },
+  {
+    "revision": "1ebf53cbbb618a64ab6471a703afda64",
     "url": "/social/portfolio/portfolio.js"
   },
   {

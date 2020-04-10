@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app" v-scroll="onScroll">
     <div class="card"><div class="shine"></div></div>
     <div ref="workWrapper">
       <span
@@ -17,10 +17,11 @@
       v-touch:swipe.bottom="swipeDownHandler"
       :class="{ '--mini': isMini }"
     >
-      <TheHeader />
+      <TheHeader/>
       <HelloWorld
         author="Héctor Villar"
         role="Software Engineer"
+        :style="{ height: 300 - heightHeader + 'px' }"
       />
       <TheMenu ref="menuSwiper"
         :options="menuSwiperOptions"
@@ -29,7 +30,7 @@
       />
     </div>
     <main class="content">
-      <div class="content__main">
+      <div class="content__main" v-scroll="onScroll">
         <swiper ref="contentSwiper" :options="contentSwiperOptions">
           <swiper-slide><About /></swiper-slide>
           <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
@@ -85,11 +86,12 @@ export default {
       },
       currentStep: 1,
       lightBoxStyle: {},
-      lightBoxItem: null
+      lightBoxItem: null,
+      heightHeader: 60
     }
   },
   methods: {
-    ...mapMutations(['toggleIsMini', 'setIsExpanded']),
+    ...mapMutations(['toggleIsMini', 'setIsExpanded', 'setIsMini']),
     handGo({ slideIndex }) {
       this.currentStep = slideIndex;
       this.$refs.contentSwiper.$swiper.slideTo(slideIndex);
@@ -125,6 +127,12 @@ export default {
 			setTimeout(() => {
 				this.work.classList.add('--expanded');
 			}, 100);
+    },
+    onScroll(event, position) {
+      //if (position.scrollTop > 200) {
+        //this.setIsMini({ isMini: true });
+        this.heightHeader = position.scrollTop * 2.5;
+      //}
     }
   },
   mounted() {

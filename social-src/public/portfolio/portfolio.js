@@ -10,7 +10,6 @@ const portfolio = {
 		str = str.replace(/"/gi, "");
 		const regex = /src=(.*?)>/; 
 		const src = str.match(regex);
-		console.log(src);
 		return src ? src[1] : '';
 	},
 	mountedWorks() {
