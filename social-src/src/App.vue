@@ -17,11 +17,10 @@
       v-touch:swipe.bottom="swipeDownHandler"
       :class="{ '--mini': isMini }"
     >
-      <TheHeader/>
+      <TheHeader />
       <HelloWorld
         author="Héctor Villar"
         role="Software Engineer"
-        :style="{ height: 300 - heightHeader + 'px' }"
       />
       <TheMenu ref="menuSwiper"
         :options="menuSwiperOptions"
@@ -86,8 +85,7 @@ export default {
       },
       currentStep: 1,
       lightBoxStyle: {},
-      lightBoxItem: null,
-      heightHeader: 60
+      lightBoxItem: null
     }
   },
   methods: {
@@ -129,10 +127,9 @@ export default {
 			}, 100);
     },
     onScroll(event, position) {
-      //if (position.scrollTop > 200) {
-        //this.setIsMini({ isMini: true });
-        this.heightHeader = position.scrollTop * 2.5;
-      //}
+      if (position.scrollTop > 170) {
+        this.setIsMini({ isMini: true });
+      }
     }
   },
   mounted() {

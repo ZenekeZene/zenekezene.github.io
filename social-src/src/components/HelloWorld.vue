@@ -11,12 +11,11 @@
       <swiper-slide class="description">
         <p>Creo <span class="font-bold">aplicaciones web</span> e <span class="font-bold">híbridas</span> con <span class="font-bold">estándares web</span>, en entornos ágiles,
           con tests y clean code. Además, hago <span class="font-bold">videojuegos</span>, desde el arte
-          hasta animación e implementación de mecánicas.
-          <br/><br/>
-          Trabajo haciendo lo que me apasiona y me siento realmente afortunado.
-          <br/><br/>
-          <span class="claim font-bold">Trabajo, compromiso y pasión.</span>
-          <br/><br/>
+          hasta animación y desarrollo.
+          <br/>
+          Me siento afortunado por trabajar en lo que me apasiona.
+          <br/>
+          <br/>
           <span class="badge"><span class="icon-port-js"></span>JS</span>
           <span class="badge"><span class="icon-port-vue"></span>Vue</span>
           <span class="badge"><span class="icon-port-react"></span>React</span>
@@ -26,7 +25,6 @@
           <span class="badge"><span class="icon-port-sass"></span>SASS</span>
           <span class="badge"><span class="icon-port-css"></span>CSS</span>
           <span class="badge"><span class="icon-port-html5"></span>HTML</span>
-          <span class="badge"><span class="icon-port-git"></span>Git</span>
           <span class="badge"><span class="icon-port-unity"></span>Unity</span>
         </p>
       </swiper-slide>
@@ -126,7 +124,7 @@ a {
     color: white;
     text-align: left;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.937em;
   }
 }
 
@@ -136,7 +134,7 @@ a {
   overflow: hidden;
   margin: 0 0.7rem;
   border-radius: 1rem 1rem 0 0;
-  transition: all 50ms ease-in;
+  transition: all 250ms ease-in;
 
   &:hover {
     img {
@@ -157,7 +155,7 @@ a {
 }
 
 .role {
-  font-size: 0.7rem;
+  font-size: 0.937em;
 }
 
 .image {
@@ -241,12 +239,11 @@ a {
 
 .badge {
   display: inline-block;
-  margin-bottom: 0.5rem;
   padding-right: 0.5rem;
   color: #9e9e9e;
 
   [class*='icon-port'] {
-    padding-right: 0.2rem;
+    padding-right: 0.25rem;
   }
 }
 

@@ -16,6 +16,34 @@
 }
 
 body {
+	line-height: 1.65;
+}
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.383em;
+}
+
+h2 {font-size: 1.296em;}
+
+h3 {font-size: 1.215em;}
+
+h4 {font-size: 1.138em;}
+
+h5 {font-size: 1.067em;}
+
+small, .text_small, p {font-size: 0.937em;}
+
+body {
 	position: absolute;
     left: 0;
     top: 0;
