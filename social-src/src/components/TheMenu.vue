@@ -72,7 +72,6 @@ export default {
   }
 
   .active {
-    padding-top: 0.5rem;
     color: white;
     font-size: 1rem;
     font-weight: 700;

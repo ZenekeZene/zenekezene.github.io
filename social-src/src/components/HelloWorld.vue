@@ -12,10 +12,7 @@
         <p>Creo <span class="font-bold">aplicaciones web</span> e <span class="font-bold">híbridas</span> con <span class="font-bold">estándares web</span>, en entornos ágiles,
           con tests y clean code. Además, hago <span class="font-bold">videojuegos</span>, desde el arte
           hasta animación y desarrollo.
-          <br/>
-          Me siento afortunado por trabajar en lo que me apasiona.
-          <br/>
-          <br/>
+          <br/><br/>
           <span class="badge"><span class="icon-port-js"></span>JS</span>
           <span class="badge"><span class="icon-port-vue"></span>Vue</span>
           <span class="badge"><span class="icon-port-react"></span>React</span>
@@ -25,7 +22,6 @@
           <span class="badge"><span class="icon-port-sass"></span>SASS</span>
           <span class="badge"><span class="icon-port-css"></span>CSS</span>
           <span class="badge"><span class="icon-port-html5"></span>HTML</span>
-          <span class="badge"><span class="icon-port-unity"></span>Unity</span>
         </p>
       </swiper-slide>
       <swiper-slide></swiper-slide>
@@ -123,7 +119,7 @@ a {
     min-height: 16rem;
     color: white;
     text-align: left;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
     font-size: 0.937em;
   }
 }
