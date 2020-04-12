@@ -8,11 +8,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "60cacf17357910eebe80",
-    "url": "/social/css/app.6ffc12f5.css"
+    "revision": "6dda054147c464ea4161",
+    "url": "/social/css/app.9b7fa475.css"
   },
   {
-    "revision": "1922724b519f3f0d1e71",
+    "revision": "545ce417573efa5fd827",
     "url": "/social/css/chunk-vendors.4ecd944a.css"
   },
   {
@@ -60,16 +60,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "f79a528d2b812fc1977cac3e6cd069e0",
+    "revision": "d68ee5d3aeeccd37a694fd2aeef531ad",
     "url": "/social/index.html"
   },
   {
-    "revision": "60cacf17357910eebe80",
-    "url": "/social/js/app.977791e9.js"
+    "revision": "6dda054147c464ea4161",
+    "url": "/social/js/app.42e9909c.js"
   },
   {
-    "revision": "1922724b519f3f0d1e71",
-    "url": "/social/js/chunk-vendors.c8183b42.js"
+    "revision": "545ce417573efa5fd827",
+    "url": "/social/js/chunk-vendors.c7ecb613.js"
   },
   {
     "revision": "6807d751075d2eb3d52aa88df9aae182",

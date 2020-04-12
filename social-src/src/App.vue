@@ -30,21 +30,28 @@
     </div>
     <main class="content">
       <div class="content__main" v-scroll="onScroll">
-        <swiper ref="contentSwiper" :options="contentSwiperOptions">
-          <swiper-slide><About /></swiper-slide>
-          <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
-          <swiper-slide><Social /></swiper-slide>
-        </swiper>
+        <vue-custom-scrollbar class="scroll-area" :settings="settingsScroll" @ps-y-reach-end="reachEnd">
+          <swiper ref="contentSwiper" :options="contentSwiperOptions">
+            <swiper-slide><About /></swiper-slide>
+            <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
+            <swiper-slide><Social /></swiper-slide>
+          </swiper>
+        </vue-custom-scrollbar>
       </div>
     </main>
-    <button v-if="currentStep === 0" class="fab"><span class="icon-port-download"></span></button>
-    <button v-if="currentStep === 2" class="fab"><span class="icon-port-share"></span></button>
+    <div class="fab-wrapper" v-if="currentStep === 0">
+      <button class="fab"><span class="icon-port-download"></span></button>
+    </div>
+    <div class="fab-wrapper" v-if="currentStep === 2">
+      <button class="fab"><span class="icon-port-share"></span></button>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex';
 import { debounce } from 'lodash'
+import vueCustomScrollbar from 'vue-custom-scrollbar'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader.vue'
 import TheMenu from './components/TheMenu.vue'
@@ -60,7 +67,8 @@ export default {
     TheMenu,
     About,
     Social,
-    Portfolio
+    Portfolio,
+    vueCustomScrollbar
   },
   computed: {
     ...mapState(['isMini', 'isExpanded']),
@@ -85,7 +93,11 @@ export default {
       },
       currentStep: 1,
       lightBoxStyle: {},
-      lightBoxItem: null
+      lightBoxItem: null,
+      settingsScroll: {
+        maxScrollbarLength: 60,
+        suppressScrollX: true,
+      }
     }
   },
   methods: {
@@ -130,6 +142,9 @@ export default {
       if (position.scrollTop > 170) {
         this.setIsMini({ isMini: true });
       }
+    },
+    reachEnd(event) {
+      console.log(event);
     }
   },
   mounted() {
@@ -154,3 +169,26 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .scroll-area {
+    height: 100%;
+  }
+
+  .ps__thumb-y {
+    width: 1px;
+    background-color: #698360;
+  }
+
+  .ps--focus > .ps__rail-x,
+  .ps--focus > .ps__rail-y,
+  .ps--scrolling-x > .ps__rail-x,
+  .ps--scrolling-y > .ps__rail-y,
+  .ps:hover > .ps__rail-x,
+  .ps:hover > .ps__rail-y {
+    opacity: 1;
+  }
+
+  .ps__rail-y {
+    width: 1px;
+  }
+</style>
