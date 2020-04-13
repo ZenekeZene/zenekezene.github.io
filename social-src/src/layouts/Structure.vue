@@ -3,7 +3,7 @@
     :class="{ '--mini': isMini }"
   >
     <TheHeader />
-    <HelloWorld
+    <Profile
       author="Héctor Villar"
       role="Software Engineer"
     />
@@ -15,14 +15,14 @@
 </template>
 <script>
 import { mapState } from 'vuex'
-import HelloWorld from '../components/HelloWorld.vue'
+import Profile from '../components/Profile.vue'
 import TheHeader from '../components/TheHeader.vue'
 import TheMenu from '../components/TheMenu.vue'
 
 export default {
 	name: 'Structure',
 	components: {
-		HelloWorld,
+		Profile,
 		TheHeader,
 		TheMenu,
 	},

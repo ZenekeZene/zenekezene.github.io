@@ -9,7 +9,7 @@ import store from './store';
 
 import './scripts/registerServiceWorker'
 import 'swiper/css/swiper.css'
-import './assets/main.scss'
+import './assets/styles/main.scss'
 
 Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)

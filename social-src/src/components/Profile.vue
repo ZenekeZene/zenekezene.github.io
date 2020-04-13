@@ -35,7 +35,7 @@
 import { mapState, mapMutations } from 'vuex';
 
 export default {
-  name: 'HelloWorld',
+  name: 'Profile',
   props: {
     author: String,
     role: String,
@@ -87,10 +87,6 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
-
 .swiper-container {
   width: 100%;
   min-height: 16.7rem;
@@ -106,7 +102,7 @@ a {
 }
 
 .description {
-  background-color: black;
+  background-color: var(--background-color-app);
 }
 
 .slider {
@@ -117,7 +113,7 @@ a {
 
   p {
     min-height: 16rem;
-    color: white;
+    color: var(--color-text--invert);
     text-align: left;
     padding: 0.5rem 3rem 0.5rem 0.5rem;
     font-size: 0.937em;
@@ -146,8 +142,7 @@ a {
   margin: 0;
   font-size: 1.5rem;
   text-align: left;
-  color: white;
-  text-shadow: 0 0 5px black;
+  color: var(--color-text--invert);
 }
 
 .role {
@@ -165,33 +160,12 @@ a {
   transition: all 150ms ease-in;
 }
 
-.contact {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: unset;
-  height: 3rem;
-
-  &:after {
-    content: '';
-    $size: 0.5rem;
-    position: relative;
-    top: -0.8rem;
-    display: inline-block;
-    width: $size;
-    height: $size;
-    background-color: red;
-    border-radius: 50%;
-  }
-
-}
-
 .info {
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 0 1rem 0.5rem 0.5rem;
-  background: black;
+  background: var(--background-color-app);
 
   &:before {
     // content: '';
@@ -208,7 +182,7 @@ a {
 
 .hand-size {
   padding: 0.5rem 0;
-  color: white;
+  color: var(--color-text-invert);
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -219,13 +193,13 @@ a {
   z-index: 1;
   top: 50%;
   padding: 0 0.1rem;
-  color: white;
+  color: var(--color-text--invert);
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .button-prev {
-  color: black;
+  color: var(--background-color-app);
 }
 
 .button-next {
@@ -236,7 +210,6 @@ a {
 .badge {
   display: inline-block;
   padding-right: 0.5rem;
-  color: #9e9e9e;
 
   [class*='icon-port'] {
     padding-right: 0.25rem;

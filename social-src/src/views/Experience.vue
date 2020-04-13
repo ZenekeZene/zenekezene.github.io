@@ -74,7 +74,7 @@
 			height: $size;
 			margin-right: 1rem;
 			margin-left: 0.2rem;
-			background-color: black;
+			background-color: var(--background-color-app);
 			border-radius: 50%;
 		}
 	}
@@ -86,7 +86,9 @@
 		padding-left: 1.65rem;
 
 		span {
-			margin-left: 0.2rem;
+			margin-left: 0.5rem;
+			font-size: 0.937em;
+			font-weight: 400;
 		}
 	}
 

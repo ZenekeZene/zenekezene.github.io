@@ -59,6 +59,39 @@ export default {
 }
 </script>
 <style lang="scss">
+.work {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+
+    &.--expanded {
+        transition: all 250ms ease-in;
+        top: 2.4rem !important;
+        left: 0.7rem !important;
+        z-index: 3;
+        width: calc(100% - 1.4rem)!important;
+        height: calc(100% - 3rem)!important;
+        overflow: auto;
+        border-radius: 1rem 1rem 2rem 2rem;
+
+        @media (max-width: 414px) {
+            top: 0.5rem !important;
+            height: calc(100% - 1rem) !important;
+            border-radius: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .close {
     position: absolute;
     top: 1rem;

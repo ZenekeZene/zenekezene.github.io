@@ -76,3 +76,22 @@ export default {
 	}
 }
 </script>
+<style lang="scss">
+.content {
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0 0.7rem 0.7rem 0.7rem;
+  background-color: var(--background-color-app);
+
+  &__main {
+    position: relative;
+    height: 100%;
+    padding: 0.5rem;
+    text-align: left;
+    background-color: var(--background-color-app-content);
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+</style>

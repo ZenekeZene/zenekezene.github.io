@@ -1,0 +1,17 @@
+:root {
+	--vh: 0px;
+	--width-app: 22rem;
+	--height-app: 44rem;
+	--background-color: #212121;
+	--color-text: #2c3e50;
+	--color-text--invert: #ffffff;
+	--background-color-app: #000000;
+	--background-color-app-content: #ffffff;
+	--primary-font: Avenir;
+	--fallback-font: Helvetica, Arial, sans-serif;
+	--font: var(--primary-font), var(--fallback-font);
+	--font-bold: 700;
+	--fab-size: 3rem;
+}
+
+$icomoon-font-path: "../icons/fonts" !default;

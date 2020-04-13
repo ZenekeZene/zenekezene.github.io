@@ -1,0 +1,95 @@
+@import 'variables.scss';
+@import 'reset.scss';
+@import 'base.scss';
+@import 'type-scale.scss';
+@import '../icons/style.scss';
+@import 'utils.scss';
+
+.app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: var(--width-app);
+    height: var(--height-app);
+    overflow: hidden;
+    margin-top: 1rem;
+    margin: auto;
+    text-align: center;
+    color: var(--color-text);
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background-color-app);
+    border-radius: 2.8rem;
+    box-shadow: 0 0 5rem black;
+    overscroll-behavior: none;
+
+    @media (max-width: 414px) {
+        max-width: unset;
+        @include size-full;
+        border-radius: 0;
+
+        .header {
+            display: none;
+        }
+
+        .hello {
+            margin-top: 0.5rem;
+            border-radius: 0;
+        }
+
+        .content__main {
+            border-radius: 0;
+        }
+    }
+}
+
+.--mini {
+    .hello {
+        height: 3rem;
+    }
+
+    .slider,
+    .background,
+    .button-next,
+    .button-previous {
+        display: none;
+    }
+}
+
+.fab {
+    position: absolute;
+    bottom: 1.3rem;
+    right: 1.3rem;
+    z-index: 1;
+    display: inline-block;
+    width: var(--fab-size);
+    height: var(--fab-size);
+    color: var(--color-text--invert);
+    background-color: var(--background-color-app);
+    border-radius: 50%;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &-wrapper {
+
+        p {
+            position: absolute;
+            right: 0;
+            bottom: 0.2rem;
+            width: 16rem;
+            font-weight: var(--font-bold);
+        }
+    }
+}
+
+.icon-port-unity:before {
+    color: var(--color-text--invert);
+}
+
+.scroll-area {
+    height: 100%;
+}
