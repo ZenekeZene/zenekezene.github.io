@@ -8,9 +8,7 @@
       <p v-if="claimIsVisible">Descargate el CV</p>
       <button class="fab"><span class="icon-port-download"></span></button>
     </div>
-    <div class="fab-wrapper" v-if="currentSlide === 2">
-      <button class="fab"><span class="icon-port-share"></span></button>
-    </div>
+    <button v-if="currentSlide === 2" class="fab"><span class="icon-port-share" style="margin-left: -3px;"></span></button>
   </div>
 </template>
 
