@@ -1,16 +1,7 @@
 <template>
   <div id="app" class="app">
     <div class="card"><div class="shine"></div></div>
-    <div>
-      <span
-        v-if="isExpanded && currentStep === 1 && isMini"
-        class="close icon-port-cross"
-        @click="handCloseExpanded"
-      ></span>
-      <div ref="work" class="work" :style="lightBoxStyle">
-        <div v-if="lightBoxItem" v-html="lightBoxItem.content"></div>
-      </div>
-    </div>
+    <LightBox />
     <div
       ref="structure"
       :class="{ '--mini': isMini }"
@@ -36,7 +27,7 @@
         >
           <swiper ref="contentSwiper" :options="contentSwiperOptions">
             <swiper-slide><Experience /></swiper-slide>
-            <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
+            <swiper-slide><Portfolio /></swiper-slide>
             <swiper-slide><Social /></swiper-slide>
           </swiper>
         </vue-custom-scrollbar>
@@ -59,9 +50,10 @@ import vueCustomScrollbar from 'vue-custom-scrollbar'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader.vue'
 import TheMenu from './components/TheMenu.vue'
+import LightBox from './components/LightBox.vue'
 import Experience from './views/Experience.vue'
 import Social from './views/Social.vue'
-import Portfolio from './views/Portfolio.vue'
+import Portfolio from './views/Portfolio.vue';
 
 export default {
   name: 'App',
@@ -69,6 +61,7 @@ export default {
     HelloWorld,
     TheHeader,
     TheMenu,
+    LightBox,
     Experience,
     Social,
     Portfolio,
@@ -78,9 +71,6 @@ export default {
     ...mapState(['isMini', 'isExpanded', 'currentSlide']),
     contentSwiper() {
       return this.$refs.contentSwiper.$swiper
-    },
-    work() {
-      return this.$refs.work;
     }
   },
   data() {
@@ -92,8 +82,6 @@ export default {
         slidesPerView: 1,
         autoHeight: true,
       },
-      lightBoxStyle: {},
-      lightBoxItem: null,
       settingsScroll: {
         maxScrollbarLength: 60,
         suppressScrollX: true,
@@ -105,29 +93,6 @@ export default {
     ...mapMutations(['toggleIsMini', 'setIsExpanded', 'setIsMini', 'setCurrentSlide']),
     handGo({ slideIndex }) {
       this.contentSwiper.slideTo(slideIndex);
-    },
-    handCloseExpanded() {
-      this.lightBoxItem = null;
-      this.lightBoxStyle = null;
-      this.setIsExpanded({ isExpanded: false });
-      this.work.classList.remove('--expanded');
-    },
-    launchLightBox($event) {
-      const item = $event.item;
-      this.lightBoxItem = $event.data;
-      const { structure } = this.$refs;
-			const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = item;
-
-      this.lightBoxStyle = {
-        top: `calc(${structure.offsetHeight +  offsetTop}px + 0.5rem)`,
-        left: `calc(${offsetLeft}px + 1.2rem)`,
-        width: `${offsetWidth}px`,
-        height: `${offsetHeight}px`,
-      }
-
-			setTimeout(() => {
-				this.work.classList.add('--expanded');
-			}, 100);
     },
     onScroll(event) {
       if (event.target.scrollTop > 135 && this.isMini === false) {

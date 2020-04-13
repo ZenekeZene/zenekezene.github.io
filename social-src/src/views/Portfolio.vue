@@ -31,7 +31,7 @@ export default {
 		},
 		generateWork(index) {
 			const item = this.$refs[`work-${index}`][0];
-			this.$emit('launch:ligth-box', { item, data: this.works[index] });
+			this.$root.$emit('launch:ligth-box', { item, data: this.works[index] });
 		}
 	}
 }
