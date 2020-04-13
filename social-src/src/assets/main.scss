@@ -209,6 +209,14 @@ li.read-more {
 		padding: 0.5rem 0.5rem 0.5rem 0;
 		background-color: white;
 		border-radius: 3rem 2rem 3rem 3rem;
+
+		p {
+			position: absolute;
+			right: 0;
+			bottom: 0.2rem;
+			width: 16rem;
+			font-weight: 700;
+		}
 	}
 
 	&:focus {
@@ -313,4 +321,26 @@ a {
 
 .icon-port-unity:before {
 	color: white;
+}
+
+.scroll-area {
+	height: 100%;
+}
+
+.ps__thumb-y {
+	width: 1px;
+	background-color: #698360;
+}
+
+.ps--focus > .ps__rail-x,
+.ps--focus > .ps__rail-y,
+.ps--scrolling-x > .ps__rail-x,
+.ps--scrolling-y > .ps__rail-y,
+.ps:hover > .ps__rail-x,
+.ps:hover > .ps__rail-y {
+	opacity: 1;
+}
+
+.ps__rail-y {
+	width: 1px;
 }

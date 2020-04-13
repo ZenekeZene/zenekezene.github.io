@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="app" v-scroll="onScroll">
+  <div id="app" class="app">
     <div class="card"><div class="shine"></div></div>
-    <div ref="workWrapper">
+    <div>
       <span
         v-if="isExpanded && currentStep === 1 && isMini"
         class="close icon-port-cross"
@@ -13,8 +13,6 @@
     </div>
     <div
       ref="structure"
-      v-touch:swipe.top="swipeUpHandler"
-      v-touch:swipe.bottom="swipeDownHandler"
       :class="{ '--mini': isMini }"
     >
       <TheHeader />
@@ -24,13 +22,18 @@
       />
       <TheMenu ref="menuSwiper"
         :options="menuSwiperOptions"
-        :current-step="currentStep"
         @go:to="handGo($event)"
       />
     </div>
     <main class="content">
       <div class="content__main" v-scroll="onScroll">
-        <vue-custom-scrollbar class="scroll-area" :settings="settingsScroll" @ps-y-reach-end="reachEnd">
+        <vue-custom-scrollbar
+          ref="scrollbar"
+          class="scroll-area"
+          :settings="settingsScroll"
+          @ps-y-reach-end="reachEnd"
+          @ps-scroll-y="onScroll"
+        >
           <swiper ref="contentSwiper" :options="contentSwiperOptions">
             <swiper-slide><About /></swiper-slide>
             <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
@@ -39,10 +42,11 @@
         </vue-custom-scrollbar>
       </div>
     </main>
-    <div class="fab-wrapper" v-if="currentStep === 0">
+    <div class="fab-wrapper" v-if="currentSlide === 0">
+      <p v-if="claimIsVisible">Descargate el CV</p>
       <button class="fab"><span class="icon-port-download"></span></button>
     </div>
-    <div class="fab-wrapper" v-if="currentStep === 2">
+    <div class="fab-wrapper" v-if="currentSlide === 2">
       <button class="fab"><span class="icon-port-share"></span></button>
     </div>
   </div>
@@ -71,10 +75,7 @@ export default {
     vueCustomScrollbar
   },
   computed: {
-    ...mapState(['isMini', 'isExpanded']),
-    menuSwiper() {
-      return this.$refs.contentSwiper.$swiper
-    },
+    ...mapState(['isMini', 'isExpanded', 'currentSlide']),
     contentSwiper() {
       return this.$refs.contentSwiper.$swiper
     },
@@ -91,20 +92,19 @@ export default {
         slidesPerView: 1,
         autoHeight: true,
       },
-      currentStep: 1,
       lightBoxStyle: {},
       lightBoxItem: null,
       settingsScroll: {
         maxScrollbarLength: 60,
         suppressScrollX: true,
-      }
+      },
+      claimIsVisible: false
     }
   },
   methods: {
-    ...mapMutations(['toggleIsMini', 'setIsExpanded', 'setIsMini']),
+    ...mapMutations(['toggleIsMini', 'setIsExpanded', 'setIsMini', 'setCurrentSlide']),
     handGo({ slideIndex }) {
-      this.currentStep = slideIndex;
-      this.$refs.contentSwiper.$swiper.slideTo(slideIndex);
+      this.contentSwiper.slideTo(slideIndex);
     },
     handCloseExpanded() {
       this.lightBoxItem = null;
@@ -112,23 +112,14 @@ export default {
       this.setIsExpanded({ isExpanded: false });
       this.work.classList.remove('--expanded');
     },
-    swipeUpHandler() {
-      // this.toggleIsMini();
-    },
-    swipeDownHandler() {
-      // this.toggleIsMini();
-    },
     launchLightBox($event) {
       const item = $event.item;
       this.lightBoxItem = $event.data;
-      const { structure, workWrapper } = this.$refs;
-
-			const offsetTopStructure = structure.offsetTop;
-			const offsetHeightStructure = structure.offsetHeight;
+      const { structure } = this.$refs;
 			const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = item;
 
       this.lightBoxStyle = {
-        top: `calc(${offsetHeightStructure +  offsetTop}px + 0.5rem)`,
+        top: `calc(${structure.offsetHeight +  offsetTop}px + 0.5rem)`,
         left: `calc(${offsetLeft}px + 1.2rem)`,
         width: `${offsetWidth}px`,
         height: `${offsetHeight}px`,
@@ -138,20 +129,28 @@ export default {
 				this.work.classList.add('--expanded');
 			}, 100);
     },
-    onScroll(event, position) {
-      if (position.scrollTop > 170) {
+    onScroll(event) {
+      if (event.target.scrollTop > 135 && this.isMini === false) {
         this.setIsMini({ isMini: true });
       }
+      this.claimIsVisible = false;
     },
     reachEnd(event) {
-      console.log(event);
+      if (event.target.scrollTop > 0 && this.claimIsVisible === false) {
+        this.claimIsVisible = true;
+        return false;
+      }
     }
   },
   mounted() {
-    this.$refs.contentSwiper.$swiper.slideTo(this.currentStep);
-    this.$refs.contentSwiper.$swiper.on('slideChange', () => {
-      this.currentStep = this.$refs.contentSwiper.$swiper.activeIndex;
-      this.setIsExpanded({ isExpanded: false })
+    this.contentSwiper.slideTo(this.currentSlide);
+    this.contentSwiper.on('slideChange', () => {
+      this.$refs.scrollbar.$el.scrollTop = 0;
+      this.contentSwiper.offsetTop = 0;
+      this.setCurrentSlide({ currentSlide: this.contentSwiper.activeIndex });
+      if (this.isExpanded) {
+        this.setIsExpanded({ isExpanded: false })
+      }
     });
 
     // Hack mobile viewport with vh units:
@@ -169,26 +168,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-  .scroll-area {
-    height: 100%;
-  }
-
-  .ps__thumb-y {
-    width: 1px;
-    background-color: #698360;
-  }
-
-  .ps--focus > .ps__rail-x,
-  .ps--focus > .ps__rail-y,
-  .ps--scrolling-x > .ps__rail-x,
-  .ps--scrolling-y > .ps__rail-y,
-  .ps:hover > .ps__rail-x,
-  .ps:hover > .ps__rail-y {
-    opacity: 1;
-  }
-
-  .ps__rail-y {
-    width: 1px;
-  }
-</style>

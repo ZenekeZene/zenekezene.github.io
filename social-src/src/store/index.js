@@ -7,6 +7,7 @@ const store = new Vuex.Store({
 	state: {
 		isMini: true,
 		isExpanded: false,
+		currentSlide: 1
 	},
 	mutations: {
 		setIsExpanded(state, { isExpanded }) {
@@ -17,6 +18,9 @@ const store = new Vuex.Store({
 		},
 		toggleIsMini(state) {
 			state.isMini = !state.isMini;
+		},
+		setCurrentSlide(state, payload) {
+			state.currentSlide = payload.currentSlide;
 		}
 	}
 });

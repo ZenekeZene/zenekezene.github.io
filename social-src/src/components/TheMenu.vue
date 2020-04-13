@@ -1,7 +1,7 @@
 <template>
   <ol class="menu">
     <li v-for="(section, index) in sections" :key="`section-${section.name}`"
-      :class="{ 'active': currentStep === index }"
+      :class="{ 'active': currentSlide === index }"
       @click="handGo(index)"
     >
       {{ section.text }}
@@ -9,13 +9,11 @@
   </ol>
 </template>
 <script>
+import { mapState } from 'vuex';
 export default {
   name: 'TheMenu',
-  props: {
-    currentStep: {
-      type: Number,
-      default: 0,
-    },
+  computed: {
+    ...mapState(['currentSlide'])
   },
   data() {
     return {
@@ -75,17 +73,6 @@ export default {
     color: white;
     font-size: 1rem;
     font-weight: 700;
-
-    &:after {
-      $size: 3px;
-      content: '';
-      display: inline-block;
-      width: $size;
-      height: $size;
-      margin-top: 4px;
-      background-color: white;
-      border-radius: 50%;
-    }
   }
 }
 </style>
