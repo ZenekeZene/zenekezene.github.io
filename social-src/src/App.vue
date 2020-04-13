@@ -16,7 +16,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-import { trickViewport } from './viewport';
+import { trickViewport } from './scripts/viewport';
 import LightBox from './components/LightBox';
 import Glass from './components/Glass';
 import Structure from './layouts/Structure';
