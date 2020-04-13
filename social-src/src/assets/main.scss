@@ -173,7 +173,6 @@ li.read-more {
 		height: calc(100% - 3rem)!important;
 		overflow: auto;
 		border-radius: 1rem 1rem 2rem 2rem;
-		// box-shadow: 0 0 8px 0px white;
 
 		@media (max-width: 414px) {
 			top: 0.5rem !important;
@@ -265,36 +264,6 @@ li.read-more {
 #structure {
 	position: relative;
     z-index: 2;
-}
-
-@import 'glass';
-
-.card {
-	position: absolute;
-    top: 0.4rem;
-    left: 0.4rem;
-    z-index: 3;
-    width: calc(100% - 0.8rem);
-    height: calc(100% - 0.7rem);
-	pointer-events: none;
-	border-top: 1px solid rgba(255, 255, 255, 0.24);
-    border-radius: 2.5rem;
-
-	@media (max-width: 414px) {
-		display: none;
-	}
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: -5.3rem;
-		left: 2rem;
-		display: block;
-		width: 52%;
-		height: 9rem;
-		background: url('../assets/broken.png') no-repeat;
-		background-size: 100% auto;
-	}
 }
 
 a {

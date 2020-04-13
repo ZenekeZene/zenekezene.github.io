@@ -1,23 +1,10 @@
 <template>
   <div id="app" class="app">
-    <div class="card"><div class="shine"></div></div>
+    <Glass />
     <LightBox />
-    <div
-      ref="structure"
-      :class="{ '--mini': isMini }"
-    >
-      <TheHeader />
-      <HelloWorld
-        author="Héctor Villar"
-        role="Software Engineer"
-      />
-      <TheMenu ref="menuSwiper"
-        :options="menuSwiperOptions"
-        @go:to="handGo($event)"
-      />
-    </div>
+    <Structure />
     <main class="content">
-      <div class="content__main" v-scroll="onScroll">
+      <div class="content__main">
         <vue-custom-scrollbar
           ref="scrollbar"
           class="scroll-area"
@@ -45,27 +32,25 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-import { debounce } from 'lodash'
-import vueCustomScrollbar from 'vue-custom-scrollbar'
-import HelloWorld from './components/HelloWorld.vue'
-import TheHeader from './components/TheHeader.vue'
-import TheMenu from './components/TheMenu.vue'
-import LightBox from './components/LightBox.vue'
-import Experience from './views/Experience.vue'
-import Social from './views/Social.vue'
-import Portfolio from './views/Portfolio.vue';
+import { trickViewport } from './viewport';
+import vueCustomScrollbar from 'vue-custom-scrollbar';
+import LightBox from './components/LightBox';
+import Glass from './components/Glass';
+import Structure from './layouts/Structure';
+import Experience from './views/Experience';
+import Social from './views/Social';
+import Portfolio from './views/Portfolio';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    TheHeader,
-    TheMenu,
+    Glass,
     LightBox,
+    Structure,
+    vueCustomScrollbar,
     Experience,
     Social,
     Portfolio,
-    vueCustomScrollbar
   },
   computed: {
     ...mapState(['isMini', 'isExpanded', 'currentSlide']),
@@ -75,9 +60,6 @@ export default {
   },
   data() {
     return {
-      menuSwiperOptions: {
-        slidesPerView: 3,
-      },
       contentSwiperOptions: {
         slidesPerView: 1,
         autoHeight: true,
@@ -90,10 +72,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['toggleIsMini', 'setIsExpanded', 'setIsMini', 'setCurrentSlide']),
-    handGo({ slideIndex }) {
-      this.contentSwiper.slideTo(slideIndex);
-    },
+    ...mapMutations(['setIsExpanded', 'setIsMini', 'setCurrentSlide']),
     onScroll(event) {
       if (event.target.scrollTop > 135 && this.isMini === false) {
         this.setIsMini({ isMini: true });
@@ -109,27 +88,13 @@ export default {
   },
   mounted() {
     this.contentSwiper.slideTo(this.currentSlide);
+    this.$root.$on('change:slide', ({ slideIndex }) => this.contentSwiper.slideTo(slideIndex));
     this.contentSwiper.on('slideChange', () => {
       this.$refs.scrollbar.$el.scrollTop = 0;
-      this.contentSwiper.offsetTop = 0;
       this.setCurrentSlide({ currentSlide: this.contentSwiper.activeIndex });
-      if (this.isExpanded) {
-        this.setIsExpanded({ isExpanded: false })
-      }
+      this.isExpanded && this.setIsExpanded({ isExpanded: false });
     });
-
-    // Hack mobile viewport with vh units:
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-
-    window.addEventListener(
-      "resize",
-      debounce(() => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
-      }, 100)
-    );
+    trickViewport();
   }
 }
 </script>
