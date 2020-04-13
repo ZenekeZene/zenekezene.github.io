@@ -1,18 +1,17 @@
 <template>
 	<div
-      ref="structure"
-      :class="{ '--mini': isMini }"
-    >
-      <TheHeader />
-      <HelloWorld
-        author="Héctor Villar"
-        role="Software Engineer"
-      />
-      <TheMenu
-        :options="menuSwiperOptions"
-        @go:to="handGo($event)"
-      />
-    </div>
+    :class="{ '--mini': isMini }"
+  >
+    <TheHeader />
+    <HelloWorld
+      author="Héctor Villar"
+      role="Software Engineer"
+    />
+    <TheMenu
+      :options="menuSwiperOptions"
+      @go:to="handGo($event)"
+    />
+  </div>
 </template>
 <script>
 import { mapState } from 'vuex'

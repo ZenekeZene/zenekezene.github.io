@@ -119,19 +119,6 @@ body {
 $icomoon-font-path: "icons/fonts" !default;
 @import './icons/style.scss';
 
-li.read-more {
-	height: auto;
-	padding: 1rem;
-	text-align: center;
-	text-decoration: underline;
-	font-weight: 700;
-	grid-column: span 2;
-
-	&:before {
-		display: none;
-	}
-}
-
 .--mini {
 	.hello {
 		height: 3rem;

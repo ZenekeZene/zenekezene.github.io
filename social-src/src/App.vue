@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <Glass />
     <LightBox />
-    <Structure />
+    <Structure ref="structure" />
     <main class="content">
       <div class="content__main">
         <vue-custom-scrollbar

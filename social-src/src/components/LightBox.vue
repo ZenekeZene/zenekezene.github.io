@@ -39,7 +39,6 @@ export default {
 			const item = $event.item;
 			this.lightBoxItem = $event.data;
 			const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = item;
-
 			this.lightBoxStyle = {
 				top: `calc(${this.structure.offsetHeight +  offsetTop}px + 0.5rem)`,
 				left: `calc(${offsetLeft}px + 1.2rem)`,
