@@ -35,7 +35,7 @@
           @ps-scroll-y="onScroll"
         >
           <swiper ref="contentSwiper" :options="contentSwiperOptions">
-            <swiper-slide><About /></swiper-slide>
+            <swiper-slide><Experience /></swiper-slide>
             <swiper-slide><Portfolio @launch:ligth-box="launchLightBox($event)" /></swiper-slide>
             <swiper-slide><Social /></swiper-slide>
           </swiper>
