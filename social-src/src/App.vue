@@ -59,7 +59,7 @@ import vueCustomScrollbar from 'vue-custom-scrollbar'
 import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from './components/TheHeader.vue'
 import TheMenu from './components/TheMenu.vue'
-import About from './views/About.vue'
+import Experience from './views/Experience.vue'
 import Social from './views/Social.vue'
 import Portfolio from './views/Portfolio.vue'
 
@@ -69,7 +69,7 @@ export default {
     HelloWorld,
     TheHeader,
     TheMenu,
-    About,
+    Experience,
     Social,
     Portfolio,
     vueCustomScrollbar

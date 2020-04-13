@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import About from '../views/About.vue';
+import Experience from '../views/Experience.vue';
 import Social from '../views/Social.vue';
 import Portfolio from '../views/Portfolio.vue';
 
@@ -13,9 +13,9 @@ const routes = [
     component: Social,
   },
   {
-    path: '/about',
-    name: 'about',
-    component: About,
+    path: '/experience',
+    name: 'experience',
+    component: Experience,
   },
   {
     path: '/networks',
