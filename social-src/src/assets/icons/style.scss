@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?y5isp3');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?y5isp3#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?y5isp3') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?y5isp3') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?y5isp3##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wlknoj');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wlknoj#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wlknoj') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wlknoj') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wlknoj##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-port-whatsapp {
+  &:before {
+    content: $icon-port-whatsapp; 
+  }
+}
 .icon-port-help {
   &:before {
     content: $icon-port-help; 

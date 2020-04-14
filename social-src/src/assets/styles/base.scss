@@ -16,3 +16,32 @@ body {
 a {
 	color: var(--color-text);
 }
+
+input[type="button"],
+button {
+	-webkit-appearance: none;
+	margin-bottom: 1rem;
+    padding: 1rem;
+	font-size: 1rem;
+    color: var(--color-text--invert);
+    background-color: var(--background-color-app);
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+	margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+	font-family: inherit;
+	font-size: 1rem;
+	border: none;
+    border-bottom: 1px solid var(--background-color-app);
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}

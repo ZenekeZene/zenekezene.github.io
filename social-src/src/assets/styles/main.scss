@@ -46,7 +46,7 @@
 
 .--mini {
     .hello {
-        height: 3rem;
+        height: 4rem;
     }
 
     .slider,
@@ -92,4 +92,8 @@
 
 .scroll-area {
     height: 100%;
+}
+
+[class*="icon-port-arrow-left"]:before {
+    transform: rotate(90deg);
 }
