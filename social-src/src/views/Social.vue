@@ -3,12 +3,12 @@
 		<li>
 			<input class="dropdown__checkbox" type="checkbox" id="dropdown" :checked="isMini">
 			<label class="link--as-button" for="dropdown" @click="handContact">
-				<span class="icon-port-bubble"></span>Hey, hola, ¡hablémos!
+				<span class="icon-port-bubble"></span>Mándame un email a <span class="font-bold"><a href="mailto:hectorvillarm@gmail.com" target="_top">hectorvillarm@gmail.com</a></span>
 				<span class="icon-port-arrow-left dropdown__arrow"></span>
 			</label>
 			<div class="dropdown__content" id="dropdown">
-				<input type="text" placeholder="Inserta tu email">
-				<textarea placeholder="Inserta tu mensaje" rows="2"></textarea>
+				<input type="text" placeholder="Escribe tu email">
+				<textarea placeholder="Escribe tu mensaje" rows="2"></textarea>
 				<button>Enviar</button>
 			</div>
 		</li>
