@@ -60,7 +60,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/caracoles-grande.ba94f2bd.jpg"
   },
   {
-    "revision": "2d1cea56fe2fdd772b897204dc2fab7a",
+    "revision": "95c3bd654b3641cf78ea22ba6f7f14e6",
     "url": "/social/index.html"
   },
   {
