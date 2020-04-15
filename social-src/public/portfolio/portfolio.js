@@ -23,7 +23,9 @@ const portfolio = {
 			};
 			worksOutput.push(workObject);
 		});
-		return worksOutput;
+		return worksOutput.sort((a, b) => {
+			return parseInt(a.key) - parseInt(b.key)
+		});
 	}
 }
 

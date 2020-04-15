@@ -5,6 +5,7 @@
 
 	&:hover {
 		background-color: #ececec;
+		text-decoration: underline;
 	}
 }
 
@@ -15,4 +16,8 @@
 @mixin size-full {
 	width: 100%;
 	height: 100%;
+}
+
+[mb-0] {
+	margin-bottom: 0;
 }

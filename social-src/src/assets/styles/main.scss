@@ -92,8 +92,19 @@
 
 .scroll-area {
     height: 100%;
+    border-radius: 0 0 1.8rem 1.8rem;
+
+    @media (max-width: 414px) {
+        border-radius: 0;
+    }
 }
 
 [class*="icon-port-arrow-left"]:before {
     transform: rotate(90deg);
+}
+
+.panel {
+    color: var(--color-text--invert);
+    padding: 1rem;
+    background-color: var(--background-color-app);
 }

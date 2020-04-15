@@ -90,6 +90,21 @@ export default {
         width: 100%;
         height: auto;
     }
+
+    p {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    ul,
+    ol {
+        padding-left: 2.5rem;
+        text-align: left;
+
+        li {
+            padding-left: 0.5rem;
+        }
+    }
 }
 
 .close {

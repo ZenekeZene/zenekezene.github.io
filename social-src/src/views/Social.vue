@@ -3,7 +3,7 @@
 		<li>
 			<input class="dropdown__checkbox" type="checkbox" id="dropdown" :checked="isMini">
 			<label class="link--as-button" for="dropdown" @click="handContact">
-				<span class="icon-port-bubble"></span>Mándame un email a <span class="font-bold"><a href="mailto:hectorvillarm@gmail.com" target="_top">hectorvillarm@gmail.com</a></span>
+				<span class="icon-port-bubble"></span>Escríbeme a <span class="font-bold"><a href="mailto:hectorvillarm@gmail.com" target="_top">hectorvillarm@gmail.com</a></span>
 				<span class="icon-port-arrow-left dropdown__arrow"></span>
 			</label>
 			<div class="dropdown__content" id="dropdown">
@@ -18,22 +18,22 @@
 			</a>
 		</li>
 		<li>
-			<a href="#" class="link--as-button">
+			<a href="https://github.com/ZenekeZene" class="link--as-button">
 				<span class="icon-port-github"></span>Aquí subo mi deuda técnica
 			</a>
 		</li>
 		<li>
-			<a href="#" class="link--as-button">
+			<a href="https://twitter.com/zenekezene" class="link--as-button">
 				<span class="icon-port-twitter"></span>Aquí troleo a famosos
 			</a>
 		</li>
 		<li>
-			<a href="#" class="link--as-button">
+			<a href="https://www.linkedin.com/in/hectorvillarm/" class="link--as-button">
 				<span class="icon-port-linkedin"></span>Aquí le doy like a mi jefe
 			</a>
 		</li>
 		<li>
-			<a href="#" class="link--as-button">
+			<a href="https://www.instagram.com/zenekezene/" class="link--as-button">
 				<span class="icon-port-instagram"></span>Aquí subo dibujitos
 			</a>
 		</li>
@@ -49,14 +49,15 @@ export default {
 	methods: {
 		...mapMutations(['setIsMini']),
 		handContact() {
-			if (!this.isMini) {
-				setTimeout(() => {
-					this.$root.$emit('update:swiper');
+			setTimeout(() => {
+				console.log('emit update:swiper');
+				if (!this.isMini) {
 					this.setIsMini({ isMini: true });
-				}, 100);
-			}
+				}
+				this.$root.$emit('update:swiper');
+			}, 100);
 		}
-	},
+	}
 }
 </script>
 <style lang="scss">

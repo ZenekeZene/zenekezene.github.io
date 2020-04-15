@@ -68,7 +68,10 @@ export default {
 	mounted() {
 		this.contentSwiper.slideTo(this.currentSlide);
 		this.$root.$on('change:slide', ({ slideIndex }) => this.contentSwiper.slideTo(slideIndex));
-		this.$root.$on('update:swiper', () => this.contentSwiper.updateAutoHeight());
+		this.$root.$on('update:swiper', () => {
+			console.log('autoHeight');
+			this.contentSwiper.updateAutoHeight();
+		});
 		this.contentSwiper.on('slideChange', () => {
 			this.$refs.scrollbar.$el.scrollTop = 0;
 			this.setCurrentSlide({ currentSlide: this.contentSwiper.activeIndex });

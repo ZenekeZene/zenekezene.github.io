@@ -40,7 +40,7 @@ export default {
 	.portfolio {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: 7.7rem;
+		grid-auto-rows: 6rem;
 		grid-column-gap: 0.5rem;
 		grid-row-gap: 0.5rem;
 		height: 100%;
