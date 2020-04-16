@@ -2,47 +2,45 @@
 	<ol class="social">
 		<li>
 			<input class="dropdown__checkbox" type="checkbox" id="dropdown" :checked="isMini">
-			<label class="link--as-button" for="dropdown" @click="handContact">
-				<span class="icon-port-bubble"></span>Escríbeme a <span class="font-bold"><a href="mailto:hectorvillarm@gmail.com" target="_top">hectorvillarm@gmail.com</a></span>
+			<label class="link--as-button dropdown__label" for="dropdown" @click="handContact">
+				<span class="icon-port-bubble"></span><p>Escríbeme a<br/><span class="font-bold">hectorvillarm@gmail.com</span></p>
 				<span class="icon-port-arrow-left dropdown__arrow"></span>
 			</label>
 			<div class="dropdown__content" id="dropdown">
-				<input type="text" placeholder="Escribe tu email">
-				<textarea placeholder="Escribe tu mensaje" rows="2"></textarea>
+				<input type="text" placeholder="Escribe tu email" style="margin: 0; padding-left: 0;">
+				<textarea placeholder="Escribe tu mensaje" rows="2" style="padding-left: 0;"></textarea>
 				<button>Enviar</button>
 			</div>
 		</li>
 		<li>
-			<a href="#" class="link--as-button">
-				<span class="icon-port-whatsapp"></span>Puedes envíarme un Whatsapp
-			</a>
-		</li>
-		<li>
-			<a href="https://github.com/ZenekeZene" class="link--as-button">
-				<span class="icon-port-github"></span>Aquí subo mi deuda técnica
-			</a>
+			<WhatsApp>Whatsapp</WhatsApp>
 		</li>
 		<li>
 			<a href="https://twitter.com/zenekezene" class="link--as-button">
-				<span class="icon-port-twitter"></span>Aquí troleo a famosos
+				<span class="icon-port-twitter"></span>Twitter
 			</a>
 		</li>
 		<li>
 			<a href="https://www.linkedin.com/in/hectorvillarm/" class="link--as-button">
-				<span class="icon-port-linkedin"></span>Aquí le doy like a mi jefe
+				<span class="icon-port-linkedin"></span>Linkedin
 			</a>
 		</li>
 		<li>
 			<a href="https://www.instagram.com/zenekezene/" class="link--as-button">
-				<span class="icon-port-instagram"></span>Aquí subo dibujitos
+				<span class="icon-port-instagram"></span>Instagram
 			</a>
 		</li>
 	</ol>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
+import WhatsApp from '../components/WhatsApp.vue';
+
 export default {
 	name: 'Social',
+	components: {
+		WhatsApp
+	},
 	computed: {
 		...mapState(['isMini'])
 	},
@@ -50,7 +48,6 @@ export default {
 		...mapMutations(['setIsMini']),
 		handContact() {
 			setTimeout(() => {
-				console.log('emit update:swiper');
 				if (!this.isMini) {
 					this.setIsMini({ isMini: true });
 				}
@@ -74,7 +71,7 @@ export default {
 			}
 
 			[class^='icon-port'] {
-				padding-right: 1rem;
+				padding-right: 0.8rem;
 			}
 		}
 	}
@@ -92,11 +89,21 @@ export default {
 			transform: rotate(270deg);
 		}
 
+		&__label {
+			display: flex !important;
+			flex-wrap: wrap;
+
+			p {
+				margin: 0;
+			}
+		}
+
 		&__content {
 			display: flex;
 			flex-direction: column;
 			height: 0;
 			overflow: hidden;
+			padding: 0 2.5rem;
 		}
 
 		&__arrow {
