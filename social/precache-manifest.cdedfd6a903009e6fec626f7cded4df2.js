@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/avatar2.jpg"
   },
   {
-    "revision": "4846add555a51333499f",
-    "url": "/social/css/app.9dfd568b.css"
+    "revision": "1c4a4498db5d40c9dd0d",
+    "url": "/social/css/app.1c6ebd25.css"
   },
   {
     "revision": "09c5a4866c56db01e256",
@@ -96,12 +96,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/moebius.1cecc82a.jpg"
   },
   {
-    "revision": "cdc6acfecfaa8c3f983e93e8d111b335",
+    "revision": "efc9eda60926508bd604deb82a931011",
     "url": "/social/index.html"
   },
   {
-    "revision": "4846add555a51333499f",
-    "url": "/social/js/app.158cf58d.js"
+    "revision": "1c4a4498db5d40c9dd0d",
+    "url": "/social/js/app.9e86c16b.js"
   },
   {
     "revision": "09c5a4866c56db01e256",
