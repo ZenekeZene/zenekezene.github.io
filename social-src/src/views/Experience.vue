@@ -64,6 +64,7 @@
 	.title {
 		display: flex;
 		align-items: center;
+		margin-bottom: 0.2rem;
 		text-align: left;
 
 		&:before {

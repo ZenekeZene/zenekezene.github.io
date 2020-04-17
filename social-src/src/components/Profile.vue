@@ -164,7 +164,7 @@ li {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 0 1rem 0.5rem 0.5rem;
+  padding: 0 1rem 0.5rem 0.7rem;
   background: var(--background-color-app);
 
   &:before {

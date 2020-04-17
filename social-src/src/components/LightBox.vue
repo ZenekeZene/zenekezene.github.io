@@ -38,9 +38,10 @@ export default {
         launchLightBox($event) {
             const item = $event.item;
             this.lightBoxItem = $event.data;
+            const scrollTop = document.getElementById('scrollbar').scrollTop;
             const { offsetTop, offsetLeft, offsetWidth, offsetHeight } = item;
             this.lightBoxStyle = {
-                top: `calc(${this.structure.offsetHeight +  offsetTop}px + 0.5rem)`,
+                top: `calc(${this.structure.offsetHeight +  offsetTop - scrollTop}px + 0.5rem)`,
                 left: `calc(${offsetLeft}px + 1.2rem)`,
                 width: `${offsetWidth}px`,
                 height: `${offsetHeight}px`,

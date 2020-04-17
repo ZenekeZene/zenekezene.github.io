@@ -3,6 +3,7 @@
 		<div class="content__main">
 			<vue-custom-scrollbar
 				ref="scrollbar"
+				id="scrollbar"
 				class="scroll-area"
 				:settings="settingsScroll"
 				@ps-y-reach-end="reachEnd"
@@ -69,7 +70,6 @@ export default {
 		this.contentSwiper.slideTo(this.currentSlide);
 		this.$root.$on('change:slide', ({ slideIndex }) => this.contentSwiper.slideTo(slideIndex));
 		this.$root.$on('update:swiper', () => {
-			console.log('autoHeight');
 			this.contentSwiper.updateAutoHeight();
 		});
 		this.contentSwiper.on('slideChange', () => {

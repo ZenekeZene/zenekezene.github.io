@@ -86,7 +86,7 @@ export default {
 		}
 
 		&__checkbox:checked ~ label &__arrow  {
-			transform: rotate(270deg);
+			transform: rotate(90deg);
 		}
 
 		&__label {
@@ -113,7 +113,8 @@ export default {
 			margin: 0;
 			padding: 0.7rem;
 			font-size: 1.5rem;
-			transform: rotate(90deg);
+			transform: rotate(270deg);
+			transition: transform 150ms ease-in;
 		}
 	}
 </style>
