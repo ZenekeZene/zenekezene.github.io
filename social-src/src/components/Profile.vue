@@ -6,7 +6,7 @@
       </h1>
       <p class="role">{{ role }}</p>
     </div>
-    <img class="background" src="/social/img/avatar2.jpg">
+    <img class="background" src="/img/avatar2.jpg">
     <swiper ref="aboutSwiper" class="slider" :options="optionsSwiper">
       <swiper-slide class="description">
         <p>Creo <span class="font-bold">aplicaciones web</span> e <span class="font-bold">híbridas</span> con <span class="font-bold">estándares web</span>, en entornos ágiles,
