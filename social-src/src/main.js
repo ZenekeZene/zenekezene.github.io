@@ -19,8 +19,8 @@ Vue.use(Vue2TouchEvents)
 Vue.use(vuescroll)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: '../social/spinner.svg',
-  loading: '../social/spinner.svg',
+  error: '../social/img/warning.svg',
+  loading: '../social/img/spinner.svg',
   attempt: 1,
   listenEvents: [
     'scroll',

@@ -83,15 +83,16 @@ export default {
 				border-radius: 0;
 			}
 		}
-	}
 
-	img[lazy=loading] {
-		width: 100%;
-		height: 100%;
-	}
+		img[lazy=loading] {
+			width: 100%;
+			height: 100%;
+		}
 
-	img[lazy=error] {
-		width: 100%;
-		height: 100%;
+		img[lazy=error] {
+			display: block;
+			width: 2rem;
+			margin: 2rem auto;
+		}
 	}
 </style>
