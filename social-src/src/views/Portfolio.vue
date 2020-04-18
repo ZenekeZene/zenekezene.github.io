@@ -1,18 +1,21 @@
 <template>
-	<ul ref="portfolio" class="portfolio" :class="{ '--mini': isMini }">
+	<ul ref="portfolio" class="portfolio" :class="{ '--mini': isMini }" v-lazy-container="{ selector: 'img '}">
 		<li
 			v-for="(work, index) in works"
 			:key="work.key"
 			:ref="`work-${index}`"
 			@click="showWork(index)"
 		>
-			<img :src="work.previewImage">
+			<img
+				v-lazy="work.previewImage"
+				lazy="loading"
+			>
 		</li>
 	</ul>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex';
-import portfolio from '../../public/portfolio/portfolio.js';
+import portfolio from '../../public/works/portfolio.js';
 
 export default {
 	name: 'Portfolio',
@@ -80,5 +83,15 @@ export default {
 				border-radius: 0;
 			}
 		}
+	}
+
+	img[lazy=loading] {
+		width: 100%;
+		height: 100%;
+	}
+
+	img[lazy=error] {
+		width: 100%;
+		height: 100%;
 	}
 </style>

@@ -1,1 +1,0 @@
-<img src=../../../img/portfolio/mercante/mercante1.jpg>

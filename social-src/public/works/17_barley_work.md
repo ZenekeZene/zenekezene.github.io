@@ -1,0 +1,1 @@
+<img data-src=../../../img/portfolio/barley/barley4.jpg>

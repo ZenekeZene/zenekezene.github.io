@@ -1,13 +1,18 @@
 <template>
     <section>
-      <span
-        v-if="isExpanded && currentSlide === 1 && isMini"
-        class="close icon-port-cross"
-        @click="handCloseExpanded"
-      ></span>
-      <div ref="work" class="work" :style="lightBoxStyle">
-        <div v-if="lightBoxItem" v-html="lightBoxItem.content"></div>
-      </div>
+        <span
+            v-if="isExpanded && currentSlide === 1 && isMini"
+            class="close icon-port-cross"
+            @click="handCloseExpanded"
+        ></span>
+        <div ref="work" class="work"
+            :style="lightBoxStyle"
+            v-lazy-container="{ selector: 'img' }"
+        >
+            <div v-if="lightBoxItem"
+                v-html="lightBoxItem.content"
+            ></div>
+        </div>
     </section>
 </template>
 <script>
