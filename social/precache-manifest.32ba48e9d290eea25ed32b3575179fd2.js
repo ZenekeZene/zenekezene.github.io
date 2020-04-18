@@ -1,15 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "339e507eae4b2d468f953b1ad47ee934",
-    "url": "/social/avatar.jpg"
-  },
-  {
-    "revision": "119b185f0de29eb0159f6bfd007f9991",
-    "url": "/social/avatar2.jpg"
-  },
-  {
-    "revision": "0ba3ef28f4404456238c",
-    "url": "/social/css/app.35e324bd.css"
+    "revision": "8288e4256d87ad82df14",
+    "url": "/social/css/app.c4a7da8a.css"
   },
   {
     "revision": "13f3242c475968e4145d",
@@ -30,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0c1a7a3e4c878d272879039647b8568f",
     "url": "/social/img/Portfolio.0c1a7a3e.svg"
+  },
+  {
+    "revision": "119b185f0de29eb0159f6bfd007f9991",
+    "url": "/social/img/avatar2.jpg"
   },
   {
     "revision": "3a5a87e6f045d3374d7322af0638e2ae",
@@ -772,20 +768,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/portfolio/vudu.jpg"
   },
   {
-    "revision": "72f1a425e3ea3505929a30b8adabefb8",
-    "url": "/social/img/spinner.gif"
-  },
-  {
-    "revision": "3655818aea7e660293c39d27c32f88f3",
+    "revision": "6137b5e677dd3fbd75e330397ca1cc9c",
     "url": "/social/img/spinner.svg"
   },
   {
-    "revision": "b7c4c6d3131d54a636f5096eda795935",
+    "revision": "726162cd8b9e4c8ea56a7b1dd0a5c2c6",
+    "url": "/social/img/warning.svg"
+  },
+  {
+    "revision": "94ceb73cb0504d5c5d3207ed36b238e7",
     "url": "/social/index.html"
   },
   {
-    "revision": "0ba3ef28f4404456238c",
-    "url": "/social/js/app.ac9cbe83.js"
+    "revision": "8288e4256d87ad82df14",
+    "url": "/social/js/app.fb2d57c2.js"
   },
   {
     "revision": "13f3242c475968e4145d",
@@ -798,14 +794,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/social/robots.txt"
-  },
-  {
-    "revision": "72f1a425e3ea3505929a30b8adabefb8",
-    "url": "/social/spinner.gif"
-  },
-  {
-    "revision": "6137b5e677dd3fbd75e330397ca1cc9c",
-    "url": "/social/spinner.svg"
   },
   {
     "revision": "d41d8cd98f00b204e9800998ecf8427e",
