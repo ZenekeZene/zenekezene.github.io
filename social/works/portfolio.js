@@ -1,4 +1,4 @@
-const works = require.context('./', true, /_work\.md$/);
+const works = require.context('./', true, /\.md$/);
 const worksData = works.keys().map(work => works(work));
 
 const portfolio = {

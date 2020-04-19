@@ -6,10 +6,7 @@
 			:ref="`work-${index}`"
 			@click="showWork(index)"
 		>
-			<img
-				v-lazy="work.previewImage"
-				lazy="loading"
-			>
+			<img :src="work.previewImage">
 		</li>
 	</ul>
 </template>
@@ -34,7 +31,9 @@ export default {
 		},
 		generateWork(index) {
 			const item = this.$refs[`work-${index}`][0];
-			this.$root.$emit('launch:ligth-box', { item, data: this.works[index] });
+			setTimeout(() => {
+				this.$root.$emit('launch:ligth-box', { item, data: this.works[index] });
+			}, 1000);
 		}
 	}
 }

@@ -1,1 +1,0 @@
-<img data-src=../../../img/portfolio/emprendizaje.jpg>

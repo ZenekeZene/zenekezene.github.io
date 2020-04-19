@@ -1,11 +1,11 @@
-<img data-src=../../../img/portfolio/especialista/captura1_2.png>
+<img src=../img/portfolio/captura1_2.png>
 
 # El Especialista
 
 Videojuego 2D de temática Zombie, que aúna géneros Shoot' em up y Runner. Se ha desarrollado a lo largo de 8 meses como trabajo de final de carrera de manera solitaria, con el motor Unity3D, obteniendo una calificación final de Sobresaliente.
 
-<img data-src="../../../img/portfolio/especialista/captura1.png">
-<img data-src="../../../img/portfolio/especialista/captura3.png">
+<img src="../img/portfolio/captura3.png">
+<img src="../img/portfolio/captura4.png">
 
 <p mb-0>He llevado a cabo todos los apartados:</p>
 
@@ -17,7 +17,7 @@ Videojuego 2D de temática Zombie, que aúna géneros Shoot' em up y Runner. Se 
 - Documentación técnica, estudio de viabilidad / mercado
 - Análisis
 
-<img data-src="../../../img/portfolio/especialista/captura4.png">
+<img src="../img/portfolio/captura5.png">
 
 <div class="panel">
 	<ul>
