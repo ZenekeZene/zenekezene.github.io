@@ -31,9 +31,7 @@ export default {
 		},
 		generateWork(index) {
 			const item = this.$refs[`work-${index}`][0];
-			setTimeout(() => {
-				this.$root.$emit('launch:ligth-box', { item, data: this.works[index] });
-			}, 1000);
+			this.$root.$emit('launch:ligth-box', { item, data: this.works[index] });
 		}
 	}
 }
