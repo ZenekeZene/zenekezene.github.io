@@ -1,16 +1,10 @@
 <template>
 	<ol class="social">
 		<li>
-			<input class="dropdown__checkbox" type="checkbox" id="dropdown" :checked="isMini">
-			<label class="link--as-button dropdown__label" for="dropdown" @click="handContact">
-				<span class="icon-port-bubble"></span><p>Escríbeme a<br/><span class="font-bold">hectorvillarm@gmail.com</span></p>
-				<span class="icon-port-arrow-left dropdown__arrow"></span>
-			</label>
-			<div class="dropdown__content" id="dropdown">
-				<input type="text" placeholder="Escribe tu email" style="margin: 0; padding-left: 0;">
-				<textarea placeholder="Escribe tu mensaje" rows="2" style="padding-left: 0;"></textarea>
-				<button>Enviar</button>
-			</div>
+			<FormContact action="https://formsubmit.co/hectorvillarm@gmail.com">
+				<span class="icon-port-bubble"></span>
+				<p>Escríbeme a<br/><span class="font-bold">hectorvillarm@gmail.com</span></p>
+			</FormContact>
 		</li>
 		<li>
 			<WhatsApp>Whatsapp</WhatsApp>
@@ -33,27 +27,14 @@
 	</ol>
 </template>
 <script>
-import { mapState, mapMutations } from 'vuex'
 import WhatsApp from '../components/WhatsApp.vue';
+import FormContact from '../components/FormContact.vue';
 
 export default {
 	name: 'Social',
 	components: {
-		WhatsApp
-	},
-	computed: {
-		...mapState(['isMini'])
-	},
-	methods: {
-		...mapMutations(['setIsMini']),
-		handContact() {
-			setTimeout(() => {
-				if (!this.isMini) {
-					this.setIsMini({ isMini: true });
-				}
-				this.$root.$emit('update:swiper');
-			}, 100);
-		}
+		WhatsApp,
+		FormContact
 	}
 }
 </script>
