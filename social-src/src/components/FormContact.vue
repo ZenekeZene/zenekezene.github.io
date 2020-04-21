@@ -6,6 +6,9 @@
 			<span class="icon-port-arrow-left dropdown__arrow"></span>
 		</label>
 		<div class="dropdown__content" id="dropdown">
+			<input type="hidden" name="_subject" value="Nuevo email!">
+			<input type="hidden" name="_replyto">
+			<input type="hidden" name="_next" value="https://hectorvillar.com/social">
 			<input
 				name="email"
 				type="text"
