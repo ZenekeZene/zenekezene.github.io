@@ -2,8 +2,7 @@
 	<ol class="social">
 		<li>
 			<FormContact action="https://formsubmit.co/hectorvillarm@gmail.com">
-				<span class="icon-port-bubble"></span>
-				<p>Escríbeme a<br/><span class="font-bold">hectorvillarm@gmail.com</span></p>
+				<span>Email</span>
 			</FormContact>
 		</li>
 		<li>
@@ -54,48 +53,6 @@ export default {
 			[class^='icon-port'] {
 				padding-right: 0.8rem;
 			}
-		}
-	}
-
-	.dropdown {
-		&__checkbox {
-			display: none;
-		}
-
-		&__checkbox:checked + label + &__content {
-			height: auto;
-		}
-
-		&__checkbox:checked ~ label &__arrow  {
-			transform: rotate(90deg);
-		}
-
-		&__label {
-			display: flex !important;
-			flex-wrap: wrap;
-
-			p {
-				margin: 0;
-			}
-		}
-
-		&__content {
-			display: flex;
-			flex-direction: column;
-			height: 0;
-			overflow: hidden;
-			padding: 0 2.5rem;
-		}
-
-		&__arrow {
-			position: absolute;
-			top: 0;
-			right: 0;
-			margin: 0;
-			padding: 0.7rem;
-			font-size: 1.5rem;
-			transform: rotate(270deg);
-			transition: transform 150ms ease-in;
 		}
 	}
 </style>

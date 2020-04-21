@@ -2,7 +2,9 @@
 	<form :action="action" method="POST">
 		<input class="dropdown__checkbox" type="checkbox" id="dropdown" :checked="isMini">
 		<label class="link--as-button dropdown__label" for="dropdown" @click="handContact">
-			<slot></slot>
+			<span class="icon-port-bubble"></span>
+			<p class="hide"><slot></slot></p>
+			<span class="show font-bold"><a href="mailto:hectorvillarm@gmail.com?Subject=Hola%20Héctor">hectorvillarm@gmail.com</a></span>
 			<span class="icon-port-arrow-left dropdown__arrow"></span>
 		</label>
 		<div class="dropdown__content" id="dropdown">
@@ -52,12 +54,70 @@ export default {
 }
 </script>
 <style lang="scss">
-	.email {
+	input[type="text"].email {
 		margin: 0;
 		padding-left: 0;
 	}
 
-	.message {
+	textarea.message {
 		padding-left: 0;
+	}
+
+	.dropdown {
+		&__checkbox {
+			display: none;
+		}
+
+		&__checkbox:checked + label + &__content {
+			height: auto;
+		}
+
+		&__checkbox:checked ~ label &__arrow  {
+			transform: rotate(90deg);
+		}
+
+		&__checkbox:checked ~ label .show  {
+			visibility: visible;
+		}
+
+		&__checkbox:checked ~ label .hide  {
+			display: none;
+		}
+
+		&__label {
+			display: flex !important;
+			flex-wrap: wrap;
+
+			p {
+				margin: 0;
+			}
+
+			.hide {
+				display: inline;
+			}
+
+			.show {
+				visibility: hidden;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			height: 0;
+			overflow: hidden;
+			padding: 0 2.5rem;
+		}
+
+		&__arrow {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			margin: 0;
+			padding: 0!important;
+			font-size: 1.5rem;
+			transform: rotate(270deg);
+			transition: transform 150ms ease-in;
+		}
 	}
 </style>
