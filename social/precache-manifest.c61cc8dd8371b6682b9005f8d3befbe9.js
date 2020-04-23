@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "59cae1a7bc7486225e1e",
+    "revision": "22cdf3c9eb7509db6132",
     "url": "/social/css/app.e66d4272.css"
   },
   {
@@ -600,12 +600,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/social/img/warning.svg"
   },
   {
-    "revision": "258324d5640bbfc4365a03dd5948e4d9",
+    "revision": "6e238cbdde73a9b58176aed5b09bdc4a",
     "url": "/social/index.html"
   },
   {
-    "revision": "59cae1a7bc7486225e1e",
-    "url": "/social/js/app.bfbfbfae.js"
+    "revision": "22cdf3c9eb7509db6132",
+    "url": "/social/js/app.49af9d2a.js"
   },
   {
     "revision": "09c5a4866c56db01e256",
@@ -622,6 +622,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a0ef91d20fa4613a82a0d98801bfd76b",
     "url": "/social/works/1_elespecialista_work.md"
+  },
+  {
+    "revision": "2cd686fd0a8e3d2be1b9ea01e8c262ac",
+    "url": "/social/works/2_bichos_work.md"
   },
   {
     "revision": "08c32cd51b1c517fb290ff4848b04ddd",

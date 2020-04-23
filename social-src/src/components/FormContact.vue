@@ -4,7 +4,7 @@
 		<label class="link--as-button dropdown__label" for="dropdown" @click="handContact">
 			<span class="icon-port-bubble"></span>
 			<p class="hide"><slot></slot></p>
-			<span class="show font-bold"><a href="mailto:hectorvillarm@gmail.com?Subject=Hola%20Héctor">hectorvillarm@gmail.com</a></span>
+			<span class="show font-bold"><a href="mailto:hectorvillarm@gmail.com?subject=Hola%20H%C3%A9ctor&body=Hola%20H%C3%A9ctor%2C%0D%0A%0D%0A%0D%0A%0D%0A%C2%A1Gracias!" target="_top">hectorvillarm@gmail.com</a></span>
 			<span class="icon-port-arrow-left dropdown__arrow"></span>
 		</label>
 		<div class="dropdown__content" id="dropdown">
