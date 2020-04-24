@@ -9,6 +9,8 @@
       <button class="fab"><span class="icon-port-download"></span></button>
     </div>
     <button v-if="currentSlide === 2" class="fab"><span class="icon-port-share" style="margin-left: -3px;"></span></button>
+    <div class="app__base"></div>
+    <div class="app__base2"></div>
   </div>
 </template>
 

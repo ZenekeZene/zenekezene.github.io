@@ -1,4 +1,4 @@
-<img src=../img/portfolio/captura1_2.png>
+<img src=../img/portfolio/bichos/bichos1.jpg>
 
 # Palette
 
