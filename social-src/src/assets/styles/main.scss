@@ -30,7 +30,7 @@
         --height-app: 80%;
         margin-top: 1rem;
         overflow: visible;
-        background: #0d0d0d;
+        background: #000000;
         border-radius: 20px;
 
         &__base,
@@ -44,6 +44,10 @@
 
         .glass {
             display: none;
+        }
+
+        .portfolio {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 

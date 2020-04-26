@@ -2,20 +2,20 @@
 	<ol class="experience">
 		<li>
 			<h4 class="title">Init</h4>
-			<p class="role">Frontend developer<span>(2017 - Hoy)</span></p>
+			<p class="role" mb-0>Frontend developer<span>(2017 - Hoy)</span></p>
 			<p>Desarrollo de apps híbridas de salud, con Ionic, Angular8, Vue, Nuxt.
 				Manager de equipo de UX / Front.
 			</p>
 		</li>
 		<li>
 			<h4 class="title">Suggiero</h4>
-			<p class="role">Frontend / UI<span>(2015 - 2017)</span></p>
+			<p class="role" mb-0>Frontend / UI<span>(2015 - 2017)</span></p>
 			<p>Diseño UX / UI y desarrollo Front de plataformas web enfocadas en apuestas deportivas.
 				JS, Gulp, Webpack, SASS.</p>
 		</li>
 		<li>
 			<h4 class="title">Diario de un videojuego</h4>
-			<p class="role">Game developer<span>(2014 - 2015)</span></p>
+			<p class="role" mb-0>Game developer<span>(2014 - 2015)</span></p>
 			<p>Fundador y redactor principal de Diario de un Videojuego
 			(htttp://diariodeunvideojuego.es).
 			Sigue todo el proceso de creación de un videojuego 2D para
@@ -23,7 +23,7 @@
 		</li>
 		<li>
 			<h4 class="title">Seotec</h4>
-			<p class="role">Full Stack<span>(2012 - 2014)</span></p>
+			<p class="role" mb-0>Full Stack<span>(2012 - 2014)</span></p>
 			<p>Desarrollo Front-End y Back-End, HTML5, CSS3, MySQL, PHP, Yii,
 			Javascript, Backbone, JQuery, Illustrator, Photoshop. Desarrollo
 			de aplicaciones móviles basados en tecnologías web con Phonegap, JS y HTML5.</p>
