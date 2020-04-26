@@ -9,7 +9,7 @@
 				@ps-y-reach-end="reachEnd"
 				@ps-scroll-y="onScroll"
 			>
-			<swiper ref="contentSwiper" :options="contentSwiperOptions">
+			<swiper ref="contentSwiper" :options="contentSwiperOptions" class="content-swiper">
 				<swiper-slide><Experience /></swiper-slide>
 				<swiper-slide><Portfolio /></swiper-slide>
 				<swiper-slide><Social /></swiper-slide>
@@ -42,6 +42,20 @@ export default {
 	data() {
 		return {
 			contentSwiperOptions: {
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						
+					},
+					// when window width is >= 480px
+					480: {
+						
+					},
+					// when window width is >= 640px
+					640: {
+						// slidesPerView: 2,
+					}
+				},
 				slidesPerView: 1,
 				autoHeight: true,
 			},

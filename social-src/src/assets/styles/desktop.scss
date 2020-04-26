@@ -1,0 +1,125 @@
+// Desktop
+@media (min-width: 1020px) {
+	.app {
+		--width-app: 60rem;
+    	--height-app: 85%;
+		margin-top: 1rem;
+		overflow: visible;
+		background: #000000;
+		border-radius: 20px;
+
+		&__base,
+		&__base2 {
+			display: block !important;
+		}
+
+		.content__main {
+			border-radius: 0;
+		}
+
+		.glass {
+			display: none;
+		}
+
+		.portfolio {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.slider p {
+			min-height: 8rem;
+			padding-right: 1rem;
+		}
+
+		.swiper-container {
+			// width: 70%;
+			min-height: 8.7rem;
+			margin-left: 0;
+		}
+
+		.hello {
+			height: 11rem;
+			border-radius: 0;
+		}
+
+		.background {
+			top: 0rem;
+			right: 0;
+			left: unset;
+			z-index: 1;
+			width: 30%;
+		}
+
+		.hand-size {
+			display: none;
+		}
+	}
+
+	.content-swiper {
+		// width: 80%;
+	}
+}
+
+.app {
+	&__base {
+        display: none;
+        width: 100%;
+        height: 32px;
+        border-radius: 0 0 20px 20px;
+        background: #272626;
+
+        &:before {
+            bottom: 10px;
+            color: #c8cacb;
+            content: "MacBook";
+            font-size: 12px;
+            height: 16px;
+            left: 50%;
+            line-height: 16px;
+            margin-left: -100px;
+            position: absolute;
+            text-align: center;
+            width: 200px;
+            z-index: 1;
+        }
+    }
+
+	&__base2 {
+        display: none;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9;
+        width: 110%;
+        height: 4px;
+        margin-top: -10px;
+        background: #e2e3e4;
+        border: solid #d5d6d8;
+        border-radius: 2px 2px 0 0;
+        border-width: 0 4px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: #a0a3a7;
+            border-radius: 0 0 180px 180px/ 0 0 10px 10px;
+            box-shadow: inset 0 -2px 6px 0 #474a4d;
+            height: 10px;
+            left: -4px;
+            margin: 0 auto;
+            top: 4px;
+            width: 100%;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: radial-gradient(circle at center, #e2e3e4 0, #e2e3e4 85%, #a0a3a7 100%);
+            border: solid #adb0b3;
+            border-width: 0 2px;
+            height: 4px;
+            left: 50%;
+            margin-left: -60px;
+            width: 120px;
+        }
+    }
+}

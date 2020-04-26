@@ -1,0 +1,19 @@
+// Mobile
+@media (max-width: 414px) {
+	max-width: unset;
+	@include size-full;
+	border-radius: 0;
+
+	.header {
+		display: none;
+	}
+
+	.hello {
+		margin-top: 0.5rem;
+		border-radius: 0;
+	}
+
+	.content__main {
+		border-radius: 0;
+	}
+}

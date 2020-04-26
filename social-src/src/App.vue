@@ -22,7 +22,6 @@ import Glass from './components/Glass';
 import Structure from './layouts/Structure';
 import Content from './layouts/Content';
 
-
 export default {
   name: 'App',
   components: {
@@ -41,6 +40,13 @@ export default {
   },
   mounted() {
     trickViewport();
+    console.log(window.innerWidth);
+    if (window.innerWidth > 900) {
+      this.setIsMini({ isMini: false });
+    }
+  },
+  methods: {
+    ...mapMutations(['setIsMini']),
   }
 }
 </script>
