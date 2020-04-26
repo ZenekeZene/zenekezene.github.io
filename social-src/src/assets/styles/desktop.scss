@@ -22,7 +22,26 @@
 		}
 
 		.portfolio {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.slider {
+			width: 70%;
+		}
+
+		.menu {
+			position: absolute;
+			left: 50%;
+			bottom: 2.5rem;
+			z-index: 2;
+			width: 30%;
+			transform: translateX(-50%);
+			background: white;
+
+			li {
+				color: black;
+				// SACAR LOS ITEMS DE CONTACTO A ESTE MENU, COMO EN MAC
+			}
 		}
 
 		.slider p {
@@ -42,11 +61,11 @@
 		}
 
 		.background {
-			top: 0rem;
+			top: -2rem;
 			right: 0;
 			left: unset;
 			z-index: 1;
-			width: 30%;
+			width: 25%;
 		}
 
 		.hand-size {

@@ -40,7 +40,6 @@ export default {
   },
   mounted() {
     trickViewport();
-    console.log(window.innerWidth);
     if (window.innerWidth > 900) {
       this.setIsMini({ isMini: false });
     }
