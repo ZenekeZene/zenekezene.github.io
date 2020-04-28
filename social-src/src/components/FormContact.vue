@@ -55,6 +55,7 @@ export default {
 </script>
 <style lang="scss">
 	input[type="text"].email {
+		max-width: 22rem;
 		margin: 0;
 		padding-left: 0;
 	}

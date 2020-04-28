@@ -1,12 +1,19 @@
 <template>
-  <ol class="menu">
-    <li v-for="(section, index) in sections" :key="`section-${section.name}`"
-      :class="{ 'active': currentSlide === index }"
-      @click="handGo(index)"
-    >
-      {{ section.text }}
-    </li>
-  </ol>
+  <nav class="menu">
+    <ol class="menu__inner">
+      <li v-for="(section, index) in sections" :key="`section-${section.name}`"
+        :class="{ 'active': currentSlide === index }"
+        @click="handGo(index)"
+      >
+        {{ section.text }}
+      </li>
+      <li :class="{ 'active': currentSlide === 2 }" @click="handGo(2)">Contacto</li>
+      <li><span class="icon-port-whatsapp"></span></li>
+      <li><span class="icon-port-twitter"></span></li>
+      <li><span class="icon-port-instagram"></span></li>
+      <li><span class="icon-port-linkedin"></span></li>
+    </ol>
+  </nav>
 </template>
 <script>
 import { mapState } from 'vuex';
@@ -25,11 +32,7 @@ export default {
         {
           name: 'portfolio',
           text: 'Portafolio'
-        },
-        {
-          name: 'networks',
-          text: 'Contacto'
-        },
+        }
       ]
     }
   },
@@ -44,13 +47,18 @@ export default {
 .menu {
   position: relative;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
+  width: 97%;
   background-color: var(--background-color-app);
   color: var(--color-text--invert);
   list-style: none;
+
+  &__inner {
+    max-width: 24rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
 
   li {
     display: flex;

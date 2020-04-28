@@ -68,6 +68,7 @@ export default {
 	methods: {
 		...mapMutations(['setIsExpanded', 'setIsMini', 'setCurrentSlide']),
 		onScroll(event) {
+			if (window.innerWidth > 900) return false;
 			if (event.target.scrollTop > 135 && this.isMini === false) {
 				this.setIsMini({ isMini: true });
 			}

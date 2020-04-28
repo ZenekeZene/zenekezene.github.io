@@ -29,19 +29,44 @@
 			width: 70%;
 		}
 
+		.experience {
+			max-width: 80%;
+		}
+
 		.menu {
 			position: absolute;
 			left: 50%;
-			bottom: 2.5rem;
+			bottom: 2.3rem;
 			z-index: 2;
-			width: 30%;
 			transform: translateX(-50%);
-			background: white;
+			background: rgba(256, 256, 256, 0.5);
+
+			&__inner {
+				position: relative;
+				z-index: 1;
+			}
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 3rem;
+				filter: blur(13px);
+			}
 
 			li {
+				flex-basis: unset;
+				padding: 0 0.5rem;
 				color: black;
 				// SACAR LOS ITEMS DE CONTACTO A ESTE MENU, COMO EN MAC
 			}
+		}
+
+		.content {
+			height: 20rem;
 		}
 
 		.slider p {
@@ -71,6 +96,10 @@
 		.hand-size {
 			display: none;
 		}
+	}
+
+	.fab {
+		bottom: 2rem;
 	}
 
 	.content-swiper {
