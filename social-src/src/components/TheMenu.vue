@@ -5,13 +5,13 @@
         :class="{ 'active': currentSlide === index }"
         @click="handGo(index)"
       >
-        {{ section.text }}
+        <span class="label">{{ section.text }}</span><span :class="`icon-port-${section.icon}`"></span>
       </li>
-      <li :class="{ 'active': currentSlide === 2 }" @click="handGo(2)">Contacto</li>
-      <li><span class="icon-port-whatsapp"></span></li>
-      <li><span class="icon-port-twitter"></span></li>
-      <li><span class="icon-port-instagram"></span></li>
-      <li><span class="icon-port-linkedin"></span></li>
+      <li :class="{ 'active': currentSlide === 2 }" @click="handGo(2)"><span class="label">Contacto</span><span class="icon-port-mail"></span></li>
+      <li class="only-desktop"><span class="label">Whatsapp</span><span class="icon-port-whatsapp"></span></li>
+      <li class="only-desktop"><span class="label">Twitter</span><span class="icon-port-twitter"></span></li>
+      <li class="only-desktop"><span class="label">Instagram</span><span class="icon-port-instagram"></span></li>
+      <li class="only-desktop"><span class="label">Linkedin</span><span class="icon-port-linkedin"></span></li>
     </ol>
   </nav>
 </template>
@@ -27,11 +27,13 @@ export default {
       sections: [
         {
           name: 'about',
-          text: 'CV'
+          text: 'CV',
+          icon: 'user-circle'
         },
         {
           name: 'portfolio',
-          text: 'Portafolio'
+          text: 'Portfolio',
+          icon: 'heart'
         }
       ]
     }
@@ -70,7 +72,6 @@ export default {
     padding: 1rem;
     color: var(--color-text--invert);
     height: 3rem;
-    overflow: hidden;
     flex-grow: 1;
     font-size: 1rem;
     transition: all 250ms ease-in;

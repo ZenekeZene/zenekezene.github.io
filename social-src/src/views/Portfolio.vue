@@ -25,9 +25,10 @@ export default {
 	methods: {
 		...mapMutations(['setIsMini', 'setIsExpanded']),
 		showWork(index) {
-			this.setIsMini({ isMini: true });
 			this.setIsExpanded({ isExpanded: true });
 			this.generateWork(index);
+			if (window.innerWidth > 900) return false;
+			this.setIsMini({ isMini: true });
 		},
 		generateWork(index) {
 			const item = this.$refs[`work-${index}`][0];

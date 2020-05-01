@@ -22,11 +22,32 @@
 		}
 
 		.portfolio {
-			grid-template-columns: repeat(4, 1fr);
+			max-width: 32rem;
+    		grid-template-columns: repeat(3, 1fr);
+		}
+
+		.work.--expanded {
+			top: 7rem !important;
+			right: 1rem;
+			left: unset !important;
+			width: 25rem !important;
+			height: calc(100% - 13rem) !important;
+			border-radius: 0;
+		}
+
+		.header {
+			display: none;
 		}
 
 		.slider {
-			width: 70%;
+			position: absolute;
+			top: -0.2rem;
+			width: 83%;
+			left: 10rem;
+		}
+
+		.only-desktop {
+			display: inline-flex !important;
 		}
 
 		.experience {
@@ -39,11 +60,24 @@
 			bottom: 2.3rem;
 			z-index: 2;
 			transform: translateX(-50%);
-			background: rgba(256, 256, 256, 0.5);
 
 			&__inner {
-				position: relative;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
 				z-index: 1;
+				display: block;
+				white-space: nowrap;
+				background-color: #e4e4cf;
+				background: rgba(228, 228, 207, .35);
+				backdrop-filter: blur(2px);
+    			border-radius: 10px 10px 0 0;
+				box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
+				$border-color: #cccccc;
+				border-top: 1px solid $border-color;
+				border-left: 1px solid $border-color;
+				border-right: 1px solid $border-color;
 			}
 			
 			&:before {
@@ -58,11 +92,51 @@
 			}
 
 			li {
-				flex-basis: unset;
-				padding: 0 0.5rem;
+				display: inline-flex;
+				width: 3rem;	
 				color: black;
-				// SACAR LOS ITEMS DE CONTACTO A ESTE MENU, COMO EN MAC
+				transition: all 250ms ease-in;
+
+				[class*="icon-port"] {
+					display: inline-block;
+					transition: 150ms ease-in all;
+				}
+
+				.label {
+					position: absolute;
+					top: 0;
+					opacity: 0;
+					text-align: center;
+					padding: 5px 10px;
+					border-radius: 5px;
+					font-size: 14px;
+					background: rgba(0,0,0,.4);
+					backdrop-filter: blur(2px);
+					color: #fff;
+					transition: all 150ms ease-in;
+					pointer-events: none;
+				}
+
+				&:hover {
+					width: 8rem;
+
+					[class*="icon-port"] {
+						padding-bottom: 1rem;
+						transform: scale(4);
+					}
+
+					.label {
+    					top: -5rem;
+						opacity: 1;
+					}
+				}
 			}
+		}
+
+		.info {
+			display: inline-block;
+			width: 11rem;
+			padding-top: 1rem;
 		}
 
 		.content {
@@ -72,6 +146,7 @@
 		.slider p {
 			min-height: 8rem;
 			padding-right: 1rem;
+			padding-top: 1.5rem;
 		}
 
 		.swiper-container {
@@ -81,7 +156,8 @@
 		}
 
 		.hello {
-			height: 11rem;
+			height: 8rem;
+			text-align: left;
 			border-radius: 0;
 		}
 
@@ -100,10 +176,6 @@
 
 	.fab {
 		bottom: 2rem;
-	}
-
-	.content-swiper {
-		// width: 80%;
 	}
 }
 

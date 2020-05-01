@@ -93,3 +93,7 @@
     padding: 1rem;
     background-color: var(--background-color-app);
 }
+
+.only-desktop {
+    display: none !important;
+}
